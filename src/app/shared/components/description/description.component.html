@@ -1,6 +1,7 @@
 <div class="container-full bg-primary px-10">
   <div [ngClass]="gridCols" class="description grid gap-10 place-content-start place-items-center container max-w-[96rem]">
     <div [ngClass]="spanCol1" class="place-self-start self-center">
+      <h1 *ngIf="preTitle" [innerHTML]="preTitle" class="text-3xl md:text-5xl font-bold mb-2"></h1>
       <h2 *ngIf="staticTitle" [innerHTML]="staticTitle" class="text-2xl md:text-4xl font-medium"></h2>
       <h2 *ngIf="!isChildRoute && !staticTitle" [innerHTML]="'DESCRIPTION.TITLE' | translate" class="text-2xl md:text-4xl font-medium"></h2>
       <h2 *ngIf="isChildRoute && !staticTitle" [innerHTML]="currentRouteName + '.DESCRIPTION.TITLE' | translate" class="text-2xl md:text-4xl font-medium"></h2>

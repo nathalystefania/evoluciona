@@ -13,5 +13,9 @@
   "KNOW_ITS_CHARACTERISTICS": "Conoce sus características",
   "TMFE_CONCENTRATES_IN_A_SINGLE_INTERFACE_ELEMENTS_SUCH_AS" : "TMFE concentra en una única interfaz elementos como:",
   "ALARMS_EG_NETXMS": "<li>Alarmas (v.g. NetXMS).</li> <li>Vista jerárquica del Estado de Objetos (pórticos, cámaras, antenas y switches).</li> <li>Transacciones e imágenes.</li> <li>Indicadores desempeño comunes, como Transacciones, Lecturas de TAG, Confiabilidad OCR y Capturas de imagen.</li> ",
-  "CONTACT_US": "Contact us"
+  "CONTACT_US": "Contact us",
+  "PCA": {
+      "PARAGRAPH_1": "Fue diseñado para vehículos policiales y sistemas de control vial inteligente. Su función principal es registrar datos de dispositivos DSRC, asociándolos a su ubicación geográfica GPS (Global Positioning System) y transmitirlos en tiempo real a otro punto de control policial utilizando conectividad LTE (Long Term Evolution).</br>Pensado para ofrecer rendimiento, confiabilidad y facilidad de uso en todo momento. Posee una plataforma base compacta que integra todos los componentes de forma eficiente, impulsado por un minicomputador de última generación capaz de procesar datos en tiempo real y transmitirlos de manera segura.</br>Gracias a su módulo de comunicación con GPS y LTE-M, la unidad puede enviar información y reportes directamente a diferentes puntos de control policial, mientras que el transceptor DSRC garantiza una lectura precisa y rápida de dispositivos de peaje o identificación sin contacto."
+  }
+  
 }

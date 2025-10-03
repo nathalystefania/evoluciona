@@ -15,6 +15,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { SharedModule } from '@shared/shared.module';
 import { OurProductsComponent } from './our-products/our-products.component';
 import { TrafficMonitoringFrontEndComponent } from './traffic-monitoring-front-end/traffic-monitoring-front-end.component';
+import { PoliceControllerAdapterComponent } from './police-controller-adapter/police-controller-adapter.component';
 
 export function productsHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/products/', '.json');
@@ -24,7 +25,8 @@ export function productsHttpLoaderFactory(http: HttpClient) {
   declarations: [
     ProductPageComponent,
     OurProductsComponent,
-    TrafficMonitoringFrontEndComponent
+    TrafficMonitoringFrontEndComponent,
+    PoliceControllerAdapterComponent
   ],
   imports: [
     SharedModule,
