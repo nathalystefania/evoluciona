@@ -1,9 +1,24 @@
-<app-wrap-description id="pca" [gridCols]="gridCols" [spanCol1]="spanCol1" [preTitle]="'PCA' | translate"
+<app-wrap-description id="pca" [gridCols]="gridCols" [spanCol1]="spanCol1" [preTitle]="'PCA'"
   [staticTitle]="'Police Controller Adapter' | translate" appScrollSection="one">
 </app-wrap-description>
 
 <div class="container-fluid">
-  <section class="container px-4 lg:px-6 max-w-[96rem] pt-28 pb-10">
-    <p class="text-lg leading-6">{{ 'PCA.PARAGRAPH_1' | translate}}</p>
+  <section class="container px-4 lg:px-6 max-w-[96rem] py-28">
+    <p class="text-[1.35rem] columns-1 md:columns-2 gap-8 text-balance" [innerHTML]="'PCA.PARAGRAPH_1' | translate"></p>
   </section>
+
+  <app-wrap-hero class="contact-hero" [imagebackground]="'./assets/images/products/pca/hero-pca.png'" [headText]="' '">
+  </app-wrap-hero>
+</div>
+
+<div class="container px-4 lg:px-10 max-w-[96rem]">
+  <div *ngFor="let feature of features" class="grid grid-cols-2 gap-8 my-20">
+    <div class="text-col">
+      <h3 class="text-3xl font-bold">{{ feature.title | translate }}</h3>
+      <p [innerHTML]="feature.text | translate " class="text-[1.35rem] pt-8 text-balance"></p>
+    </div>
+    <div class="img-col">
+      <img [src]="feature.image" alt="" class="w-full h-auto object-contain block" loading="lazy">
+    </div>
+  </div>
 </div>
