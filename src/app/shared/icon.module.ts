@@ -14,6 +14,7 @@ import { MatIconRegistry } from "@angular/material/icon";
     .addSvgIcon("icon-facebook", this.setPath(`${this.path}/icon-fb.svg`))
     .addSvgIcon("icon-linkedin", this.setPath(`${this.path}/icon-in.svg`))
     .addSvgIcon("icon-youtube", this.setPath(`${this.path}/icon-yt.svg`))
+    .addSvgIcon("icon-download", this.setPath(`${this.path}/icon-download.svg`))
   }
   private setPath(url: string): SafeResourceUrl { 
     return this.domSanitizer.bypassSecurityTrustResourceUrl(url); 

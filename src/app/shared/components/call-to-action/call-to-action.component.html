@@ -1,6 +1,16 @@
 <button 
   mat-flat-button 
-  class="bg-primary w-full text-lg lg:text-2xl uppercase font-bold"
-  (click)="goTo($event)">
-  {{'CONTACT_US' | translate}}
+  class="bg-primary w-full text-2xl lg:text-3xl font-medium justify-center"
+  (click)="onClick($event)">
+  <ng-container *ngIf="(svgIcon || icon) && iconPosition === 'left'">
+    <mat-icon *ngIf="svgIcon; else fontIconLeft" [svgIcon]="svgIcon" aria-hidden="true" class="mr-2 mat-icon--md"></mat-icon>
+    <ng-template #fontIconLeft><mat-icon aria-hidden="true" class="mr-2">{{ icon }}</mat-icon></ng-template>
+  </ng-container>
+  
+  {{ text ? (text | translate) : ('CONTACT_US' | translate) }}
+  
+  <ng-container *ngIf="(svgIcon || icon) && iconPosition === 'right'">
+    <mat-icon *ngIf="svgIcon; else fontIconRight" [svgIcon]="svgIcon" aria-hidden="true" class="ml-2 mat-icon--md"></mat-icon>
+    <ng-template #fontIconRight><mat-icon aria-hidden="true" class="ml-2">{{ icon }}</mat-icon></ng-template>
+  </ng-container>
 </button>

@@ -12,15 +12,18 @@ const routes: Routes = [
     children: [
       {
         path: 'our-products',
-        component: OurProductsComponent
+        component: OurProductsComponent,
+        data: { title: 'PRODUCTS.TITLE' }
       },
       {
         path: 'traffic-monitoring-front-end',
-        component: TrafficMonitoringFrontEndComponent
+        component: TrafficMonitoringFrontEndComponent,
+        data: { title: 'PRODUCTS.TITLE' }
       },
       {
         path: 'police-controller-adapter',
-        component: PoliceControllerAdapterComponent
+        component: PoliceControllerAdapterComponent,
+        data: { title: 'PRODUCTS.PCA.TITLE' }
       },
     ]
   },

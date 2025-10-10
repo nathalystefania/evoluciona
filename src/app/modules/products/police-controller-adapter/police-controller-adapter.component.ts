@@ -98,5 +98,8 @@ export class PoliceControllerAdapterComponent implements OnInit {
     return !this.isVideoPlaying(videoId) && !this.isVideoPaused(videoId);
   }
 
-
+  handleCtaClick(event?: Event) {
+    // lógica adicional antes/después de la navegación
+    console.log('CTA clicked', event);
+  }
 }

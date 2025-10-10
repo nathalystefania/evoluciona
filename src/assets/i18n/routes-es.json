@@ -1,0 +1,20 @@
+{
+  "HOME": {
+    "TITLE": "Inicio"
+  },
+  "CONTACT": {
+    "TITLE": "Contacto"
+  },
+  "PRODUCTS": {
+    "TITLE": "Productos",
+    "PCA": {
+      "TITLE": "Police Controller Adapter"
+    },
+    "TMFE": {
+      "TITLE": "Traffic Monitoring Front-end"
+    },
+    "OUR_PRODUCTS": {
+      "TITLE": "Nuestros productos"
+    }
+  }
+}

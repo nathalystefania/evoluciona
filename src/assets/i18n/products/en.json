@@ -1,4 +1,5 @@
 {
+  "TITLE": "Products",
   "HEADER_TEXT": "",
   "DESCRIPTION": {
     "TITLE": "Traffic Monitoring Front End",
@@ -13,5 +14,19 @@
   "KNOW_ITS_CHARACTERISTICS": "Know its characteristics",
   "TMFE_CONCENTRATES_IN_A_SINGLE_INTERFACE_ELEMENTS_SUCH_AS" : "TMFE concentrates in a single interface elements such as:",
   "ALARMS_EG_NETXMS": "<li>Alarms (eg NetXMS).</li> <li>Hierarchical view of the State of Objects (gantries, cameras, antennas and switches).</li> <li>Transactions and images.</li> <li>Common performance indicators, such as Transactions, TAG Reads, OCR Reliability and Image Captures.</li>",
-  "CONTACT_US": "Contact us"
+  "CONTACT_US": "Contact us",
+  "PCA": {
+      "TITLE": "Police Controller Adapter",
+      "PARAGRAPH_1": "The PCA is an intelligent road control solution designed for police vehicles. Its main function is to record data from DSRC devices such as digital tachograph or TAG, associating them with a control point and transmitting them in real time to another police control point using 4G/LTE connectivity. <br>Designed to offer performance, reliability and ease of use at all times. It has a compact base platform that integrates all components efficiently.",
+      "FEATURES": {
+          "TITLE_1": "The brain behind intelligent police control",
+          "TEXT_1": "Powered by a microcontroller capable of processing data in real time and transmitting it securely. Thanks to its GPS and 4G/LTE communication module. The unit can send information and reports directly to different police control points, while the DSRC transceiver ensures accurate and fast reading of digital tachographs.",
+          "TITLE_2": "Simplified installation and handling",
+          "TEXT_2": "The unit is easy to use and adapts to any work environment. <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Tool-free installation:</b> Its high-strength suction cups allow it to be mounted on the windshield or windows of the vehicle in seconds. Even on external mounts.</li><li class='mb-5'><b>Versatile connection:</b> It is powered both by the vehicle's battery (12v) and by the electrical network (220v), making it ideal for any operation. A permanent ventilation system protects it against high temperatures.</li><li><b>Intuitive monitoring:</b> LED indicators allow you to easily check the status of power and software. Additionally, a management panel with access from any browser facilitates the control and configuration of the unit.</li></ul>",
+          "TITLE_3": "Software and monitoring",
+          "TEXT_3": "The PCA includes intuitive software that gives you control and immediate accessibility over the entire system from any web browser. Some of its features: <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Real-Time Monitoring:</b> View on a map the exact location and operational status of each unit.</li><li><b>Efficient Management:</b> Quickly locate active devices and access detailed information with a simple click.</li></ul> Together, these components make the unit a robust, adaptable and field-ready solution, ensuring reliable support in mobility and security operations."
+      },
+      "IF_YOU_WANT_TO_KNOW_A_LITTLE_MORE": "If you want to know a little more about the PCA watch the video",
+      "DOWNLOAD_TECHNICAL_SHEET": "Download Data Sheet"
+  }
 }

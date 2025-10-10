@@ -1,4 +1,5 @@
 {
+  "TITLE": "Productos",
   "HEADER_TEXT": "",
   "DESCRIPTION": {
     "TITLE": "Traffic Monitoring Front End",
@@ -15,15 +16,18 @@
   "ALARMS_EG_NETXMS": "<li>Alarmas (v.g. NetXMS).</li> <li>Vista jerárquica del Estado de Objetos (pórticos, cámaras, antenas y switches).</li> <li>Transacciones e imágenes.</li> <li>Indicadores desempeño comunes, como Transacciones, Lecturas de TAG, Confiabilidad OCR y Capturas de imagen.</li> ",
   "CONTACT_US": "Contact us",
   "PCA": {
+      "TITLE": "Police Controller Adapter",
       "PARAGRAPH_1": "El PCA es una solución de control vial inteligente diseñada para vehículos policiales. Su función principal es registrar datos de dispositivos DSRC tales como tacógrafo digital o TAG, asociándolos un punto de control y transmitirlos en tiempo real a otro punto de control policial utilizando conectividad 4G/LTE. <br>Pensado para ofrecer rendimiento, confiabilidad y facilidad de uso en todo momento. Posee una plataforma base compacta que integra todos los componentes de forma eficaz.",
       "FEATURES": {
           "TITLE_1": "El cerebro detrás del control policial inteligente",
           "TEXT_1": "Comandado por un microcontrolador capaz de procesar datos en tiempo real y transmitirlos de manera segura. Gracias a su módulo de comunicación GPS y 4G/LTE. La unidad puede enviar información y reportes directamente a diferentes puntos de control policial, mientras que el transceptor DSRC garantiza una lectura precisa y rápida de tacógrafos digitales.",
           "TITLE_2": "Instalación y manipulación simplificada",
-          "TEXT_2": "La unidad es fácil de usar y se adapta a cualquier entorno de trabajo. <ul><li><b>Instalación sin herramientas:</b> Sus ventosas de alta resistencia permiten montarlo en el parabrisas o ventanas del vehículo en segundos. Incluso en soportes externos.</li><li><b>Conexión versátil:</b> Se alimenta tanto de la batería del vehículo (12v) como de la red eléctrica (220v), lo que lo hace ideal para cualquier operación. U.n sistema de ventilación permanente lo protege contra altas temperaturas.</li><li><b>Monitoreo intuitivo:</b> Indicadores LED permiten constatar de forma sencilla el estado de alimentación y software. Adicionalmente un panel de gestión con acceso desde cualquier navegador facilita el control y configuración de la unidad.</li></ul>",
+          "TEXT_2": "La unidad es fácil de usar y se adapta a cualquier entorno de trabajo. <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Instalación sin herramientas:</b> Sus ventosas de alta resistencia permiten montarlo en el parabrisas o ventanas del vehículo en segundos. Incluso en soportes externos.</li><li class='mb-5'><b>Conexión versátil:</b> Se alimenta tanto de la batería del vehículo (12v) como de la red eléctrica (220v), lo que lo hace ideal para cualquier operación. U.n sistema de ventilación permanente lo protege contra altas temperaturas.</li><li><b>Monitoreo intuitivo:</b> Indicadores LED permiten constatar de forma sencilla el estado de alimentación y software. Adicionalmente un panel de gestión con acceso desde cualquier navegador facilita el control y configuración de la unidad.</li></ul>",
           "TITLE_3": "Software y monitoreo",
-          "TEXT_3": "El PCA incluye un software intuitivo que te brinda control y accesibilidad inmediata sobre todo el sistema desde cualquier navegador web. Algunas de sus caracteristicas: <ul><li><b>Monitoreo en Tiempo Real:</b>Visualizaenunmapala ubicación exacta y el estado operativo de cada unidad.</li><li><b>Gestión Eficiente:</b> Localiza rápidamente dispositivos activos y accede a información detallada con un simple clic.</li></ul> En conjunto, estos componentes hacen de la unidad una solución robusta, adaptable y lista para el terreno, garantizando un soporte confiable en las operaciones de movilidad y seguridad."
-      }
+          "TEXT_3": "El PCA incluye un software intuitivo que te brinda control y accesibilidad inmediata sobre todo el sistema desde cualquier navegador web. Algunas de sus caracteristicas: <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Monitoreo en Tiempo Real:</b> Visualizaenunmapala ubicación exacta y el estado operativo de cada unidad.</li><li><b>Gestión Eficiente:</b> Localiza rápidamente dispositivos activos y accede a información detallada con un simple clic.</li></ul> En conjunto, estos componentes hacen de la unidad una solución robusta, adaptable y lista para el terreno, garantizando un soporte confiable en las operaciones de movilidad y seguridad."
+      },
+      "IF_YOU_WANT_TO_KNOW_A_LITTLE_MORE": "Si quieres saber un poco más sobre el PCA mira el video",
+      "DOWNLOAD_TECHNICAL_SHEET": "Descargar Ficha Técnica"
   }
   
 }

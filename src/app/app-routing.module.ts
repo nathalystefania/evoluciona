@@ -6,13 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
-    loadChildren: () => import(`@modules/home/home.module`).then(m => m.HomeModule)
+    loadChildren: () => import(`@modules/home/home.module`).then(m => m.HomeModule),
+    data: { title: 'HOME.TITLE' }
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled',
+    initialNavigation: 'enabledBlocking',
     scrollPositionRestoration: 'top',
 })],
   exports: [RouterModule]

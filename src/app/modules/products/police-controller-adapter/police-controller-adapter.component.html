@@ -3,22 +3,102 @@
 </app-wrap-description>
 
 <div class="container-fluid">
-  <section class="container px-4 lg:px-6 max-w-[96rem] py-28">
-    <p class="text-[1.35rem] columns-1 md:columns-2 gap-8 text-balance" [innerHTML]="'PCA.PARAGRAPH_1' | translate"></p>
+  <section class="container px-4 lg:px-6 max-w-[96rem] py-10 md:py-28">
+    <p class="text-xl md:text-[1.35rem] columns-1 md:columns-2 gap-8 leading-relaxed text-balance" [innerHTML]="'PCA.PARAGRAPH_1' | translate"></p>
   </section>
-
   <app-wrap-hero class="contact-hero" [imagebackground]="'./assets/images/products/pca/hero-pca.png'" [headText]="' '">
   </app-wrap-hero>
 </div>
 
 <div class="container px-4 lg:px-10 max-w-[96rem]">
-  <div *ngFor="let feature of features" class="grid grid-cols-2 gap-8 my-20">
-    <div class="text-col">
-      <h3 class="text-3xl font-bold">{{ feature.title | translate }}</h3>
-      <p [innerHTML]="feature.text | translate " class="text-[1.35rem] pt-8 text-balance"></p>
+  <div *ngFor="let feature of features; let i = index" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[4rem] my-10 md:my-20 items-center">
+    <div class="text-col" [ngClass]="{ 'md:order-2': i % 2 === 1 }">
+      <h3 class="text-2xl md:text-3xl font-bold">{{ feature.title | translate }}</h3>
+      <p [innerHTML]="feature.text | translate" class="text-xl md:text-[1.35rem] pt-5 md:pt-8 md:leading-relaxed text-balance"></p>
     </div>
-    <div class="img-col">
-      <img [src]="feature.image" alt="" class="w-full h-auto object-contain block" loading="lazy">
+    <div class="img-col" [ngClass]="{ 'md:order-1': i % 2 === 1 }">
+      <img [src]="feature.image" alt="" class="w-[80%] h-auto object-contain block mx-auto" loading="lazy">
     </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <section class="container px-4 lg:px-10 max-w-[96rem] py-12">
+    <div class="flex justify-center mb-10">
+      <h2 class="flex text-gray text-3xl text-center title_border relative pb-3">
+        {{ 'PCA.IF_YOU_WANT_TO_KNOW_A_LITTLE_MORE' | translate}}
+      </h2>
+    </div>
+
+    <!-- {{ playerState$ | async }} -->
+    <div class="video-container_video" *ngIf="translate.currentLang == 'en'">
+      <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('card.id_en')" alt="" [ngClass]="{'show': isVideoCoverVisible('card.id_en'), 'hide': isVideoPlaying('card.id_en') || isVideoPaused('card.id_en') }" class="fallback-video" >
+      <vg-player (onPlayerReady)="onPlayerReady($event, 'card.id_en')">
+        <vg-overlay-play vgFor="card.id_en"></vg-overlay-play>
+    
+        <!-- Controles para el video en inglés -->
+        <vg-controls [vgAutohide]="true" [vgAutohideTime]="5">
+          <vg-play-pause vgFor="card.id_en"></vg-play-pause>
+          <vg-time-display vgFor="card.id_en" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+          <vg-scrub-bar vgFor="card.id_en" style="pointer-events: none;"></vg-scrub-bar>
+          <vg-time-display vgFor="card.id_en" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+          <vg-track-selector vgFor="card.id_en" class="track-selector"></vg-track-selector>
+          <vg-mute vgFor="card.id_en"></vg-mute>
+          <vg-volume vgFor="card.id_en"></vg-volume>
+          <vg-fullscreen vgFor="card.id_en"></vg-fullscreen>
+        </vg-controls>
+    
+        <video [vgMedia]="$any(media)" #media id="card.id_en" preload="auto">
+            <source src="./assets/video/its/ITS_en.mp4" type="video/mp4">
+            <source src="./assets/video/its/ITS_en.ogv" type="video/ogv">
+            <source src="./assets/video/its/ITS_en.webm" type="video/webm">
+    
+            <track kind="subtitles" label="English" src="./assets/video/its/subtitles/its_en_sub_en.vtt" srclang="en">
+            <track kind="subtitles" label="Spanish" src="./assets/video/its/subtitles/its_en_sub_es.vtt" srclang="es">
+        </video>
+      </vg-player>
+    </div>
+    
+    <div class="video-container_video" *ngIf="translate.currentLang == 'es'">
+      <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('itsEsVideo')" alt="" [ngClass]="{'show': isVideoCoverVisible('itsEsVideo'), 'hide': isVideoPlaying('itsEsVideo') || isVideoPaused('itsEsVideo') }" class="fallback-video">
+      <vg-player (onPlayerReady)="onPlayerReady($event, 'itsEsVideo')">
+        <vg-overlay-play vgFor="itsEsVideo"></vg-overlay-play>
+    
+        <!-- Controles para el video en español -->
+        <vg-controls [vgAutohide]="true" [vgAutohideTime]="5">
+          <vg-play-pause vgFor="itsEsVideo"></vg-play-pause>
+          <vg-time-display vgFor="itsEsVideo" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+          <vg-scrub-bar vgFor="itsEsVideo" style="pointer-events: none;"></vg-scrub-bar>
+          <vg-time-display vgFor="itsEsVideo" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+          <vg-track-selector vgFor="itsEsVideo" class="track-selector"></vg-track-selector>
+          <vg-mute vgFor="itsEsVideo"></vg-mute>
+          <vg-volume vgFor="itsEsVideo"></vg-volume>
+          <vg-fullscreen vgFor="itsEsVideo"></vg-fullscreen>
+        </vg-controls>
+    
+        <video [vgMedia]="$any(media)" #media id="itsEsVideo" preload="auto">
+            <source src="./assets/video/its/ITS_es.mp4" type="video/mp4">
+            <source src="./assets/video/its/ITS_es.ogv" type="video/ogv">
+            <source src="./assets/video/its/ITS_es.webm" type="video/webm">
+    
+            <track kind="subtitles" label="English" src="./assets/video/its/subtitles/its_es_sub_en.vtt" srclang="en">
+            <track kind="subtitles" label="Spanish" src="./assets/video/its/subtitles/its_es_sub_es.vtt" srclang="es">
+        </video>
+      </vg-player>
+    </div>
+    
+
+  </section>
+</div>
+
+<div class="grid md:grid-cols-4 my-10 mb-24 mx-4 lg:mx-10">
+  <div class="md:col-start-2 md:col-span-2">
+    <app-call-to-action
+      [text]="'PCA.DOWNLOAD_TECHNICAL_SHEET'"
+      [svgIcon]="'icon-download'"
+      [iconPosition]="'right'"
+      [action]="handleCtaClick">
+    </app-call-to-action>
   </div>
 </div>
