@@ -6,9 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "prebuild": "mv src/assets/video/ src/assets/exclude_temp",
-    "postbuild": "mv src/assets/exclude_temp src/assets/video/"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
