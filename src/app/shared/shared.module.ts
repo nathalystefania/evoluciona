@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf, NgForOf, CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -43,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule,
     MaterialModule,
     IconModule,
+    NgFor, NgIf, NgForOf,
     CommonModule,
     TranslateModule.forChild({
       loader: {

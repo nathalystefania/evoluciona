@@ -54,6 +54,11 @@
       "CARD3": {
         "TITLE": "SOFTWARE CBO: BACK OFFICE COMERCIAL",
         "TEXT": "Es un sistema de gestión comercial que permite: Gestión de contratos, facturación, cobranza, atención al cliente (CRM), Interfaz RNUT, Autoservicio Web, Infractores, Gestión de TAG (Inventario), Interfaz Contable (Contabilidad), Recursos Humanos (Turnos y Caja), Firma Digital e interacción con un sistema interoperable con otras autopistas de peaje."
+      },
+      "CARD4": {
+        "TITLE": "PCA: POLICE CONTROLLER ADAPTER",
+        "TEXT": "Nuestra solución Police Controller Adapter PCA-1.02B es una solución innovadora para el control de velocidad de camiones de carga. Ha sido diseñada para simplificar y mejorar la operación de las unidades móviles de control de velocidad policial utilizando radares DSRC, ofreciendo una solución que maximiza la calidad técnica sin sacrificar la facilidad de uso.",
+        "LINK_TEXT": "Conoce más sobre el PCA"
       }
     }
   },

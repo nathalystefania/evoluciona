@@ -1,0 +1,374 @@
+.cP
+    cursor: pointer
+.form-pca,
+.pca-dialog-content
+  position: relative
+
+.loading-overlay
+  position: absolute
+  inset: 0
+  background: rgba(255,255,255,0.85)
+  z-index: 50
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 1rem
+
+.loading-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.spinner
+  width: 48px
+  height: 48px
+  animation: spin 1s linear infinite
+
+.spinner .path
+  stroke: #f97316 /* tailwind orange-500 */
+  stroke-linecap: round
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+.flex-center-v
+    display: flex
+    align-items: center
+
+.wf-form-component
+    .wf-field-error, .wf-field-help-text
+        text-align: left
+    .wf-field-error
+        text-align: right
+
+.wf-form-paid
+    padding-bottom: 45px
+
+.wf-parent
+    padding: 30px 0
+    height: 100%
+    box-sizing: border-box
+    overflow: auto
+    background-repeat: no-repeat
+    background-size: 100% 100%
+
+.wf-wrapper
+    width: 100%
+    border-radius: 10px
+    margin: auto
+    border: none
+    background-color: #fff
+    color: #222
+    *
+        box-sizing: border-box
+
+.iframe-container
+    height: 0
+    width: 100%
+    border: none
+
+.wf-header
+    padding-bottom: 35px
+    font-weight: bold
+    word-break: break-word
+
+.wf-sec-wrap
+    margin-bottom: 40px
+    &:first-child .wf-sec-head
+        margin-top: 0
+
+.wf-sec-head
+    margin-bottom: 20px
+    margin-top: 35px
+
+.wf-sec-title
+    font-weight: bold
+    word-break: break-word
+
+.wf-sec-desc
+    margin: 0
+    margin-top: 5px
+    word-break: break-word
+
+// .wf-field
+//     text-align: left
+//     word-break: break-word
+//     border: 0
+//     position: relative
+//     &:not(.multiple-fields-div)
+//         text-align: left
+//     &-inner
+//         position: relative
+//         display: flex
+//         flex: 1
+//     &-input
+//         width: 100%
+//         border: 1px solid #BDC8D3
+//         border-radius: 4px
+//         padding: 10px 15px
+//         min-height: 38px
+
+//         font-family: inherit
+//         &:focus
+//             border: 1px solid #1980d8
+//     &-dropdown
+//         width: 100%
+//         border: 1px solid #BDC8D3
+//         border-radius: 4px
+//         padding: 10px 15px
+//         min-height: 38px
+
+//         font-family: inherit
+//         .wf-field-input:focus
+//             border: none
+
+.wf-input-focus.wf-field
+    &::after
+        opacity: 1
+        display: block
+
+.wf-field-error-active.wf-field
+    .wf-field-error
+        display: block
+    .wf-error-view-more
+        display: flex
+    .wf-field-input:not(.date-input-container .wf-field-input),
+    .wf-field-dropdown,
+    .date-input-container
+        border: 1px solid #FD6B6D
+        box-shadow: 0 0 1px 1px #F4A2A2
+
+// .wf-field-mandatory .wf-field-inner
+//     &::before
+//         content: ''
+//         position: absolute
+//         left: 0
+//         background-color: #ff6a6a
+//         width: 3px
+//         height: 100%
+//         border-top-left-radius: 4px
+//         border-bottom-left-radius: 4px
+//         z-index: 2
+//         top: 0
+//         bottom: 0
+//     &.no-results-elem::before
+//         height: 98%
+
+select:not([data-wform-field='select-multiple'])
+    -webkit-appearance: none
+    -moz-appearance: none
+    background: transparent
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='34' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+    background-repeat: no-repeat
+    background-position-x: 99%
+    background-color: #fff
+    min-width: 70px
+
+.wf-field-item
+    min-height: 38px
+
+.wf-time-field-wrapper
+    display: flex
+    flex: 1
+    select
+        margin-left: 10px
+
+.wf-field-error
+    color: #FF5050
+    margin-top: 4px
+    display: none
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+    perspective: 1000px
+
+.wf-field-error-long
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.wf-error-view-more
+    display: none
+    white-space: nowrap
+    align-items: center
+    color: #1880d8
+    margin-top: 4px
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+
+.wf-error-parent-ele
+    display: flex
+    justify-content: end
+
+.wf-field-help-text
+    color: #515159
+    margin-top: 5px
+
+.wf-field-help-text + .wf-error-parent-ele
+    .wf-field-error, .wf-error-view-more
+        @apply text-red-800 text-sm
+        margin: 0
+::ng-deep 
+    .wf-error-parent-ele
+        position: relative
+        .wf-field-error
+            @apply text-red-800 text-sm
+            position: absolute
+            left: 0
+            top: 20px
+
+.wf-field-help-text-link
+    text-decoration: none
+
+.wf-field-checkbox
+    cursor: pointer
+    border-radius: 3px
+    min-width: 14px
+    min-height: 20px
+    box-sizing: initial
+    accent-color: #1980d8
+    margin-right: 10px
+    margin-bottom: auto
+
+.wf-field-dropdown-date
+    padding: 8px 12px
+    border-radius: 4px
+    cursor: pointer
+    border: 1px solid #BDC8D3
+    &:hover
+        border: 1px solid #65C199
+
+.wform-field-item-upload-input
+    min-height: 5rem
+    background-color: #FBFCFD
+    border: 1px dashed #bdc8d3
+    line-height: 2.1
+    cursor: pointer
+    &:focus
+        border: 1px dashed #bdc8d3
+
+.wform-file-upload-input-label
+    background-color: #fff
+    background-image: linear-gradient(to top, #F5F8FA, #ffffff)
+    color: #212129
+    border: 1px solid #d3dbe3
+    border-radius: 4px
+    padding: 0.7rem 2rem
+    right: 1rem
+    transform: translateY(-50%)
+    top: 50%
+    position: absolute
+
+input[type='file']
+    &::file-selector-button, &::-webkit-file-upload-button
+        opacity: 0
+        width: 0
+        height: 28px
+
+.wf-btn
+    padding: 10px 20px
+    border-radius: 4px
+    cursor: pointer
+    font-weight: bold
+    font-family: inherit
+    &[data-ux-btn-type='default']
+        border-radius: 0
+    &[data-ux-btn-type='primary']
+        border-radius: 4px
+    &[data-ux-btn-type='secondary']
+        border-radius: 20px
+
+.wform-btn-wrap
+    margin-top: 40px
+    &[data-ux-pos='left']
+        justify-content: flex-start
+    &[data-ux-pos='center']
+        justify-content: center
+    &[data-ux-pos='right']
+        justify-content: flex-end
+
+.wform-poweredby-container
+    position: absolute
+    left: 0
+    bottom: 0
+    border-top-right-radius: 10px
+    border-bottom-left-radius: 10px
+    background-color: #23384F
+    padding: 6px 8px
+    font-family: sans-serif
+    display: flex
+    align-items: center
+
+.wf-text-area-input
+    resize: vertical
+    height: 100px
+    min-height: 100px
+    max-height: 200px
+
+.dropdown-contents::after
+    border-left: 0.4rem solid transparent
+    border-right: 0.4rem solid transparent
+    border-top: 0.4rem solid black
+    top: 45%
+    content: ''
+    position: absolute
+    right: 1rem
+    pointer-events: none
+
+.form-pca
+  .wf-parent
+    width: 100%
+
+  .wf-wrapper
+    width: 100%
+
+  .wf-form-wrapper
+    display: block
+
+  .wf-field
+    margin-bottom: .25rem
+
+    input, select, textarea
+      width: 100%
+      padding: 0.5rem
+    //   border: 1px solid #e5e7eb
+      border-radius: 0.375rem
+      box-sizing: border-box
+      margin: 0
+
+  .wf-actions, .wform-btn-wrap
+    margin-top: 1rem
+    display: flex
+    gap: 0.5rem
+    justify-content: flex-start
+
+.dialog-title
+  @apply text-xl md:text-3xl font-normal
+
+.dialog-close-btn
+  position: absolute
+  top: 0px
+  right: 0px
+  width: 36px
+  height: 36px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+::ng-deep
+  .mat-form-field-infix
+    padding-bottom: 0
+  input.mat-input-element
+    margin-top: 0
+  .mat-form-field-label-wrapper
+    padding-top: 1em
+    top: -1em
+//   .mat-form-field-appearance-standard
+//     .mat-form-field-flex
+//       padding-top: 1em!important

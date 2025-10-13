@@ -82,6 +82,23 @@ export class ItsTransportationSystemsComponent implements OnInit {
     ],
     this.dataLargeCards = [
       {
+        title: 'ITS_SOFTWARE_DEVELOPED.CARDS.CARD4.TITLE',
+        text: 'ITS_SOFTWARE_DEVELOPED.CARDS.CARD4.TEXT',
+        image: './assets/images/products/pca/product-pca.jpg',
+        id_en: 'itsPCAEn',
+        id_es: 'itsPCAEs',
+        link: '/products/police-controller-adapter',
+        linkText: 'ITS_SOFTWARE_DEVELOPED.CARDS.CARD4.LINK_TEXT',
+        video_mp4_en: './assets/video/products/pca/pca-police-controller-adapter.mp4',
+        video_ogv_en: './assets/video/products/pca/pca-police-controller-adapter.ogv',
+        video_webm_en: './assets/video/products/pca/pca-police-controller-adapter.webm',
+        video_mp4_es: './assets/video/products/pca/pca-police-controller-adapter.mp4',
+        video_ogv_es: './assets/video/products/pca/pca-police-controller-adapter.ogv',
+        video_webm_es: './assets/video/products/pca/pca-police-controller-adapter.webm',
+        subtitle_en: './assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt',
+        subtitle_es: './assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt'
+      },
+      {
         title: 'ITS_SOFTWARE_DEVELOPED.CARDS.CARD1.TITLE',
         text: 'ITS_SOFTWARE_DEVELOPED.CARDS.CARD1.TEXT',
         image: './assets/images/its/tmfe.jpg',

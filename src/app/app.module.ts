@@ -19,10 +19,9 @@ import { MaterialModule } from '@shared/material.module';
 import { Title } from '@angular/platform-browser';
 import { TranslateTitleStrategy } from './core/translate-title.strategy';
 import { APP_INITIALIZER } from '@angular/core';
-import { firstValueFrom, forkJoin } from 'rxjs';
+import { firstValueFrom, forkJoin, of } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { TitleStrategy } from '@angular/router';
-// import { TitleStrategy } from '@angular/router'; // Removed due to missing export in current Angular version
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,35 +32,23 @@ export function HttpLoaderFactory(http: HttpClient) {
 export function loadTranslationsFactory(translate: TranslateService, http: HttpClient) {
   return async () => {
     const lang = localStorage.getItem('currentLang') || 'en';
-
-    // Cargar ambos JSON en paralelo; ignorar si alguno falta
     const baseUrl = `/assets/i18n/${lang}.json`;
     const routesUrl = `/assets/i18n/routes-${lang}.json`;
 
     try {
+      // intenta cargar ambos en paralelo; si alguno falla, se captura
       const [base, routes] = await firstValueFrom(
-        forkJoin([
-          http.get(baseUrl).pipe(),    // may 404 -> caught by try/catch
-          http.get(routesUrl).pipe()
-        ])
+        forkJoin([ http.get(baseUrl), http.get(routesUrl) ])
       );
-
-      // merge = true para no sobreescribir keys ya existentes
       translate.setTranslation(lang, base as any, true);
       translate.setTranslation(lang, routes as any, true);
     } catch (e) {
-      // fallback: intentar cargar lo que exista individualmente
-      try {
-        const base = await firstValueFrom(http.get(baseUrl));
-        translate.setTranslation(lang, base as any, true);
-      } catch {}
-      try {
-        const routes = await firstValueFrom(http.get(routesUrl));
-        translate.setTranslation(lang, routes as any, true);
-      } catch {}
+      // fallback: intenta cargar individualmente y mergear lo que exista
+      try { const base = await firstValueFrom(http.get(baseUrl)); translate.setTranslation(lang, base as any, true); } catch {}
+      try { const routes = await firstValueFrom(http.get(routesUrl)); translate.setTranslation(lang, routes as any, true); } catch {}
     }
 
-    // finalmente activar el idioma (esto no lanzará otra solicitud si ya cargamos base)
+    // activa el idioma y espera a que termine la carga del loader
     await translate.use(lang).toPromise();
   };
 }
@@ -91,11 +78,11 @@ export function loadTranslationsFactory(translate: TranslateService, http: HttpC
   providers: [
     PlayerStateService,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AutorizationInterceptorService,
-      multi: true
-    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AutorizationInterceptorService,
+    //   multi: true
+    // },
     Title,
     { provide: TitleStrategy, useClass: TranslateTitleStrategy },
     {

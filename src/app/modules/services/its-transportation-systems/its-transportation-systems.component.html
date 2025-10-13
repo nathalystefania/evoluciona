@@ -52,11 +52,12 @@
         <div class="flex flex-col w-fit md:w-2/3 md:pr-5">
           <h4 [innerHTML]="card.title | translate" class="flex text-gray text-xl text-center title_border_top relative pb-3 font-medium"></h4>
           <p [innerHTML]="card.text | translate"></p>
+          <a *ngIf="card.link" [routerLink]="card.link" class="text-primary underline underline-offset-4 mt-auto mb-4 inline-flex w-auto self-start" [innerHTML]="card.linkText | translate"></a>
         </div>
         <div class="flex flex-col w-fit md:w-1/3 md:pl-5" [id]="card.id_en">
           <img *ngIf="card.image && !card.video_mp4_en && !card.video_mp4_es" [src]="card.image" />
           
-          <div class="video-container_video" *ngIf="translate.currentLang == 'en' && card.video_mp4_en">
+          <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'en' && card.video_mp4_en">
             <img [src]="card.image" (click)="toggleVideo(card.id_en)" alt="" [ngClass]="{'show': isVideoCoverVisible(card.id_en), 'hide': isVideoPlaying(card.id_en) || isVideoPaused(card.id_en) }" class="fallback-video">
             <vg-player (onPlayerReady)="onPlayerReady($event, card.id_en)">
               <vg-overlay-play [vgFor]="card.id_en"></vg-overlay-play>
@@ -85,7 +86,7 @@
           </div>
           <div *ngIf="translate.currentLang == 'en' && !card.video_mp4_en && !card.image">Video no encontrado</div>
           
-          <div class="video-container_video" *ngIf="translate.currentLang == 'es' && card.video_mp4_es">
+          <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'es' && card.video_mp4_es">
             <img [src]="card.image" (click)="toggleVideo(card.id_es)" alt="" [ngClass]="{'show': isVideoCoverVisible(card.id_es), 'hide': isVideoPlaying(card.id_es) || isVideoPaused(card.id_es) }" class="fallback-video">
             <vg-player (onPlayerReady)="onPlayerReady($event, card.id_es)">
               <vg-overlay-play [vgFor]="card.id_es"></vg-overlay-play>
@@ -140,7 +141,7 @@
     </div> -->
 
     <!-- {{ playerState$ | async }} -->
-    <div class="video-container_video" *ngIf="translate.currentLang == 'en'">
+    <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'en'">
       <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('card.id_en')" alt="" [ngClass]="{'show': isVideoCoverVisible('card.id_en'), 'hide': isVideoPlaying('card.id_en') || isVideoPaused('card.id_en') }" class="fallback-video" >
       <vg-player (onPlayerReady)="onPlayerReady($event, 'card.id_en')">
         <vg-overlay-play vgFor="card.id_en"></vg-overlay-play>
@@ -168,7 +169,7 @@
       </vg-player>
     </div>
     
-    <div class="video-container_video" *ngIf="translate.currentLang == 'es'">
+    <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'es'">
       <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('itsEsVideo')" alt="" [ngClass]="{'show': isVideoCoverVisible('itsEsVideo'), 'hide': isVideoPlaying('itsEsVideo') || isVideoPaused('itsEsVideo') }" class="fallback-video">
       <vg-player (onPlayerReady)="onPlayerReady($event, 'itsEsVideo')">
         <vg-overlay-play vgFor="itsEsVideo"></vg-overlay-play>

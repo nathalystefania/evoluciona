@@ -12,28 +12,28 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~13.3.0",
+    "@angular/animations": "^14.3.0",
     "@angular/cdk": "^13.3.8",
-    "@angular/common": "~13.3.0",
-    "@angular/compiler": "~13.3.0",
-    "@angular/core": "~13.3.0",
-    "@angular/forms": "~13.3.0",
+    "@angular/common": "^14.3.0",
+    "@angular/compiler": "^14.3.0",
+    "@angular/core": "^14.3.0",
+    "@angular/forms": "^14.3.0",
     "@angular/material": "^13.3.8",
-    "@angular/platform-browser": "~13.3.0",
-    "@angular/platform-browser-dynamic": "~13.3.0",
-    "@angular/router": "~13.3.0",
+    "@angular/platform-browser": "^14.3.0",
+    "@angular/platform-browser-dynamic": "^14.3.0",
+    "@angular/router": "^14.3.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
-    "@videogular/ngx-videogular": "^5.0.1",
+    "@videogular/ngx-videogular": "^6.0.0",
     "materialize-css": "^1.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^13.3.11",
-    "@angular/cli": "~13.3.0",
-    "@angular/compiler-cli": "~13.3.0",
+    "@angular-devkit/build-angular": "^14.2.13",
+    "@angular/cli": "^14.2.13",
+    "@angular/compiler-cli": "^14.3.0",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.14",
     "@types/core-js": "^2.5.5",
@@ -48,6 +48,6 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",
-    "typescript": "~4.6.2"
+    "typescript": "~4.7.4"
   }
 }

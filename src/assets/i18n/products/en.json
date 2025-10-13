@@ -7,26 +7,43 @@
   },
   "REDUCED_SIZE_THAT_FACILITATES_ITS_IMPLEMENTATION_IN_ANY_INFRASTRUCTURE": "<b>REDUCED SIZE</b> that facilitates its implementation in any infrastructure.",
   "UNIQUE_INTERFACE_FOCUSED_ON_COMMON_FUNCTIONS": "<b>UNIQUE INTERFACE</b> focused on common functions.",
-  "MULTIPLE_LANGUAGES_LIKE_ENGLISH_SPANISH_PORTUGUESE_AND_GERMAN":"<b>MULTIPLE LANGUAGES</b> like English, Spanish, Portuguese and German.",
-  "BASED_ON_COMMON_PLATFORMS_GOOGLE_MATERIAL_JAVA_TOMCAT_MARIADB_WHICH_DO_NOT_REQUIRE_LICENSING":"<b>BASED ON COMMON PLATFORMS</b> Google Material, Java, Tomcat, MariaDB, which do not require licensing.",
-  "USES_OPEN_DATA_ENCODING_SCHEMES_JSON_THAT_FACILITATES_INTERACTION_WITH_OTHER_SYSTEMS_AND_HUMAN_UNDERSTANDING":"<b>USES OPEN DATA ENCODING SCHEMES (JSON)</b> that facilitates interaction with other systems and human understanding.",
-  "ADAPTABILITY_BASED_ON_CUSTOMER_REQUESTS_REGARDING_COMMON_CHARACTERISTICS":"<b>ADAPTABILITY</b> based on customer requests regarding common characteristics.",
+  "MULTIPLE_LANGUAGES_LIKE_ENGLISH_SPANISH_PORTUGUESE_AND_GERMAN": "<b>MULTIPLE LANGUAGES</b> like English, Spanish, Portuguese and German.",
+  "BASED_ON_COMMON_PLATFORMS_GOOGLE_MATERIAL_JAVA_TOMCAT_MARIADB_WHICH_DO_NOT_REQUIRE_LICENSING": "<b>BASED ON COMMON PLATFORMS</b> Google Material, Java, Tomcat, MariaDB, which do not require licensing.",
+  "USES_OPEN_DATA_ENCODING_SCHEMES_JSON_THAT_FACILITATES_INTERACTION_WITH_OTHER_SYSTEMS_AND_HUMAN_UNDERSTANDING": "<b>USES OPEN DATA ENCODING SCHEMES (JSON)</b> that facilitates interaction with other systems and human understanding.",
+  "ADAPTABILITY_BASED_ON_CUSTOMER_REQUESTS_REGARDING_COMMON_CHARACTERISTICS": "<b>ADAPTABILITY</b> based on customer requests regarding common characteristics.",
   "KNOW_ITS_CHARACTERISTICS": "Know its characteristics",
-  "TMFE_CONCENTRATES_IN_A_SINGLE_INTERFACE_ELEMENTS_SUCH_AS" : "TMFE concentrates in a single interface elements such as:",
+  "TMFE_CONCENTRATES_IN_A_SINGLE_INTERFACE_ELEMENTS_SUCH_AS": "TMFE concentrates in a single interface elements such as:",
   "ALARMS_EG_NETXMS": "<li>Alarms (eg NetXMS).</li> <li>Hierarchical view of the State of Objects (gantries, cameras, antennas and switches).</li> <li>Transactions and images.</li> <li>Common performance indicators, such as Transactions, TAG Reads, OCR Reliability and Image Captures.</li>",
   "CONTACT_US": "Contact us",
   "PCA": {
-      "TITLE": "Police Controller Adapter",
-      "PARAGRAPH_1": "The PCA is an intelligent road control solution designed for police vehicles. Its main function is to record data from DSRC devices such as digital tachograph or TAG, associating them with a control point and transmitting them in real time to another police control point using 4G/LTE connectivity. <br>Designed to offer performance, reliability and ease of use at all times. It has a compact base platform that integrates all components efficiently.",
-      "FEATURES": {
-          "TITLE_1": "The brain behind intelligent police control",
-          "TEXT_1": "Powered by a microcontroller capable of processing data in real time and transmitting it securely. Thanks to its GPS and 4G/LTE communication module. The unit can send information and reports directly to different police control points, while the DSRC transceiver ensures accurate and fast reading of digital tachographs.",
-          "TITLE_2": "Simplified installation and handling",
-          "TEXT_2": "The unit is easy to use and adapts to any work environment. <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Tool-free installation:</b> Its high-strength suction cups allow it to be mounted on the windshield or windows of the vehicle in seconds. Even on external mounts.</li><li class='mb-5'><b>Versatile connection:</b> It is powered both by the vehicle's battery (12v) and by the electrical network (220v), making it ideal for any operation. A permanent ventilation system protects it against high temperatures.</li><li><b>Intuitive monitoring:</b> LED indicators allow you to easily check the status of power and software. Additionally, a management panel with access from any browser facilitates the control and configuration of the unit.</li></ul>",
-          "TITLE_3": "Software and monitoring",
-          "TEXT_3": "The PCA includes intuitive software that gives you control and immediate accessibility over the entire system from any web browser. Some of its features: <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Real-Time Monitoring:</b> View on a map the exact location and operational status of each unit.</li><li><b>Efficient Management:</b> Quickly locate active devices and access detailed information with a simple click.</li></ul> Together, these components make the unit a robust, adaptable and field-ready solution, ensuring reliable support in mobility and security operations."
-      },
-      "IF_YOU_WANT_TO_KNOW_A_LITTLE_MORE": "If you want to know a little more about the PCA watch the video",
-      "DOWNLOAD_TECHNICAL_SHEET": "Download Data Sheet"
+    "TITLE": "Police Controller Adapter",
+    "PARAGRAPH_1": "The PCA is an intelligent road control solution designed for police vehicles. Its main function is to record data from DSRC devices such as digital tachograph or TAG, associating them with a control point and transmitting them in real time to another police control point using 4G/LTE connectivity. <br>Designed to offer performance, reliability and ease of use at all times. It has a compact base platform that integrates all components efficiently.",
+    "FEATURES": {
+      "TITLE_1": "The brain behind intelligent police control",
+      "TEXT_1": "Powered by a microcontroller capable of processing data in real time and transmitting it securely. Thanks to its GPS and 4G/LTE communication module. The unit can send information and reports directly to different police control points, while the DSRC transceiver ensures accurate and fast reading of digital tachographs.",
+      "TITLE_2": "Simplified installation and handling",
+      "TEXT_2": "The unit is easy to use and adapts to any work environment. <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Tool-free installation:</b> Its high-strength suction cups allow it to be mounted on the windshield or windows of the vehicle in seconds. Even on external mounts.</li><li class='mb-5'><b>Versatile connection:</b> It is powered both by the vehicle's battery (12v) and by the electrical network (220v), making it ideal for any operation. A permanent ventilation system protects it against high temperatures.</li><li><b>Intuitive monitoring:</b> LED indicators allow you to easily check the status of power and software. Additionally, a management panel with access from any browser facilitates the control and configuration of the unit.</li></ul>",
+      "TITLE_3": "Software and monitoring",
+      "TEXT_3": "The PCA includes intuitive software that gives you control and immediate accessibility over the entire system from any web browser. Some of its features: <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Real-Time Monitoring:</b> View on a map the exact location and operational status of each unit.</li><li><b>Efficient Management:</b> Quickly locate active devices and access detailed information with a simple click.</li></ul> Together, these components make the unit a robust, adaptable and field-ready solution, ensuring reliable support in mobility and security operations."
+    },
+    "IF_YOU_WANT_TO_KNOW_A_LITTLE_MORE": "If you want to know a little more about the PCA watch the video",
+    "DOWNLOAD_TECHNICAL_SHEET": "Download Data Sheet",
+    "FORM": {
+      "TITLE": "Leave us your contact information:",
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "EMAIL": "Email",
+      "COMPANY_ORGANIZATION": "Company/Organization",
+      "MOBILE": "Mobile Phone",
+      "COUNTRY": "Country",
+      "CITY": "City",
+      "COMMENTS": "Comments",
+      "SUBMIT": "Submit",
+      "DOWNLOAD_TECHNICAL_SHEET": "Download Police Controller Adapter Data Sheet",
+      "SENDING": "Sending...",
+      "DOWNLOAD_ANYWAY": "Download Without Providing Info",
+      "SUCCESS_MESSAGE": "<p class='text-xl md:text-2xl text-center'>Thank you for reaching out!</p><p class='text-lg text-center'>We’ve received your information and our team will get back to you shortly.</p>",
+      "ERROR_MESSAGE": "There was an error submitting the form. Please try again later."
+    }
   }
 }

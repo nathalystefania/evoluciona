@@ -1,4 +1,3 @@
-import { newArray } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/shared/services/news.service';
 import { environment as Env } from '@env/environment';

@@ -40,7 +40,7 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import(`@modules/contact/contact.module`).then(m => m.ContactModule),
-    data: { title: 'HOME.TITLE' }
+    data: { title: 'CONTACT.TITLE' }
   },
   {
     path: '**',

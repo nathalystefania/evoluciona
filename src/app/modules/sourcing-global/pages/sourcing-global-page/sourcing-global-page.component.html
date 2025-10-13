@@ -63,7 +63,7 @@
     </div>
     
     <div *ngFor="let video of landingVideos">
-      <div class="video-container_video mb-10" *ngIf="translate.currentLang == video.lang">
+      <div class="video-container_video aspect-[16/9] w-full mb-10" *ngIf="translate.currentLang == video.lang">
         <img [src]="video.cover" alt="" [ngClass]="[!videoPlay && !videoPause ? 'show' : 'hide', 'fallback-video']">
         <vg-player (onPlayerReady)="onPlayerReady($event)">
           <vg-overlay-play [vgFor]="video.id"></vg-overlay-play>

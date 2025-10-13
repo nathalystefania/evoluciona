@@ -54,6 +54,11 @@
       "CARD3": {
         "TITLE": "CBO SOFTWARE: COMMERCIAL BACK OFFICE",
         "TEXT": "It is a commercial management system that allows: Contract management, billing, collection, customer service (CRM), RNUT Interface, Web Self-Service, Offenders, TAG Management (Inventory), Accounting Interface (Accounting), Human Resources (Shifts and Cash), Digital Signature and interaction with a system interoperable with other toll highways."
+      },
+      "CARD4": {
+        "TITLE": "PCA: POLICE CONTROLLER ADAPTER",
+        "TEXT": "Our Police Controller Adapter PCA-1.02B solution is an innovative solution for speed control of cargo trucks. It has been designed to simplify and improve the operation of mobile police speed control units using DSRC radars, offering a solution that maximizes technical quality without sacrificing ease of use.",
+        "LINK_TEXT": "Learn more about the PCA"
       }
     }
   },

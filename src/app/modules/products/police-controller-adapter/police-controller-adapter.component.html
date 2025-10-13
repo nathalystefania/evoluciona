@@ -32,12 +32,12 @@
     </div>
 
     <!-- {{ playerState$ | async }} -->
-    <div class="video-container_video" *ngIf="translate.currentLang == 'en'">
+    <!-- <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'en'">
       <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('card.id_en')" alt="" [ngClass]="{'show': isVideoCoverVisible('card.id_en'), 'hide': isVideoPlaying('card.id_en') || isVideoPaused('card.id_en') }" class="fallback-video" >
       <vg-player (onPlayerReady)="onPlayerReady($event, 'card.id_en')">
         <vg-overlay-play vgFor="card.id_en"></vg-overlay-play>
     
-        <!-- Controles para el video en inglés -->
+        
         <vg-controls [vgAutohide]="true" [vgAutohideTime]="5">
           <vg-play-pause vgFor="card.id_en"></vg-play-pause>
           <vg-time-display vgFor="card.id_en" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
@@ -58,32 +58,33 @@
             <track kind="subtitles" label="Spanish" src="./assets/video/its/subtitles/its_en_sub_es.vtt" srclang="es">
         </video>
       </vg-player>
-    </div>
+    </div> -->
     
-    <div class="video-container_video" *ngIf="translate.currentLang == 'es'">
-      <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('itsEsVideo')" alt="" [ngClass]="{'show': isVideoCoverVisible('itsEsVideo'), 'hide': isVideoPlaying('itsEsVideo') || isVideoPaused('itsEsVideo') }" class="fallback-video">
-      <vg-player (onPlayerReady)="onPlayerReady($event, 'itsEsVideo')">
-        <vg-overlay-play vgFor="itsEsVideo"></vg-overlay-play>
+    <!-- <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'es'"> -->
+    <div class="video-container_video aspect-[16/9] w-full">
+      <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('pcaEsVideo')" alt="" [ngClass]="{'show': isVideoCoverVisible('pcaEsVideo'), 'hide': isVideoPlaying('pcaEsVideo') || isVideoPaused('pcaEsVideo') }" class="fallback-video">
+      <vg-player (onPlayerReady)="onPlayerReady($event, 'pcaEsVideo')">
+        <vg-overlay-play vgFor="pcaEsVideo"></vg-overlay-play>
     
         <!-- Controles para el video en español -->
         <vg-controls [vgAutohide]="true" [vgAutohideTime]="5">
-          <vg-play-pause vgFor="itsEsVideo"></vg-play-pause>
-          <vg-time-display vgFor="itsEsVideo" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-          <vg-scrub-bar vgFor="itsEsVideo" style="pointer-events: none;"></vg-scrub-bar>
-          <vg-time-display vgFor="itsEsVideo" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-          <vg-track-selector vgFor="itsEsVideo" class="track-selector"></vg-track-selector>
-          <vg-mute vgFor="itsEsVideo"></vg-mute>
-          <vg-volume vgFor="itsEsVideo"></vg-volume>
-          <vg-fullscreen vgFor="itsEsVideo"></vg-fullscreen>
+          <vg-play-pause vgFor="pcaEsVideo"></vg-play-pause>
+          <vg-time-display vgFor="pcaEsVideo" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+          <vg-scrub-bar vgFor="pcaEsVideo" style="pointer-events: none;"></vg-scrub-bar>
+          <vg-time-display vgFor="pcaEsVideo" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+          <vg-track-selector vgFor="pcaEsVideo" class="track-selector"></vg-track-selector>
+          <vg-mute vgFor="pcaEsVideo"></vg-mute>
+          <vg-volume vgFor="pcaEsVideo"></vg-volume>
+          <vg-fullscreen vgFor="pcaEsVideo"></vg-fullscreen>
         </vg-controls>
     
-        <video [vgMedia]="$any(media)" #media id="itsEsVideo" preload="auto">
-            <source src="./assets/video/its/ITS_es.mp4" type="video/mp4">
-            <source src="./assets/video/its/ITS_es.ogv" type="video/ogv">
-            <source src="./assets/video/its/ITS_es.webm" type="video/webm">
+        <video [vgMedia]="$any(media)" #media id="pcaEsVideo" preload="auto">
+            <source src="./assets/video/products/pca/pca-police-controller-adapter.mp4" type="video/mp4">
+            <source src="./assets/video/products/pca/pca-police-controller-adapter.ogv" type="video/ogv">
+            <source src="./assets/video/products/pca/pca-police-controller-adapter.webm" type="video/webm">
     
-            <track kind="subtitles" label="English" src="./assets/video/its/subtitles/its_es_sub_en.vtt" srclang="en">
-            <track kind="subtitles" label="Spanish" src="./assets/video/its/subtitles/its_es_sub_es.vtt" srclang="es">
+            <track kind="subtitles" label="English" src="/assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt" srclang="en">
+            <track kind="subtitles" label="Spanish" src="/assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt" srclang="es" default>
         </video>
       </vg-player>
     </div>
@@ -98,7 +99,7 @@
       [text]="'PCA.DOWNLOAD_TECHNICAL_SHEET'"
       [svgIcon]="'icon-download'"
       [iconPosition]="'right'"
-      [action]="handleCtaClick">
+      (click)="openDialog()">
     </app-call-to-action>
   </div>
 </div>

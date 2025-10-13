@@ -103,7 +103,7 @@
     </div> -->
     
     <!-- {{ playerState$ | async }} -->
-    <div class="video-container_video mb-10" *ngIf="translate.currentLang == 'en'">
+    <div class="video-container_video aspect-[16/9] w-full mb-10" *ngIf="translate.currentLang == 'en'">
       <img src="./assets/images/nosotros-video-cover.png" alt="" [ngClass]="[!videoPlay && !videoPause ? 'show' : 'hide', 'fallback-video']">
       <vg-player (onPlayerReady)="onPlayerReady($event)">
         <vg-overlay-play vgFor="homeEnVideo"></vg-overlay-play>
@@ -130,7 +130,7 @@
       </vg-player>
     </div>
 
-    <div class="video-container_video mb-10" *ngIf="translate.currentLang == 'es'">
+    <div class="video-container_video aspect-[16/9] w-full mb-10" *ngIf="translate.currentLang == 'es'">
       <img src="./assets/images/nosotros-video-cover.png" alt="" [ngClass]="[!videoPlay && !videoPause ? 'show' : 'hide', 'fallback-video']">
       <vg-player (onPlayerReady)="onPlayerReady($event)">
         <vg-overlay-play vgFor="homeEsVideo"></vg-overlay-play>

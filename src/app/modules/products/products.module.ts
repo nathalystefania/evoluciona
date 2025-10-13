@@ -16,6 +16,13 @@ import { SharedModule } from '@shared/shared.module';
 import { OurProductsComponent } from './our-products/our-products.component';
 import { TrafficMonitoringFrontEndComponent } from './traffic-monitoring-front-end/traffic-monitoring-front-end.component';
 import { PoliceControllerAdapterComponent } from './police-controller-adapter/police-controller-adapter.component';
+import { PcaFormComponent } from './police-controller-adapter/pca-form/pca-form.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from "@angular/material/icon";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 export function productsHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/products/', '.json');
@@ -26,24 +33,31 @@ export function productsHttpLoaderFactory(http: HttpClient) {
     ProductPageComponent,
     OurProductsComponent,
     TrafficMonitoringFrontEndComponent,
-    PoliceControllerAdapterComponent
+    PoliceControllerAdapterComponent,
+    PcaFormComponent
   ],
   imports: [
     SharedModule,
     CommonModule,
     ProductsRoutingModule,
     TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: productsHttpLoaderFactory,
-        deps: [HttpClient]
-      },
-      isolate: true,
+        loader: {
+            provide: TranslateLoader,
+            useFactory: productsHttpLoaderFactory,
+            deps: [HttpClient]
+        },
+        isolate: true,
     }),
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
-  ]
+    VgBufferingModule,
+    MatDialogModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatProgressSpinnerModule
+]
 })
 export class ProductsModule { }

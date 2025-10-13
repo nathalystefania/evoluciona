@@ -27,7 +27,24 @@
           "TEXT_3": "El PCA incluye un software intuitivo que te brinda control y accesibilidad inmediata sobre todo el sistema desde cualquier navegador web. Algunas de sus caracteristicas: <ul class='browser-default list-disc pl-[1.5rem] py-6'><li class='mb-5'><b>Monitoreo en Tiempo Real:</b> Visualizaenunmapala ubicación exacta y el estado operativo de cada unidad.</li><li><b>Gestión Eficiente:</b> Localiza rápidamente dispositivos activos y accede a información detallada con un simple clic.</li></ul> En conjunto, estos componentes hacen de la unidad una solución robusta, adaptable y lista para el terreno, garantizando un soporte confiable en las operaciones de movilidad y seguridad."
       },
       "IF_YOU_WANT_TO_KNOW_A_LITTLE_MORE": "Si quieres saber un poco más sobre el PCA mira el video",
-      "DOWNLOAD_TECHNICAL_SHEET": "Descargar Ficha Técnica"
+      "DOWNLOAD_TECHNICAL_SHEET": "Descargar Ficha Técnica",
+      "FORM": {
+          "TITLE": "Déjanos tus datos de contacto:",
+          "FIRST_NAME": "Nombre",
+          "LAST_NAME": "Apellidos",
+          "EMAIL": "E-mail",
+          "COMPANY_ORGANIZATION": "Compañía/Organización",
+          "MOBILE": "Teléfono móvil",
+          "COUNTRY": "País",
+          "CITY": "Ciudad",
+          "COMMENTS": "Comentarios",
+          "SUBMIT": "Enviar",
+          "DOWNLOAD_TECHNICAL_SHEET": "Descargar Ficha Técnica Police Controller Adapter",
+          "SENDING": "Enviando...",
+          "DOWNLOAD_ANYWAY": "Descargar sin dar su información",
+          "SUCCESS_MESSAGE": "<p class='text-xl md:text-2xl text-center'>¡Gracias por contactarnos!</p><p class='text-lg text-center'>Hemos recibido tu información y nuestro equipo se pondrá en contacto contigo en breve.</p>",
+          "ERROR_MESSAGE": "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde."
+      }
   }
   
 }

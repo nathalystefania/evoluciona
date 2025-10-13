@@ -21,8 +21,8 @@ export class SourcingGlobalPageComponent implements OnInit, OnDestroy {
 
   intervalId: any;
   
-  videoPlay: boolean | undefined
-  videoPause: boolean | undefined
+  videoPlay: boolean = false
+  videoPause: boolean = false 
   api!: VgApiService;
   playerState$!: Observable<string>;
 

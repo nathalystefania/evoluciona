@@ -172,7 +172,7 @@ export class HeaderComponent implements OnInit {
         link: 'https://www.linkedin.com/company/evoluciona-limitada/posts/?feedView=all'
       },
       {
-        name: 'CONTACT',
+        name: 'CONTACT.TITLE',
         router: ['/', 'contact']
       }
     ]
