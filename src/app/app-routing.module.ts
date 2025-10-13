@@ -12,10 +12,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabledBlocking',
-    scrollPositionRestoration: 'top',
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: false,
+      initialNavigation: 'enabledBlocking',
+      scrollPositionRestoration: 'top',
+      }
+    )
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

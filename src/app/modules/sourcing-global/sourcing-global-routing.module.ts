@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: SourcingGlobalPageComponent,
+    data: { title: 'GLOBAL_SOURCING.TITLE' }
   },
   {
     path: '**',

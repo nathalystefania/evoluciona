@@ -31,11 +31,11 @@
             "inlineStyleLanguage": "sass",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
               {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "ignore": ["videos/**"],
+                  "output": "/assets/"
               }
             ],
             "styles": [
@@ -58,8 +58,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "3kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "8kb"
                 }
               ],
               "fileReplacements": [

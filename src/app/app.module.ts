@@ -12,7 +12,7 @@ import { ScrollAnchorDirective } from './directives/scroll-anchor.directive';
 import { ScrollSectionDirective } from './directives/scroll-section.directive';
 import { ScrollManagerDirective } from './directives/scroll-manager.directive';
 import { PlayerStateService } from '@shared/services/player-state.service';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { MaterialModule } from '@shared/material.module';
 
@@ -77,7 +77,7 @@ export function loadTranslationsFactory(translate: TranslateService, http: HttpC
   ],
   providers: [
     PlayerStateService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
     // {
     //   provide: HTTP_INTERCEPTORS,
     //   useClass: AutorizationInterceptorService,

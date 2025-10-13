@@ -5,7 +5,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 const routes: Routes = [
   {
     path: '',
-    component: ContactPageComponent
+    component: ContactPageComponent,
+    data: { title: 'CONTACT.TITLE' }
   }
 ];
 

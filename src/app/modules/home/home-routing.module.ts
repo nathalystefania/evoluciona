@@ -10,33 +10,32 @@ const routes: Routes = [
   {
     path: 'products',
     loadChildren: () => import(`@modules/products/products.module`).then(m => m.ProductsModule),
-    data: { title: 'HOME.TITLE' }
+    data: { title: 'PRODUCTS.TITLE' }
   },
   {
     path: 'its-transportation-systems',
     loadChildren: () => import(`@modules/services/services.module`).then(m => m.ServicesModule),
-    data: { title: 'HOME.TITLE' }
+    data: { title: 'ITS.TITLE' }
   },
   {
     path: 'clients',
     loadChildren: () => import(`@modules/clients/clients.module`).then(m => m.ClientsModule),
-    data: { title: 'HOME.TITLE' }
+    data: { title: 'CLIENTS_&_SUCCESS_STORIES.TITLE' }
   },
   {
     path: 'development-innovation',
     loadChildren: () => import(`@modules/development-innovation/development-innovation.module`).then(m => m.DevelopmentInnovationModule),
-    data: { title: 'HOME.TITLE' }
+    data: { title: 'DEVELOPMENT_&_INNOVATION.TITLE' }
   },
   {
     path: 'sourcing-global',
     loadChildren: () => import(`@modules/sourcing-global/sourcing-global.module`).then(m => m.SourcingGlobalModule),
-    data: { title: 'HOME.TITLE' }
+    data: { title: 'GLOBAL_SOURCING.TITLE' }
   },
-  {
-    path: 'news',
-    loadChildren: () => import(`@modules/news/news.module`).then(m => m.NewsModule),
-    data: { title: 'HOME.TITLE' }
-  },
+  // {
+  //   path: 'news',
+  //   loadChildren: () => import(`@modules/news/news.module`).then(m => m.NewsModule),
+  // },
   {
     path: 'contact',
     loadChildren: () => import(`@modules/contact/contact.module`).then(m => m.ContactModule),
@@ -49,7 +48,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes)
+  ],
   exports: [RouterModule]
 })
 export class HomeRoutingModule { }

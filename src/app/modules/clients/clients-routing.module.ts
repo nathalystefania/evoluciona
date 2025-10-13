@@ -5,7 +5,8 @@ import { ClientsPageComponent } from './pages/clients-page/clients-page.componen
 const routes: Routes = [
   {
     path: '',
-    component: ClientsPageComponent
+    component: ClientsPageComponent,
+    data: { title: 'CLIENTS_&_SUCCESS_STORIES.TITLE' }
   }
 ];
 

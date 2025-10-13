@@ -1,17 +1,18 @@
 {
-  "Sitetitle": "Angular Multi Language Site",
-  "HOME" : "Home",
-  "ABOUT_US" : "About us",
-  "SERVICES" : "Services",
-  "PRODUCTS" : "Products",
-  "CLIENTS" : "Clients",
-  "COMMUNITY": "Community",
-  "CONTACT" : "Contact",
+  "MENU": {
+    "HOME" : "Home",
+    "ABOUT_US" : "About us",
+    "SERVICES" : "Services",
+    "PRODUCTS" : "Products",
+    "ITS" : "ITS",
+    "CLIENTS" : "Clients",
+    "COMMUNITY": "Community",
+    "CONTACT" : "Contact",
+    "CLIENTS_&_SUCCESS_STORIES": "Clients & Success Stories",
+    "GLOBAL_SOURCING": "Sourcing Global",
+    "DEVELOPMENT_&_INNOVATION": "Development & Innovation",
+    "NEWS" : "News"
+  },
   "FOLLOW_US_ON_NETWORKS": "FOLLOW US ON NETWORKS",
-  "ALL_RIGHTS_RESERVED": "All Rights Reserved.",
-
-  "CLIENTS_&_SUCCESS_STORIES": "Clients & Success Stories",
-  "GLOBAL_SOURCING": "Sourcing Global",
-  "DEVELOPMENT_&_INNOVATION": "Development & Innovation",
-  "NEWS" : "News"
+  "ALL_RIGHTS_RESERVED": "All Rights Reserved."
 }

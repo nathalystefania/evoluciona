@@ -16,32 +16,32 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.mainMenu.defaultOptions = [
       {
-        name: 'ABOUT_US',
+        name: 'MENU.ABOUT_US',
         router: ['/', 'home']
       },
       {
-        name: 'ITS',
+        name: 'MENU.ITS',
         router: ['', 'its-transportation-systems']
       },
       {
-        name: 'GLOBAL_SOURCING',
+        name: 'MENU.GLOBAL_SOURCING',
         router: ['/', 'sourcing-global']
       },
       {
-        name: 'DEVELOPMENT_&_INNOVATION',
+        name: 'MENU.DEVELOPMENT_&_INNOVATION',
         router: ['/', 'development-innovation']
       },
       {
-        name: 'CLIENTS_&_SUCCESS_STORIES',
+        name: 'MENU.CLIENTS_&_SUCCESS_STORIES',
         router: ['/', 'clients']
       },
       {
-        name: 'NEWS',
+        name: 'MENU.NEWS',
         // router: ['/', 'community']
         link: 'https://www.linkedin.com/company/evoluciona-limitada/posts/?feedView=all'
       },
       {
-        name: 'CONTACT',
+        name: 'MENU.CONTACT',
         router: ['/', 'contact']
       }
     ]

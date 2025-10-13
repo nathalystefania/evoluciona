@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: DevelopmentInnovationPageComponent,
+    data: { title: 'DEVELOPMENT_&_INNOVATION.TITLE' }
   }
 ];
 

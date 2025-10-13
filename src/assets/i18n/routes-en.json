@@ -1,9 +1,21 @@
 {
   "HOME": {
-    "TITLE": "Home"
+    "TITLE": "About Us"
   },
   "CONTACT": {
     "TITLE": "Contact"
+  },
+  "ITS": {
+    "TITLE": "Transportation Intelligent"
+  },
+  "CLIENTS_&_SUCCESS_STORIES": {
+    "TITLE": "Clients & Success Stories"
+  },
+  "GLOBAL_SOURCING": {
+    "TITLE": "Global Sourcing"
+  },
+  "DEVELOPMENT_&_INNOVATION": { 
+    "TITLE": "Development & Innovation"
   },
   "PRODUCTS": {
     "TITLE": "Products",

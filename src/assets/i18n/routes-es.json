@@ -1,9 +1,21 @@
 {
   "HOME": {
-    "TITLE": "Inicio"
+    "TITLE": "Nosotros"
   },
   "CONTACT": {
     "TITLE": "Contacto"
+  },
+  "ITS": {
+    "TITLE": "Inteligencia de Transporte"
+  },
+  "CLIENTS_&_SUCCESS_STORIES": {
+    "TITLE": "Clientes & casos de éxito"
+  },
+  "GLOBAL_SOURCING": {
+    "TITLE": "Global Sourcing"
+  },
+  "DEVELOPMENT_&_INNOVATION": {
+    "TITLE": "Desarrollo e innovación"
   },
   "PRODUCTS": {
     "TITLE": "Productos",

@@ -90,89 +90,89 @@ export class HeaderComponent implements OnInit {
 
     this.mainMenu.defaultOptions = [
       {
-        name: 'ABOUT_US',
+        name: 'MENU.ABOUT_US',
         router: ['/', 'home']
       },
       // {
-      //   name: 'SERVICES',
+      //   name: 'MENU.SERVICES',
       //   router: ['services', 'our-services'],
       //   childrens: [
       //     {
       //       initials: '',
-      //       name: 'Sistemas de Transporte ITS',
+      //       name: 'MENU.Sistemas de Transporte ITS',
       //       router: ['services', 'its-transportation-systems']
       //     },
       //     {
       //       initials: '',
-      //       name: 'Sourcing Global',
+      //       name: 'MENU.Sourcing Global',
       //       router: ['/', 'services']
       //     },
       //     {
       //       initials: '',
-      //       name: 'Aplicaciones Móviles',
+      //       name: 'MENU.Aplicaciones Móviles',
       //       router: ['/', 'services']
       //     },
       //     {
       //       initials: '',
-      //       name: 'Desarrollo Audiovisual',
+      //       name: 'MENU.Desarrollo Audiovisual',
       //       router: ['/', 'services']
       //     },
       //     {
       //       initials: '',
-      //       name: 'Ingeniería de Negocios',
+      //       name: 'MENU.Ingeniería de Negocios',
       //       router: ['/', 'services']
       //     },
       //   ]
       // },
       // {
-      //   name: 'PRODUCTS',
+      //   name: 'MENU.PRODUCTS',
       //   router: ['products', 'our-products'],
       //   childrens: [
       //     {
       //       initials: 'TMFE',
-      //       name: 'Traffic Monitoring Front End',
+      //       name: 'MENU.Traffic Monitoring Front End',
       //       router: ['products', 'traffic-monitoring-front-end']
       //     },
       //     {
       //       initials: 'OBO',
-      //       name: 'Operational Back Office',
+      //       name: 'MENU.Operational Back Office',
       //       router: ['/', 'products']
       //     },
       //     {
       //       initials: 'CBO',
-      //       name: 'Comercial Back Office',
+      //       name: 'MENU.Comercial Back Office',
       //       router: ['/', 'products']
       //     },
       //     {
       //       initials: '',
-      //       name: 'RepublicApp',
+      //       name: 'MENU.RepublicApp',
       //       router: ['/', 'products']
       //     },
       //   ]
       // },
       {
-        name: 'ITS',
+        name: 'MENU.ITS',
         router: ['', 'its-transportation-systems']
       },
       {
-        name: 'GLOBAL_SOURCING',
+        name: 'MENU.GLOBAL_SOURCING',
         router: ['/', 'sourcing-global']
       },
       {
-        name: 'DEVELOPMENT_&_INNOVATION',
+        name: 'MENU.DEVELOPMENT_&_INNOVATION',
         router: ['/', 'development-innovation']
       },
       {
-        name: 'CLIENTS_&_SUCCESS_STORIES',
+        name: 'MENU.CLIENTS_&_SUCCESS_STORIES',
         router: ['/', 'clients']
       },
       {
-        name: 'NEWS',
+        name: 'MENU.NEWS',
         // router: ['/', 'community']
         link: 'https://www.linkedin.com/company/evoluciona-limitada/posts/?feedView=all'
       },
       {
-        name: 'CONTACT.TITLE',
+        name: 'MENU.CONTACT',
         router: ['/', 'contact']
       }
     ]
