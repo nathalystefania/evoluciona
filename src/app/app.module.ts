@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { AutorizationInterceptorService } from './core/interceptors/autorization.service';
+// import { AutorizationInterceptorService } from './core/interceptors/autorization.service';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ScrollAnchorDirective } from './directives/scroll-anchor.directive';
 import { ScrollSectionDirective } from './directives/scroll-section.directive';
