@@ -1,4 +1,4 @@
-import { Component, Inject, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, Inject, AfterViewInit, Renderer2, NgZone, ChangeDetectorRef } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { AnalyticsService } from '@shared/services/analytics.service';
@@ -19,7 +19,9 @@ export class PcaFormComponent implements AfterViewInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private renderer: Renderer2,
     private http: HttpClient,
-    private analytics: AnalyticsService
+    private analytics: AnalyticsService,
+    private ngZone: NgZone,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -49,6 +51,56 @@ export class PcaFormComponent implements AfterViewInit {
     helperScript.onload = () => console.log('Local Zoho helper loaded');
 
     this.renderer.appendChild(document.body, helperScript);
+
+
+    // Detectar envío completado al cargar el iframe
+    const iframe = document.getElementById('hidden6778134000000950046Frame') as HTMLIFrameElement | null;
+
+    if (iframe) {
+      iframe.addEventListener('load', () => {
+        try {
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+
+          // Si el iframe tiene contenido de Zoho, damos por válido el envío
+          if (iframeDoc && iframeDoc.body && iframeDoc.body.innerHTML.trim().length > 0) {
+            console.log('Zoho form submission detected');
+            this.ngZone.run(() => {
+              this.isSubmitting = false;
+              this.formSubmitted = true;
+              this.cdr.detectChanges();
+            });
+          } else {
+            console.warn('Iframe loaded but empty (maybe validation failed?)');
+            this.ngZone.run(() => {
+              this.isSubmitting = false;
+              this.cdr.detectChanges();
+            });
+          }
+
+          console.log('Zoho iframe response:', iframeDoc?.body?.innerHTML);
+
+        } catch (error) {
+          console.error('Error reading Zoho iframe response', error);
+          this.ngZone.run(() => {
+            this.isSubmitting = false;
+            this.cdr.detectChanges();
+          });
+        }
+      });
+    }
+
+    // Detectar el inicio del envío
+    const form = document.getElementById('BiginWebToRecordFormDiv6778134000000950046') as HTMLFormElement | null;
+    if (form) {
+      form.addEventListener('submit', () => {
+        this.ngZone.run(() => {
+          this.isSubmitting = true;
+          this.formSubmitted = false;
+          this.cdr.detectChanges();
+        });
+      });
+    }
+  
   }
 
   beforeSubmit() {
