@@ -27,10 +27,10 @@ export class PoliceControllerAdapterComponent implements OnInit {
   features: { title: string; text: string; image: string; }[] = [];
 
 
-  // scriptsLoaded = false;
-  // isSubmitting = false;
-  // formSubmitted = false;
-  // private scriptRefs: HTMLScriptElement[] = [];
+  scriptsLoaded = false;
+  isSubmitting = false;
+  formSubmitted = false;
+  private scriptRefs: HTMLScriptElement[] = [];
 
   constructor(
     public dialog: MatDialog,
@@ -54,21 +54,22 @@ export class PoliceControllerAdapterComponent implements OnInit {
 
 
 
-// ngAfterViewInit() {
-//   // 2️⃣ Script general (el que usas para configuración adicional)
-//   const helperScript = this.renderer.createElement('script');
-//   helperScript.src = 'assets/js/zoho-form.js';
-//   helperScript.onload = () => console.log('Local Zoho helper loaded');
+ngAfterViewInit() {
+  // 2️⃣ Script general (el que usas para configuración adicional)
+  const helperScript = this.renderer.createElement('script');
+  helperScript.src = 'assets/js/zoho-form.js';
+  helperScript.defer = true;
+  helperScript.onload = () => console.log('Local Zoho helper loaded');
 
-//   // 3️⃣ Agregarlos al body (en orden)
-//   this.renderer.appendChild(document.body, helperScript);
-// }
+  // 3️⃣ Agregarlos al body (en orden)
+  this.renderer.appendChild(document.body, helperScript);
+}
 
-// forceSubmit() {
-//   const form = document.getElementById('BiginWebToRecordForm6778134000000950046') as HTMLFormElement;
-//   console.log('Force submit', form.action);
-//   form.submit();
-// }
+forceSubmit() {
+  const form = document.getElementById('BiginWebToRecordForm6778134000000950046') as HTMLFormElement;
+  console.log('Force submit', form.action);
+  form.submit();
+}
 
 
 

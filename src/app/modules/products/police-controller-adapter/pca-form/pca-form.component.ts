@@ -90,6 +90,7 @@ export class PcaFormComponent implements AfterViewInit {
   ngAfterViewInit() {
     const helperScript = this.renderer.createElement('script');
     helperScript.src = 'assets/js/zoho-form.js';
+    helperScript.defer = true;
     helperScript.onload = () => console.log('Local Zoho helper loaded');
 
     this.renderer.appendChild(document.body, helperScript);

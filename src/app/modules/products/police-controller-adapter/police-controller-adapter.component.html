@@ -1,4 +1,4 @@
-<!-- <iframe id='hidden6778134000000950046Frame' name='hidden6778134000000950046Frame' style='display: none;'
+<iframe id='hidden6778134000000950046Frame' name='hidden6778134000000950046Frame' style='display: none;'
   class='iframe-container'></iframe>
 <div class='wf-parent' id='BiginWebToRecordFormParent6778134000000950046'>
   <div class='wf-wrapper' id='BiginWebToRecordFormDiv6778134000000950046'>
@@ -110,7 +110,7 @@
       </div>
     </form>
   </div>
-</div> -->
+</div>
 
 
 
@@ -185,7 +185,7 @@
     <div class="video-container_video aspect-[16/9] w-full">
       <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('pcaEsVideo')" alt=""
         [ngClass]="{'show': isVideoCoverVisible('pcaEsVideo'), 'hide': isVideoPlaying('pcaEsVideo') || isVideoPaused('pcaEsVideo') }"
-        class="fallback-video" loading="lazy">
+        class="fallback-video">
       <vg-player (onPlayerReady)="onPlayerReady($event, 'pcaEsVideo')">
         <vg-overlay-play vgFor="pcaEsVideo"></vg-overlay-play>
 
