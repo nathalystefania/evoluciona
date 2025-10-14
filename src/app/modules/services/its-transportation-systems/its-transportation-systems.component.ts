@@ -87,7 +87,7 @@ export class ItsTransportationSystemsComponent implements OnInit {
         image: './assets/images/products/pca/product-pca.jpg',
         id_en: 'itsPCAEn',
         id_es: 'itsPCAEs',
-        link: '/products/police-controller-adapter',
+        link: '/products/pca',
         linkText: 'ITS_SOFTWARE_DEVELOPED.CARDS.CARD4.LINK_TEXT',
         video_mp4_en: './assets/video/products/pca/pca-police-controller-adapter.mp4',
         video_ogv_en: './assets/video/products/pca/pca-police-controller-adapter.ogv',

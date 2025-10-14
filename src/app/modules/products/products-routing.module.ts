@@ -21,7 +21,7 @@ const routes: Routes = [
         data: { title: 'PRODUCTS.TITLE' }
       },
       {
-        path: 'police-controller-adapter',
+        path: 'pca',
         component: PoliceControllerAdapterComponent,
         data: { title: 'PRODUCTS.PCA.TITLE' }
       },
