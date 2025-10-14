@@ -1,7 +1,6 @@
-import { Component, Inject, AfterViewInit, Renderer2, NgZone } from '@angular/core';
+import { Component, Inject, AfterViewInit, Renderer2 } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef } from '@angular/core';
 import { AnalyticsService } from '@shared/services/analytics.service';
 
 @Component({
@@ -20,8 +19,6 @@ export class PcaFormComponent implements AfterViewInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private renderer: Renderer2,
     private http: HttpClient,
-    private ngZone: NgZone,
-    private cdr: ChangeDetectorRef,
     private analytics: AnalyticsService
   ) { }
 
@@ -44,48 +41,6 @@ export class PcaFormComponent implements AfterViewInit {
       console.error('Error al enviar el formulario Zoho');
     });
   }
-
-  // ngAfterViewInit() {
-  //   const localScript = this.renderer.createElement('script');
-  //   localScript.src = 'assets/js/zoho-form.js';
-  //   localScript.onload = () => { this.scriptsLoaded = true; };
-  //   this.renderer.appendChild(document.body, localScript);
-
-
-
-  //   // Esperar hasta que el form esté realmente en el DOM
-  //   const checkFormInterval = setInterval(() => {
-  //     const form = document.getElementById('BiginWebToRecordForm6778134000000950046');
-  //     if (form) {
-  //       clearInterval(checkFormInterval);
-
-  //       // Ahora sí, cargar el script de Zoho
-  //       const zohoScript = this.renderer.createElement('script');
-  //       zohoScript.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=f2021906c523c66f8825da50ba06df77f7630e25fe9428586d949eff6237cbe7dd1aa4e99d5ba6165fb8a88be169fe17gidc9d571f274291b4256e8221941eb7c2523544a355756d381c1c2a7410af0f259';
-  //       zohoScript.id = 'wf_script';
-  //       zohoScript.onload = () => {
-  //         this.scriptsLoaded = true;
-  //         console.log('Zoho script loaded después de renderizar el form');
-  //         console.log('validateForm:', typeof (window as any).validateForm6778134000000950046);
-  //       };
-  //       this.renderer.appendChild(document.body, zohoScript);
-  //     }
-  //   }, 300); // chequea cada 300ms
-
-
-  //   // escuchar el load del iframe para detectar envío completado
-  //   const iframe = document.getElementById('hidden6778134000000950046Frame') as HTMLIFrameElement | null;
-  //   if (iframe) {
-  //     this.renderer.listen(iframe, 'load', () => {
-  //       this.ngZone.run(() => {
-  //         this.isSubmitting = false;
-  //         this.formSubmitted = true;
-  //         this.cdr.detectChanges();
-  //       });
-  //     });
-  //   }
-  // }
-
 
   ngAfterViewInit() {
     const helperScript = this.renderer.createElement('script');
@@ -111,41 +66,6 @@ export class PcaFormComponent implements AfterViewInit {
       label: 'Registro formulario PCA con descarga ficha técnica'
     });
   }
-
-  // onSubmit(e: Event) {
-  //   e.preventDefault();
-  //   this.analytics.sendEvent('register_click', {
-  //     category: 'Botón',
-  //     label: 'Registro formulario PCA con descarga ficha técnica'
-  //   });
-
-  //   if (!this.scriptsLoaded) {
-  //     console.warn('Zoho script not loaded yet');
-  //     return;
-  //   }
-  //   // Llamar a la función global que valida y devuelve boolean
-  //   const ok = (window as any).checkMandatory6778134000000950046 ? (window as any).checkMandatory6778134000000950046() : true;
-  //   if (ok) {
-  //      this.ngZone.run(() => {
-  //       this.isSubmitting = true;
-  //       this.cdr.detectChanges();
-  //     });
-  //     // enviar el form manualmente (para respetar target iframe)
-  //     (e.target as HTMLFormElement).submit();
-
-  //     // fallback: si no llega respuesta en X segundos, ocultar loading
-  //     setTimeout(() => {
-  //       if (this.isSubmitting) {
-  //         this.ngZone.run(() => {
-  //           this.isSubmitting = false;
-  //           this.cdr.detectChanges();
-  //         });
-  //       }
-  //     }, 15000);
-  //   } else {
-  //     console.log('Formulario inválido según Zoho validation');
-  //   }
-  // }
 
   close(result?: any) {
     this.dialogRef.close(result);

@@ -16,7 +16,7 @@
 
   window.validateForm6778134000000950046 = function(event) {
     console.log('Zoho validateForm6778134000000950046 running');
-    // 🔹 Avisamos a Angular que empezó el envío
+    // Avisamos a Angular que empezó el envío
     window.dispatchEvent(new CustomEvent('zohoFormSubmitting'));
 
     if ((typeof checkMandatory !== 'undefined' && checkMandatory()) ||
@@ -29,19 +29,19 @@
     }
   };
 
-  // 🔹 Escucha cuando Zoho termine de cargar en el iframe (éxito o error)
+  // Escucha cuando Zoho termine de cargar en el iframe (éxito o error)
   var iframe = document.getElementById('hidden6778134000000950046Frame');
   if (iframe) {
     iframe.addEventListener('load', function () {
       try {
         var doc = iframe.contentWindow.document;
         if (doc.body.childElementCount !== 0) {
-          console.log('✅ Zoho form submitted successfully');
+          console.log('Zoho form submitted successfully');
           window.dispatchEvent(new CustomEvent('zohoFormSuccess'));
           document.getElementById('BiginWebToRecordFormParent6778134000000950046').style.display = 'none';
         }
       } catch (error) {
-        console.log('❌ Zoho form submission error');
+        console.log('Zoho form submission error');
         window.dispatchEvent(new CustomEvent('zohoFormError'));
       }
     });
