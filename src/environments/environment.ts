@@ -20,4 +20,5 @@
 
 export const environment = {
   production: false,
+  analyticsId: '',
 };

@@ -2,6 +2,7 @@ import { Component, Inject, AfterViewInit, Renderer2, NgZone } from '@angular/co
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef } from '@angular/core';
+import { AnalyticsService } from '@shared/services/analytics.service';
 
 @Component({
   selector: 'app-pca-form',
@@ -20,7 +21,8 @@ export class PcaFormComponent implements AfterViewInit {
     private renderer: Renderer2,
     private http: HttpClient,
     private ngZone: NgZone,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private analytics: AnalyticsService
   ) {}
 
   ngAfterViewInit() {
@@ -51,6 +53,11 @@ export class PcaFormComponent implements AfterViewInit {
 
   onSubmit(e: Event) {
     e.preventDefault();
+    this.analytics.sendEvent('register_click', {
+      category: 'Botón',
+      label: 'Registro formulario PCA con descarga ficha técnica'
+    });
+
     if (!this.scriptsLoaded) {
       console.warn('Zoho script not loaded yet');
       return;
@@ -83,8 +90,13 @@ export class PcaFormComponent implements AfterViewInit {
     this.dialogRef.close(result);
   }
 
-  onDownloadTechnicalSheet(event: MouseEvent): void {
+  onDownloadTechnicalSheet(event: MouseEvent, location?: string): void {
     if (event) { event.preventDefault(); }
+
+    this.analytics.sendEvent('download', {
+      category: 'Descarga',
+      label: 'Descarga ficha PCA técnica' + (location ? ' desde ' + location : '')
+    });
 
     const assetPath: string = this.data?.technicalSheetPath || '/assets/downloads/ficha-tecnica-PCA.pdf';
     const fileName: string = this.data?.technicalSheetName || assetPath.split('/').pop() || 'ficha-tecnica-PCA.pdf';

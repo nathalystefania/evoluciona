@@ -163,9 +163,11 @@ document.getElementById('hidden6778134000000950046Frame').addEventListener('load
         if (doc.body.childElementCount !== 0) {
             arguments[0].currentTarget.style.display = 'block';
             document.getElementById('BiginWebToRecordFormParent6778134000000950046').style.display = 'none';
+            console.log('success zoho form');
         }
     } catch (error) {
         arguments[0].currentTarget.style.display = 'block';
         document.getElementById('BiginWebToRecordFormParent6778134000000950046').style.display = 'none'
+        console.log('error zoho form');
     }
 });

@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { VgApiService } from '@videogular/ngx-videogular/core';
 import { PlayerStateService } from '@shared/services/player-state.service';
 import { Observable } from 'rxjs';
+import { AnalyticsService } from '@shared/services/analytics.service';
 import { PcaFormComponent } from './pca-form/pca-form.component';
 
 @Component({
@@ -28,7 +29,8 @@ export class PoliceControllerAdapterComponent implements OnInit {
     public dialog: MatDialog,
     public translate: TranslateService, 
     private i18nService: I18nServiceService,
-    private playerState: PlayerStateService
+    private playerState: PlayerStateService,
+    private analytics: AnalyticsService
     ) {
       let lang = localStorage.getItem('currentLang') || 'en';
       translate.setDefaultLang(lang);
@@ -98,6 +100,10 @@ export class PoliceControllerAdapterComponent implements OnInit {
       width: '80vw',
       maxWidth: '1200px',
       data: { /* pasar datos si hace falta */ },
+    });
+    this.analytics.sendEvent('open_modal', {
+      category: 'Botón',
+      label: 'Abrir formulario PCA'
     });
     ref.afterOpened().subscribe(() => console.log('dialog opened'));
     ref.afterClosed().subscribe(result => console.log('dialog closed', result));

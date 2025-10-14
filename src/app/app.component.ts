@@ -5,6 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subject, of } from 'rxjs';
 import { filter, map, mergeMap, switchMap, takeUntil } from 'rxjs/operators';
 import { I18nServiceService } from './i18n-service/i18n-service.service';
+import { AnalyticsService } from '@shared/services/analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private translate: TranslateService,
-    private i18nService: I18nServiceService
+    private i18nService: I18nServiceService,
+    private analytics: AnalyticsService
   ) {
     let lang = localStorage.getItem('currentLang') || 'en';
     translate.setDefaultLang(lang);
@@ -29,27 +31,35 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(() => this.activatedRoute),
-      map(route => {
-        while (route.firstChild) { route = route.firstChild; }
-        return route;
-      }),
-      mergeMap(route => route.data),
-      switchMap(data => {
-        const titleKey = data?.['title'];
-        return titleKey ? this.translate.get(titleKey) : of(null);
-      }),
-      takeUntil(this.destroy$)
-    ).subscribe(translatedTitle => {
-      if (translatedTitle) {
-        this.titleService.setTitle(`${this.baseTitle} | ${translatedTitle}`);
-      } else {
-        this.titleService.setTitle(this.baseTitle);
-      }
-    });
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => this.activatedRoute),
+        map(route => {
+          while (route.firstChild) { route = route.firstChild; }
+          return route;
+        }),
+        mergeMap(route => route.data),
+        switchMap(data => {
+          const titleKey = data?.['title'];
+          return titleKey ? this.translate.get(titleKey) : of(null);
+        }),
+        takeUntil(this.destroy$)
+      )
+      .subscribe(translatedTitle => {
+        //Actualiza título
+        if (translatedTitle) {
+          this.titleService.setTitle(`${this.baseTitle} | ${translatedTitle}`);
+        } else {
+          this.titleService.setTitle(this.baseTitle);
+        }
+
+        //Envía page_view a Analytics
+        const currentUrl = this.router.url;
+        this.analytics.sendPageView(currentUrl, { page_title: translatedTitle || this.baseTitle });
+      });
   }
+
 
   ngOnDestroy(): void {
     this.destroy$.next();
@@ -57,6 +67,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   changeLocale(locale: string) {
-    this.i18nService.changeLocale(locale);   
+    this.i18nService.changeLocale(locale);
   }
 }

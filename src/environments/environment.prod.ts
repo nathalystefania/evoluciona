@@ -6,5 +6,5 @@
 // };
 export const environment = {
   production: true,
-  
+  analyticsId: 'AW-17322590524',
 };
