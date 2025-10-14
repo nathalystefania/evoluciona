@@ -23,7 +23,27 @@ export class PcaFormComponent implements AfterViewInit {
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef,
     private analytics: AnalyticsService
-  ) {}
+  ) { }
+
+  ngOnInit() {
+    window.addEventListener('zohoFormSubmitting', () => {
+      this.isSubmitting = true;
+    });
+
+    window.addEventListener('zohoFormValidationFailed', () => {
+      this.isSubmitting = false;
+    });
+
+    window.addEventListener('zohoFormSuccess', () => {
+      this.isSubmitting = false;
+      this.formSubmitted = true;
+    });
+
+    window.addEventListener('zohoFormError', () => {
+      this.isSubmitting = false;
+      console.error('Error al enviar el formulario Zoho');
+    });
+  }
 
   // ngAfterViewInit() {
   //   const localScript = this.renderer.createElement('script');
@@ -32,7 +52,7 @@ export class PcaFormComponent implements AfterViewInit {
   //   this.renderer.appendChild(document.body, localScript);
 
 
-    
+
   //   // Esperar hasta que el form esté realmente en el DOM
   //   const checkFormInterval = setInterval(() => {
   //     const form = document.getElementById('BiginWebToRecordForm6778134000000950046');
@@ -68,25 +88,23 @@ export class PcaFormComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-    // 2️⃣ Script general (el que usas para configuración adicional)
     const helperScript = this.renderer.createElement('script');
     helperScript.src = 'assets/js/zoho-form.js';
     helperScript.onload = () => console.log('Local Zoho helper loaded');
 
-    // 3️⃣ Agregarlos al body (en orden)
     this.renderer.appendChild(document.body, helperScript);
   }
 
   beforeSubmit() {
     this.isSubmitting = true;
-    
+
     if (!this.scriptsLoaded) {
       console.warn('Zoho script not loaded yet');
       return;
     }
-    
+
     setTimeout(() => (this.isSubmitting = false), 15000);
-      
+
     this.analytics.sendEvent('register_click', {
       category: 'Botón',
       label: 'Registro formulario PCA con descarga ficha técnica'
@@ -167,4 +185,12 @@ export class PcaFormComponent implements AfterViewInit {
       }
     });
   }
+
+  ngOnDestroy() {
+    window.removeEventListener('zohoFormSubmitting', () => {});
+    window.removeEventListener('zohoFormValidationFailed', () => {});
+    window.removeEventListener('zohoFormSuccess', () => {});
+    window.removeEventListener('zohoFormError', () => {});
+  }
+
 }

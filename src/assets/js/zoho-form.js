@@ -1,7 +1,6 @@
 (function() {
   console.log('Zoho form local script loaded');
 
-  // Obtener el form de Zoho por id o nombre
   var form = document.BiginWebToRecordForm 
           || document.BiginWebToRecordForm6778134000000950046 
           || document.BiginWebToContactForm6778134000000950046
@@ -15,16 +14,38 @@
   form.action = 'https://bigin.zoho.com/crm/WebForm';
   form.className = form.className + ' wf-form-paid';
 
-  window.validateForm123456 = function(event) {
+  window.validateForm6778134000000950046 = function(event) {
     console.log('Zoho validateForm6778134000000950046 running');
+    // 🔹 Avisamos a Angular que empezó el envío
+    window.dispatchEvent(new CustomEvent('zohoFormSubmitting'));
+
     if ((typeof checkMandatory !== 'undefined' && checkMandatory()) ||
-        (typeof checkMandatory123456 !== 'undefined' && checkMandatory6778134000000950046())) {
+        (typeof checkMandatory6778134000000950046 !== 'undefined' && checkMandatory6778134000000950046())) {
       form.submit();
     } else {
       event.preventDefault();
+      window.dispatchEvent(new CustomEvent('zohoFormValidationFailed'));
       return false;
     }
   };
+
+  // 🔹 Escucha cuando Zoho termine de cargar en el iframe (éxito o error)
+  var iframe = document.getElementById('hidden6778134000000950046Frame');
+  if (iframe) {
+    iframe.addEventListener('load', function () {
+      try {
+        var doc = iframe.contentWindow.document;
+        if (doc.body.childElementCount !== 0) {
+          console.log('✅ Zoho form submitted successfully');
+          window.dispatchEvent(new CustomEvent('zohoFormSuccess'));
+          document.getElementById('BiginWebToRecordFormParent6778134000000950046').style.display = 'none';
+        }
+      } catch (error) {
+        console.log('❌ Zoho form submission error');
+        window.dispatchEvent(new CustomEvent('zohoFormError'));
+      }
+    });
+  }
 })();
 
 
