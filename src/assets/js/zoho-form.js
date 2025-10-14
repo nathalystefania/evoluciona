@@ -1,3 +1,33 @@
+(function() {
+  console.log('Zoho form local script loaded');
+
+  // Obtener el form de Zoho por id o nombre
+  var form = document.BiginWebToRecordForm 
+          || document.BiginWebToRecordForm6778134000000950046 
+          || document.BiginWebToContactForm6778134000000950046
+          || document.WebToContacts6778134000000950046;
+
+  if (!form) {
+    console.warn('Zoho form not found yet');
+    return;
+  }
+
+  form.action = 'https://bigin.zoho.com/crm/WebForm';
+  form.className = form.className + ' wf-form-paid';
+
+  window.validateForm123456 = function(event) {
+    console.log('Zoho validateForm6778134000000950046 running');
+    if ((typeof checkMandatory !== 'undefined' && checkMandatory()) ||
+        (typeof checkMandatory123456 !== 'undefined' && checkMandatory6778134000000950046())) {
+      form.submit();
+    } else {
+      event.preventDefault();
+      return false;
+    }
+  };
+})();
+
+
 var mndFileds = new Array('First\x20Name', 'Last\x20Name', 'Email', 'Accounts.Account\x20Name');
 var fldLangVal = new Array('Nombre', 'Apellidos', 'Correo electr&oacute;nico', 'Empresa u Organizaci&oacute;n');
 var wfInnerWidth = window.innerWidth;

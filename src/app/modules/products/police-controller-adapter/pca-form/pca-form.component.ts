@@ -25,66 +25,108 @@ export class PcaFormComponent implements AfterViewInit {
     private analytics: AnalyticsService
   ) {}
 
+  // ngAfterViewInit() {
+  //   const localScript = this.renderer.createElement('script');
+  //   localScript.src = 'assets/js/zoho-form.js';
+  //   localScript.onload = () => { this.scriptsLoaded = true; };
+  //   this.renderer.appendChild(document.body, localScript);
+
+
+    
+  //   // Esperar hasta que el form esté realmente en el DOM
+  //   const checkFormInterval = setInterval(() => {
+  //     const form = document.getElementById('BiginWebToRecordForm6778134000000950046');
+  //     if (form) {
+  //       clearInterval(checkFormInterval);
+
+  //       // Ahora sí, cargar el script de Zoho
+  //       const zohoScript = this.renderer.createElement('script');
+  //       zohoScript.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=f2021906c523c66f8825da50ba06df77f7630e25fe9428586d949eff6237cbe7dd1aa4e99d5ba6165fb8a88be169fe17gidc9d571f274291b4256e8221941eb7c2523544a355756d381c1c2a7410af0f259';
+  //       zohoScript.id = 'wf_script';
+  //       zohoScript.onload = () => {
+  //         this.scriptsLoaded = true;
+  //         console.log('Zoho script loaded después de renderizar el form');
+  //         console.log('validateForm:', typeof (window as any).validateForm6778134000000950046);
+  //       };
+  //       this.renderer.appendChild(document.body, zohoScript);
+  //     }
+  //   }, 300); // chequea cada 300ms
+
+
+  //   // escuchar el load del iframe para detectar envío completado
+  //   const iframe = document.getElementById('hidden6778134000000950046Frame') as HTMLIFrameElement | null;
+  //   if (iframe) {
+  //     this.renderer.listen(iframe, 'load', () => {
+  //       this.ngZone.run(() => {
+  //         this.isSubmitting = false;
+  //         this.formSubmitted = true;
+  //         this.cdr.detectChanges();
+  //       });
+  //     });
+  //   }
+  // }
+
+
   ngAfterViewInit() {
-    const localScript = this.renderer.createElement('script');
-    localScript.src = 'assets/js/zoho-form.js';
-    localScript.onload = () => { this.scriptsLoaded = true; };
-    this.renderer.appendChild(document.body, localScript);
+    // 2️⃣ Script general (el que usas para configuración adicional)
+    const helperScript = this.renderer.createElement('script');
+    helperScript.src = 'assets/js/zoho-form.js';
+    helperScript.onload = () => console.log('Local Zoho helper loaded');
 
-    const script = this.renderer.createElement('script');
-    script.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=f2021906c523c66f8825da50ba06df77f7630e25fe9428586d949eff6237cbe7dd1aa4e99d5ba6165fb8a88be169fe17gidc9d571f274291b4256e8221941eb7c2523544a355756d381c1c2a7410af0f259';
-    script.id = 'wf_script';
-    this.renderer.appendChild(document.body, script);
-
-    // escuchar el load del iframe para detectar envío completado
-    const iframe = document.getElementById('hidden6778134000000950046Frame') as HTMLIFrameElement | null;
-    if (iframe) {
-      this.renderer.listen(iframe, 'load', () => {
-        // la carga final del iframe indica que Zoho respondió -> considerar submit exitoso
-        this.ngZone.run(() => {
-          this.isSubmitting = false;
-          this.formSubmitted = true;
-          // ocultar el formParent se hace via *ngIf en la plantilla
-          this.cdr.detectChanges();
-        });
-      });
-    }
+    // 3️⃣ Agregarlos al body (en orden)
+    this.renderer.appendChild(document.body, helperScript);
   }
 
-  onSubmit(e: Event) {
-    e.preventDefault();
-    this.analytics.sendEvent('register_click', {
-      category: 'Botón',
-      label: 'Registro formulario PCA con descarga ficha técnica'
-    });
-
+  beforeSubmit() {
+    this.isSubmitting = true;
+    
     if (!this.scriptsLoaded) {
       console.warn('Zoho script not loaded yet');
       return;
     }
-    // Llamar a la función global que valida y devuelve boolean
-    const ok = (window as any).checkMandatory6778134000000950046 ? (window as any).checkMandatory6778134000000950046() : true;
-    if (ok) {
-       this.ngZone.run(() => {
-        this.isSubmitting = true;
-        this.cdr.detectChanges();
-      });
-      // enviar el form manualmente (para respetar target iframe)
-      (e.target as HTMLFormElement).submit();
-
-      // fallback: si no llega respuesta en X segundos, ocultar loading
-      setTimeout(() => {
-        if (this.isSubmitting) {
-          this.ngZone.run(() => {
-            this.isSubmitting = false;
-            this.cdr.detectChanges();
-          });
-        }
-      }, 15000);
-    } else {
-      console.log('Formulario inválido según Zoho validation');
-    }
+    
+    setTimeout(() => (this.isSubmitting = false), 15000);
+      
+    this.analytics.sendEvent('register_click', {
+      category: 'Botón',
+      label: 'Registro formulario PCA con descarga ficha técnica'
+    });
   }
+
+  // onSubmit(e: Event) {
+  //   e.preventDefault();
+  //   this.analytics.sendEvent('register_click', {
+  //     category: 'Botón',
+  //     label: 'Registro formulario PCA con descarga ficha técnica'
+  //   });
+
+  //   if (!this.scriptsLoaded) {
+  //     console.warn('Zoho script not loaded yet');
+  //     return;
+  //   }
+  //   // Llamar a la función global que valida y devuelve boolean
+  //   const ok = (window as any).checkMandatory6778134000000950046 ? (window as any).checkMandatory6778134000000950046() : true;
+  //   if (ok) {
+  //      this.ngZone.run(() => {
+  //       this.isSubmitting = true;
+  //       this.cdr.detectChanges();
+  //     });
+  //     // enviar el form manualmente (para respetar target iframe)
+  //     (e.target as HTMLFormElement).submit();
+
+  //     // fallback: si no llega respuesta en X segundos, ocultar loading
+  //     setTimeout(() => {
+  //       if (this.isSubmitting) {
+  //         this.ngZone.run(() => {
+  //           this.isSubmitting = false;
+  //           this.cdr.detectChanges();
+  //         });
+  //       }
+  //     }, 15000);
+  //   } else {
+  //     console.log('Formulario inválido según Zoho validation');
+  //   }
+  // }
 
   close(result?: any) {
     this.dialogRef.close(result);

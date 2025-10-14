@@ -20,21 +20,16 @@
             </div>
         </div>
 
-        <!-- (submit)="onSubmit($event)" -->
         <iframe id='hidden6778134000000950046Frame' name='hidden6778134000000950046Frame' style='display: none;'
         class='iframe-container'></iframe>
         <div *ngIf="!formSubmitted" class='wf-parent' id='BiginWebToRecordFormParent6778134000000950046'>
             <div class='wf-wrapper' id='BiginWebToRecordFormDiv6778134000000950046'>
-                <form id='BiginWebToRecordForm6778134000000950046' 
+                <form id='BiginWebToRecordForm6778134000000950046'
                     name='BiginWebToRecordForm6778134000000950046'
-                    class='wf-form-component' 
-                    data-ux-form-alignment='top'
-                    method='POST'
-                    enctype='multipart/form-data'
+                    class='wf-form-component' data-ux-form-alignment='top' method='POST' enctype='multipart/form-data'
                     target='hidden6778134000000950046Frame'
-                    action="https://crm.zoho.com/crm/WebToLeadForm"
-                    onSubmit='return checkMandatory6778134000000950046()'
-                    accept-charset='UTF-8'>
+                    accept-charset='UTF-8'
+                    onsubmit="return validateForm6778134000000950046(event)">
                     <!-- Do not remove this code. -->
                     <input type='text' style='display:none;' name='xnQsjsdp'
                         value='c9d571f274291b4256e8221941eb7c2523544a355756d381c1c2a7410af0f259' />

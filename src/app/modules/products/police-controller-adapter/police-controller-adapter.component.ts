@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, OnDestroy, ChangeDetectorRef, Component, Input, NgZone, OnInit, Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { I18nServiceService } from 'src/app/i18n-service/i18n-service.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,6 +8,7 @@ import { PlayerStateService } from '@shared/services/player-state.service';
 import { Observable } from 'rxjs';
 import { AnalyticsService } from '@shared/services/analytics.service';
 import { PcaFormComponent } from './pca-form/pca-form.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-police-controller-adapter',
@@ -25,17 +26,52 @@ export class PoliceControllerAdapterComponent implements OnInit {
   playerState$!: Observable<string>;
   features: { title: string; text: string; image: string; }[] = [];
 
+
+  scriptsLoaded = false;
+  isSubmitting = false;
+  formSubmitted = false;
+  private scriptRefs: HTMLScriptElement[] = [];
+
   constructor(
     public dialog: MatDialog,
     public translate: TranslateService, 
     private i18nService: I18nServiceService,
     private playerState: PlayerStateService,
-    private analytics: AnalyticsService
+    private analytics: AnalyticsService,
+
+
+    private renderer: Renderer2,
+    private http: HttpClient,
+    private ngZone: NgZone,
+    private cdr: ChangeDetectorRef,
+
     ) {
       let lang = localStorage.getItem('currentLang') || 'en';
       translate.setDefaultLang(lang);
       translate.use(lang);
   }
+
+
+
+
+ngAfterViewInit() {
+  // 2️⃣ Script general (el que usas para configuración adicional)
+  const helperScript = this.renderer.createElement('script');
+  helperScript.src = 'assets/js/zoho-form.js';
+  helperScript.onload = () => console.log('Local Zoho helper loaded');
+
+  // 3️⃣ Agregarlos al body (en orden)
+  this.renderer.appendChild(document.body, helperScript);
+}
+
+forceSubmit() {
+  const form = document.getElementById('BiginWebToRecordForm6778134000000950046') as HTMLFormElement;
+  console.log('Force submit', form.action);
+  form.submit();
+}
+
+
+
 
   ngOnInit(): void {
     this.i18nService.localeEvent.subscribe(locale => this.translate.use(locale)); 

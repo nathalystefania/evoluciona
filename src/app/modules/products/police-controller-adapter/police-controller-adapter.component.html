@@ -1,20 +1,141 @@
+<iframe id='hidden6778134000000950046Frame' name='hidden6778134000000950046Frame' style='display: none;'
+  class='iframe-container'></iframe>
+<div class='wf-parent' id='BiginWebToRecordFormParent6778134000000950046'>
+  <div class='wf-wrapper' id='BiginWebToRecordFormDiv6778134000000950046'>
+    <form id='BiginWebToRecordForm6778134000000950046'
+      name='BiginWebToRecordForm6778134000000950046'
+      class='wf-form-component' data-ux-form-alignment='top' method='POST' enctype='multipart/form-data'
+      target='hidden6778134000000950046Frame'
+      accept-charset='UTF-8'
+      onsubmit="return validateForm6778134000000950046(event)">
+      
+      <input type='text' style='display:none;' name='xnQsjsdp'
+        value='c9d571f274291b4256e8221941eb7c2523544a355756d381c1c2a7410af0f259' />
+      <input type='hidden' name='zc_gad' id='zc_gad' value='' />
+      <input type='text' style='display:none;' name='xmIwtLD'
+        value='f2021906c523c66f8825da50ba06df77f7630e25fe9428586d949eff6237cbe7dd1aa4e99d5ba6165fb8a88be169fe17' />
+      <input type='text' style='display:none;' name='actionType' value='Q29udGFjdHM=' />
+      <input type='hidden' name='rmsg' id='rmsg' value='true' />
+      <input type='text' style='display:none;' name='returnURL' value='null' />
+      <div id='elementDiv6778134000000950046' class='wf-form-wrapper'>
+
+
+        <button type="button" (click)="forceSubmit()">Forzar envío</button>
+
+        <div class="grid gap-4">
+          <div class="wf-row grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.FIRST_NAME' | translate }} <sup
+                  class="text-red-800">*</sup></mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="First Name" maxlength="40" type="text" class="wf-field-item browser-default"
+                   />
+              </div>
+            </mat-form-field>
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.LAST_NAME' | translate }} <sup
+                  class="text-red-800">*</sup></mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="Last Name" maxlength="80" type="text" class="wf-field-item browser-default"
+                   />
+              </div>
+            </mat-form-field>
+          </div>
+
+          <div class="wf-row grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.EMAIL' | translate }} <sup
+                  class="text-red-800">*</sup></mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="Email" maxlength="100" type="email" fvalidate="true" ftype="email"
+                  class="wf-field-item browser-default"  />
+              </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.MOBILE' | translate }}</mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="Mobile" maxlength="30" type="text" fvalidate="true" ftype="mobile"
+                  class="wf-field-item browser-default"  />
+              </div>
+            </mat-form-field>
+          </div>
+
+          <div class="wf-row grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.COUNTRY' | translate }}</mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="Mailing Country" maxlength="100" type="text" class="wf-field-item browser-default"
+                   />
+              </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.CITY' | translate }}</mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="Mailing City" maxlength="100" type="text" class="wf-field-item browser-default"
+                   />
+              </div>
+            </mat-form-field>
+          </div>
+
+          <div class="wf-row">
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.COMPANY_ORGANIZATION' | translate }} <sup
+                  class="text-red-800">*</sup></mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <input matInput name="Accounts.Account Name" maxlength="200" type="text"
+                  class="wf-field-item browser-default"  />
+              </div>
+            </mat-form-field>
+          </div>
+
+          <div class="wf-row">
+            <mat-form-field appearance="standard" class="w-full">
+              <mat-label class="wf-label">{{ 'PCA.FORM.COMMENTS' | translate }}</mat-label>
+              <div class="wf-field wf-field-mandatory">
+                <textarea matInput name="Description" maxlength="32000"
+                  class="wf-field-item browser-default wf-text-area-input" ></textarea>
+              </div>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="wform-btn-wrap mt-6">
+          <button id="formsubmit" type="submit" mat-raised-button color="primary"
+            class="w-full text-2xl pt-4 pb-4 font-medium mat-button-base--md">
+            {{ 'PCA.FORM.SUBMIT' | translate }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
 <app-wrap-description id="pca" [gridCols]="gridCols" [spanCol1]="spanCol1" [preTitle]="'PCA'"
   [staticTitle]="'Police Controller Adapter' | translate" appScrollSection="one">
 </app-wrap-description>
 
 <div class="container-fluid">
   <section class="container px-4 lg:px-6 max-w-[96rem] py-10 md:py-28">
-    <p class="text-xl md:text-[1.35rem] columns-1 md:columns-2 gap-8 leading-relaxed text-balance" [innerHTML]="'PCA.PARAGRAPH_1' | translate"></p>
+    <p class="text-xl md:text-[1.35rem] columns-1 md:columns-2 gap-8 leading-relaxed text-balance"
+      [innerHTML]="'PCA.PARAGRAPH_1' | translate"></p>
   </section>
   <app-wrap-hero class="contact-hero" [imagebackground]="'./assets/images/products/pca/hero-pca.png'" [headText]="' '">
   </app-wrap-hero>
 </div>
 
 <div class="container px-4 lg:px-10 max-w-[96rem]">
-  <div *ngFor="let feature of features; let i = index" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[4rem] my-10 md:my-20 items-center">
+  <div *ngFor="let feature of features; let i = index"
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[4rem] my-10 md:my-20 items-center">
     <div class="text-col" [ngClass]="{ 'md:order-2': i % 2 === 1 }">
       <h3 class="text-2xl md:text-3xl font-bold">{{ feature.title | translate }}</h3>
-      <p [innerHTML]="feature.text | translate" class="text-xl md:text-[1.35rem] pt-5 md:pt-8 md:leading-relaxed text-balance"></p>
+      <p [innerHTML]="feature.text | translate"
+        class="text-xl md:text-[1.35rem] pt-5 md:pt-8 md:leading-relaxed text-balance"></p>
     </div>
     <div class="img-col" [ngClass]="{ 'md:order-1': i % 2 === 1 }">
       <img [src]="feature.image" alt="" class="w-[80%] h-auto object-contain block mx-auto" loading="lazy">
@@ -59,13 +180,15 @@
         </video>
       </vg-player>
     </div> -->
-    
+
     <!-- <div class="video-container_video aspect-[16/9] w-full" *ngIf="translate.currentLang == 'es'"> -->
     <div class="video-container_video aspect-[16/9] w-full">
-      <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('pcaEsVideo')" alt="" [ngClass]="{'show': isVideoCoverVisible('pcaEsVideo'), 'hide': isVideoPlaying('pcaEsVideo') || isVideoPaused('pcaEsVideo') }" class="fallback-video">
+      <img src="./assets/images/ITS_video_media.jpg" (click)="toggleVideo('pcaEsVideo')" alt=""
+        [ngClass]="{'show': isVideoCoverVisible('pcaEsVideo'), 'hide': isVideoPlaying('pcaEsVideo') || isVideoPaused('pcaEsVideo') }"
+        class="fallback-video">
       <vg-player (onPlayerReady)="onPlayerReady($event, 'pcaEsVideo')">
         <vg-overlay-play vgFor="pcaEsVideo"></vg-overlay-play>
-    
+
         <!-- Controles para el video en español -->
         <vg-controls [vgAutohide]="true" [vgAutohideTime]="5">
           <vg-play-pause vgFor="pcaEsVideo"></vg-play-pause>
@@ -77,28 +200,27 @@
           <vg-volume vgFor="pcaEsVideo"></vg-volume>
           <vg-fullscreen vgFor="pcaEsVideo"></vg-fullscreen>
         </vg-controls>
-    
+
         <video [vgMedia]="$any(media)" #media id="pcaEsVideo" preload="auto">
-            <source src="./assets/video/products/pca/pca-police-controller-adapter.mp4" type="video/mp4">
-            <source src="./assets/video/products/pca/pca-police-controller-adapter.ogv" type="video/ogv">
-            <source src="./assets/video/products/pca/pca-police-controller-adapter.webm" type="video/webm">
-    
-            <track kind="subtitles" label="English" src="/assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt" srclang="en">
-            <track kind="subtitles" label="Spanish" src="/assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt" srclang="es" default>
+          <source src="./assets/video/products/pca/pca-police-controller-adapter.mp4" type="video/mp4">
+          <source src="./assets/video/products/pca/pca-police-controller-adapter.ogv" type="video/ogv">
+          <source src="./assets/video/products/pca/pca-police-controller-adapter.webm" type="video/webm">
+
+          <track kind="subtitles" label="English"
+            src="/assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt" srclang="en">
+          <track kind="subtitles" label="Spanish"
+            src="/assets/video/products/pca/subtitles/pca-police-controller-adapter.vtt" srclang="es" default>
         </video>
       </vg-player>
     </div>
-    
+
 
   </section>
 </div>
 
 <div class="grid md:grid-cols-4 my-10 mb-24 mx-4 lg:mx-10">
   <div class="md:col-start-2 md:col-span-2">
-    <app-call-to-action
-      [text]="'PCA.DOWNLOAD_TECHNICAL_SHEET'"
-      [svgIcon]="'icon-download'"
-      [iconPosition]="'right'"
+    <app-call-to-action [text]="'PCA.DOWNLOAD_TECHNICAL_SHEET'" [svgIcon]="'icon-download'" [iconPosition]="'right'"
       (click)="openDialog()">
     </app-call-to-action>
   </div>
