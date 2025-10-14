@@ -1,7 +1,8 @@
-import { Component, Inject, AfterViewInit, Renderer2, NgZone, ChangeDetectorRef } from '@angular/core';
+import { Component, Inject, AfterViewInit, Renderer2 } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { AnalyticsService } from '@shared/services/analytics.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-pca-form',
@@ -19,9 +20,7 @@ export class PcaFormComponent implements AfterViewInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private renderer: Renderer2,
     private http: HttpClient,
-    private analytics: AnalyticsService,
-    private ngZone: NgZone,
-    private cdr: ChangeDetectorRef
+    private analytics: AnalyticsService
   ) { }
 
   ngOnInit() {
@@ -40,11 +39,23 @@ export class PcaFormComponent implements AfterViewInit {
 
     window.addEventListener('zohoFormError', () => {
       this.isSubmitting = false;
-      console.error('Error al enviar el formulario Zoho');
+      // console.error('Error al enviar el formulario Zoho');
     });
   }
 
   ngAfterViewInit() {
+
+    // Creamos el script de Zoho
+    const zohoScript = this.renderer.createElement('script');
+    zohoScript.type = 'text/javascript';
+
+    // Aquí pasamos las variables al script
+    zohoScript.text = `
+      window.ZOHO_FORM_ID = '${environment.zohoFormId}';
+      window.ZOHO_ACTION_URL = '${environment.zohoActionUrl}';
+    `;
+    this.renderer.appendChild(document.body, zohoScript);
+    
     const helperScript = this.renderer.createElement('script');
     helperScript.src = 'assets/js/zoho-form.js';
     helperScript.defer = true;
@@ -52,55 +63,21 @@ export class PcaFormComponent implements AfterViewInit {
 
     this.renderer.appendChild(document.body, helperScript);
 
+    const form = document.getElementById('BiginWebToRecordForm6778134000000950046');
+    const iframe = document.querySelector('iframe[name="hidden6778134000000950046Frame"]');
 
-    // Detectar envío completado al cargar el iframe
-    const iframe = document.getElementById('hidden6778134000000950046Frame') as HTMLIFrameElement | null;
-
-    if (iframe) {
-      iframe.addEventListener('load', () => {
-        try {
-          const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
-
-          // Si el iframe tiene contenido de Zoho, damos por válido el envío
-          if (iframeDoc && iframeDoc.body && iframeDoc.body.innerHTML.trim().length > 0) {
-            console.log('Zoho form submission detected');
-            this.ngZone.run(() => {
-              this.isSubmitting = false;
-              this.formSubmitted = true;
-              this.cdr.detectChanges();
-            });
-          } else {
-            console.warn('Iframe loaded but empty (maybe validation failed?)');
-            this.ngZone.run(() => {
-              this.isSubmitting = false;
-              this.cdr.detectChanges();
-            });
-          }
-
-          console.log('Zoho iframe response:', iframeDoc?.body?.innerHTML);
-
-        } catch (error) {
-          console.error('Error reading Zoho iframe response', error);
-          this.ngZone.run(() => {
+    if (form) {
+      form.addEventListener('submit', () => {
+        console.log('Formulario enviado a Zoho...');
+        if (iframe) {
+          iframe.addEventListener('load', () => {
+            console.log('Zoho respondió');
             this.isSubmitting = false;
-            this.cdr.detectChanges();
+            this.formSubmitted = true;
           });
         }
       });
     }
-
-    // Detectar el inicio del envío
-    const form = document.getElementById('BiginWebToRecordFormDiv6778134000000950046') as HTMLFormElement | null;
-    if (form) {
-      form.addEventListener('submit', () => {
-        this.ngZone.run(() => {
-          this.isSubmitting = true;
-          this.formSubmitted = false;
-          this.cdr.detectChanges();
-        });
-      });
-    }
-  
   }
 
   beforeSubmit() {

@@ -1,11 +1,13 @@
 {
   "name": "evoluciona",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "node prebuild.js",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
+    "postbuild": "node postbuild.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -39,6 +41,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "autoprefixer": "^10.4.21",
+    "dotenv": "^17.2.3",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

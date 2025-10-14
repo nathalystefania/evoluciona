@@ -13,8 +13,8 @@ export type AnalyticsEventParams = {
 @Injectable({ providedIn: 'root' })
 export class AnalyticsService {
   constructor() {
-    if (environment.analyticsId && environment.production) {
-      this.loadAnalytics(environment.analyticsId);
+    if (environment.gaMeasurementId && environment.production) {
+      this.loadAnalytics(environment.gaMeasurementId);
     }
   }
 
