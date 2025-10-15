@@ -25,7 +25,7 @@ export class I18nServiceService {
     } 
 
     try {
-      const routes = await firstValueFrom(this.http.get(`/assets/i18n/routes-${locale}.json`));
+      const routes = await firstValueFrom(this.http.get(`assets/i18n/routes-${locale}.json`));
       this.translate.setTranslation(locale, routes as any, true);
     } catch (e) { /* ignore */ }
   }

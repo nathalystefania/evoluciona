@@ -25,7 +25,11 @@ const routes: Routes = [
         component: PoliceControllerAdapterComponent,
         data: { title: 'PRODUCTS.PCA.TITLE' }
       },
-    ]
+      {
+        path: '**',
+        redirectTo: 'pca'
+      }
+    ],
   },
 ];
 

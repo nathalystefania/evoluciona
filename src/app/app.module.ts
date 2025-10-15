@@ -12,7 +12,7 @@ import { ScrollAnchorDirective } from './directives/scroll-anchor.directive';
 import { ScrollSectionDirective } from './directives/scroll-section.directive';
 import { ScrollManagerDirective } from './directives/scroll-manager.directive';
 import { PlayerStateService } from '@shared/services/player-state.service';
-import { PathLocationStrategy, LocationStrategy } from '@angular/common';
+import { PathLocationStrategy, LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { MaterialModule } from '@shared/material.module';
 
@@ -32,8 +32,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 export function loadTranslationsFactory(translate: TranslateService, http: HttpClient) {
   return async () => {
     const lang = localStorage.getItem('currentLang') || 'en';
-    const baseUrl = `/assets/i18n/${lang}.json`;
-    const routesUrl = `/assets/i18n/routes-${lang}.json`;
+    const baseUrl = `assets/i18n/${lang}.json`;
+    const routesUrl = `assets/i18n/routes-${lang}.json`;
 
     try {
       // intenta cargar ambos en paralelo; si alguno falla, se captura
@@ -77,7 +77,7 @@ export function loadTranslationsFactory(translate: TranslateService, http: HttpC
   ],
   providers: [
     PlayerStateService,
-    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     // {
     //   provide: HTTP_INTERCEPTORS,
     //   useClass: AutorizationInterceptorService,

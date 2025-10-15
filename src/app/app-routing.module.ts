@@ -8,15 +8,19 @@ const routes: Routes = [
     component: HomePageComponent,
     loadChildren: () => import(`@modules/home/home.module`).then(m => m.HomeModule),
     data: { title: 'HOME.TITLE' }
+  },
+  { 
+    path: '**',
+    redirectTo: ''
   }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: false,
+      useHash: true,
       initialNavigation: 'enabledBlocking',
-      scrollPositionRestoration: 'top',
+      scrollPositionRestoration: 'enabled'
       }
     )
   ],
