@@ -20,6 +20,8 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
 import { LargeCardComponent } from './components/large-card/large-card.component';
 import { WrapLargeCardComponent } from './components/wrap-large-card/wrap-large-card.component';
 
+import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -37,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CallToActionComponent,
     SocialMediaComponent,
     LargeCardComponent,
-    WrapLargeCardComponent
+    WrapLargeCardComponent,
+    RemoveSpacesPipe
   ],
   imports: [
     RouterModule,
@@ -67,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CallToActionComponent,
     SocialMediaComponent,
     LargeCardComponent,
-    WrapLargeCardComponent
+    WrapLargeCardComponent,
+    RemoveSpacesPipe
   ]
 })
 export class SharedModule { }

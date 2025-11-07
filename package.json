@@ -6,7 +6,7 @@
     "start": "ng serve",
     "prebuild": "node prebuild.js",
     "build": "ng build",
-    "build:prod": "ng build --configuration production",
+    "build:prod": "ng build --configuration production --base-href ./ --deploy-url ./",
     "postbuild": "node postbuild.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

@@ -48,3 +48,6 @@ Thumbs.db
 
 # Videos
 /src/assets/video
+
+# Downloads
+/src/assets/downloads

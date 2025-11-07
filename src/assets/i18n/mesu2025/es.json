@@ -1,0 +1,25 @@
+{
+  "HEADER_TITLE": "MESU 2025",
+  "HEADER_TEXT": "",
+  "DESCRIPTION": {
+    "TITLE": "MESU 2025",
+    "TEXT": "Encuesta de satisfacción de usuarios"
+  },
+  "PAGE_INFO": "<p>En esta página encontrarás la información oficial relacionada con el estudio de satisfacción de usuarios mandatado por la Defensoría del Contribuyente (DEDECON) y ejecutado por Evoluciona Ltda.</p><p>El estudio tiene como propósito conocer la experiencia de las personas que han utilizado los servicios de DEDECON o han participado en sus actividades entre agosto de 2024 y julio de 2025.</p><p>Todas las respuestas son confidenciales y anónimas, y el tratamiento de la información cumple con la Ley N° 19.628 sobre Protección de la Vida Privada y las normas internacionales de investigación social.</p>",
+  "TERMS": {
+    "CONFIDENTIALITY": { 
+      "TITLE": "Documento de Confidencialidad y Tratamiento de la Información",
+      "CONTENT": "Aquí puedes revisar el compromiso Evoluciona Ltda. respecto al manejo seguro y ético de los datos recolectados.",
+      "BUTTON": "Descargar documento de confidencialidad"
+    },
+    "BASES": { 
+      "TITLE": "Bases del Sorteo MESU 2025",
+      "CONTENT": "Conoce las condiciones del sorteo de 4 gift cards de $50.000 entre quienes completen la encuesta MESU 2025.",
+      "BUTTON": "Descargar bases del sorteo"
+    },
+    "CONTACT": { 
+      "TITLE": "Contacto",
+      "CONTENT": "Para consultas sobre el estudio o sobre esta página"
+    }
+  }
+}

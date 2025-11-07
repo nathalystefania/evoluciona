@@ -42,6 +42,11 @@ const routes: Routes = [
     data: { title: 'CONTACT.TITLE' }
   },
   {
+    path: 'mesu2025',
+    loadChildren: () => import(`@modules/mesu2025/mesu2025.module`).then(m => m.Mesu2025Module),
+    data: { title: 'MESU2025.TITLE' }
+  },
+  {
     path: '**',
     redirectTo: '/'
   }

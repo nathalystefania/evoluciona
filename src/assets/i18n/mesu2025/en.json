@@ -1,0 +1,25 @@
+{
+  "HEADER_TITLE": "MESU 2025",
+  "HEADER_TEXT": "",
+  "DESCRIPTION": {
+    "TITLE": "MESU 2025",
+    "TEXT": "User satisfaction survey"
+  },
+  "PAGE_INFO": "<p>On this page you will find the official information related to the user satisfaction study mandated by the Taxpayer Ombudsman (DEDECON) and carried out by Evoluciona Ltda. </p><p>The study aims to understand the experience of people who have used DEDECON's services or participated in its activities between August 2024 and July 2025.</p><p>All responses are confidential and anonymous, and the processing of information complies with Law No. 19,628 on the Protection of Private Life and international social research standards.</p>",
+    "TERMS": {
+    "CONFIDENTIALITY": { 
+      "TITLE": "Document of Confidentiality and Data Processing",
+      "CONTENT": "Here you can review Evoluciona Ltda.'s commitment to the safe and ethical handling of collected data.",
+      "BUTTON": "Download confidentiality document"
+    },
+    "BASES": { 
+      "TITLE": "MESU 2025 Draw Rules",
+      "CONTENT": "Learn about the conditions for the draw of 4 gift cards of $50,000 among those who complete the MESU 2025 survey.",
+      "BUTTON": "Download draw rules"
+    },
+    "CONTACT": { 
+      "TITLE": "Contact",
+      "CONTENT": "For inquiries about the study or this page"
+    }
+  }
+}
