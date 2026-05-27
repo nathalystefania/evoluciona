@@ -14,6 +14,7 @@
   <div class="image-container" id="slider-header">
     <img src="./assets/images/home-hero.jpg" class="slider-image active poster object-cover w-full" />
     <img src="./assets/images/home-hero-2.jpg" class="slider-image poster object-cover w-full" />
+    <img src="./assets/images/home-hero-3.jpg" class="slider-image poster object-cover w-full" />
   </div>
   <div [ngClass]="['slider-text container max-w-[96rem] absolute top-0 left-0 right-0 ml-auto mr-auto h-full']">
     <div [ngClass]="['left-8 absolute top-1/2 transform -translate-y-1/2 md:w-1/2 text-lg md:text-4xl font-bold']">
@@ -29,7 +30,8 @@
   [spanCol1]="spanCol1"
   [spanCol2]="spanCol2"
   [startCol2]="startCol2"
-  appScrollSection="one">
+  appScrollSection="one"
+  [staticDescription]="'DESCRIPTION.TEXT' | translate">
 </app-wrap-description>
 
 <div class="container-fluid">

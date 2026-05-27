@@ -7,9 +7,9 @@
       <h2 *ngIf="isChildRoute && !staticTitle" [innerHTML]="currentRouteName + '.DESCRIPTION.TITLE' | translate" class="text-2xl md:text-4xl font-medium"></h2>
     </div>
     <div [ngClass]="[spanCol2, startCol2]">
-      <p *ngIf="staticDescription" class="texl-lg md:text-xl" [innerHTML]="staticDescription"></p>
-      <p *ngIf="!isChildRoute && staticDescription !== ''" class="texl-lg md:text-xl" [innerHTML]="'DESCRIPTION.TEXT' | translate"></p>
-      <p *ngIf="isChildRoute && staticDescription !== ''" class="texl-lg md:text-xl" [innerHTML]="currentRouteName + '.DESCRIPTION.TEXT' | translate"></p>
+      <p *ngIf="!isChildRoute && staticDescription" class="texl-xl md:text-2xl mb-4 md:mb-0" [innerHTML]="staticDescription"></p>
+      <p *ngIf="!isChildRoute && !staticDescription" class="texl-xl md:text-2xl mb-4 md:mb-0" [innerHTML]="'DESCRIPTION.TEXT' | translate"></p>
+      <p *ngIf="isChildRoute" class="texl-xl md:text-2xl mb-4 md:mb-0" [innerHTML]="currentRouteName + '.DESCRIPTION.TEXT' | translate"></p>
     </div>
   </div>
 </div>
