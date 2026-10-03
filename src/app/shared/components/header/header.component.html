@@ -1,52 +1,53 @@
 <div class="bg-primary">
-  <div class="container px-4 lg:px-10 max-w-[96rem] grid grid-cols-2 sm:grid-cols-3 items-center">
-    <div class="sm:col-start-2 sm:col-span-1 sm:place-self-center">
-        <div class="select-idioma">
+  <div class="container px-4 py-3 max-w-[96rem] grid grid-cols-1 lg:grid-cols-12 place-content-center">
+    <div class="lg:col-span-4 place-self-center lg:place-self-start flex items-center">
+      <a [routerLink]="['/']" class="brand-logo inline-flex">
+        <img class="h-10 md:h-10 lg:h-10 object-contain" src="./assets/images/evoluciona-logo.svg"
+          alt="Evoluciona Globaltech">
+      </a>
+    </div>
+    <div class="lg:col-span-8 self-center">
+      <div class="flex justify-between gap-4">
+        <div class="flex-1 flex items-center lg:justify-center select-idioma">
           <select #locale (change)="changeLocale(locale.value)" [value]='lang' class="bg-primary material_select">
             <option value="en">English</option>
             <option value="es">Español</option>
           </select>
         </div>
-    </div>
-    <div class="sm:col-start-3 sm:col-span-1 place-self-end">
-      <app-social-media></app-social-media>
+        <div class="hidden lg:flex flex-1 flex items-center justify-end">
+          <app-social-media></app-social-media>
+        </div>
+        <div class="block lg:hidden flex-1 flex items-center justify-end">
+          <a href="#" data-target="mobile-menu" class="sidenav-trigger text-white">
+            <mat-icon>menu</mat-icon>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<nav class="bg-white shadow-none lg:my-5">
-  <div class="container px-4 lg:px-10 max-w-[96rem] header">
+<nav class="shadow-none lg:py-6">
+  <div class="container px-4 max-w-[96rem] header">
     <div class="nav-wrapper">
-      <div class="flex items-stretch">
-      <a [routerLink]="['/']" class="brand-logo">
-        <img class="h-16 md:h-20 lg:h-28 object-contain w-full" src="./assets/images/new_globaltech_logo_color.svg" alt="" srcset="">
-      </a>
-      <a href="#" data-target="mobile-menu" class="sidenav-trigger text-primary">
-        <mat-icon>menu</mat-icon>
-      </a></div>
       <!-- <ul class="right hide-on-med-and-down"> -->
-      <ul class="right header-menu">
-        <li 
-        class="text-primary"
-        [routerLink]="item.value.router"
-        routerLinkActive="router-link-active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        [ngClass]="[item.value.childrens ? 'dropdown-trigger' : '']"
-        [attr.data-target]="'dropdown' + item.key"
-        *ngFor="let item of mainMenu.defaultOptions | keyvalue"
-        >
+      <ul class="header-menu">
+        <li class="text-primary" [routerLink]="item.value.router" routerLinkActive="router-link-active"
+          [routerLinkActiveOptions]="{ exact: true }" [ngClass]="[item.value.childrens ? 'dropdown-trigger' : '']"
+          [attr.data-target]="'dropdown' + item.key" *ngFor="let item of mainMenu.defaultOptions | keyvalue">
           <div *ngIf="item.value.router">
             <span [innerHTML]="item.value.name | translate"></span>
             <!-- {{item.value.name | translate}} -->
-              <!-- Dropdown Structure -->
-              <ul *ngIf="item.value.childrens" [attr.id]="'dropdown' + item.key" class='dropdown-content'>
-                <li *ngFor="let child of item.value.childrens">
-                  <a [routerLink]="child.router" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
-                    <span class="menu-initials">{{child.initials}}</span>
-                    {{child.name | translate}}
-                  </a>
-                </li>
-              </ul>
+            <!-- Dropdown Structure -->
+            <ul *ngIf="item.value.childrens" [attr.id]="'dropdown' + item.key" class='dropdown-content'>
+              <li *ngFor="let child of item.value.childrens">
+                <a [routerLink]="child.router" routerLinkActive="router-link-active"
+                  [routerLinkActiveOptions]="{ exact: true }">
+                  <span class="menu-initials">{{child.initials}}</span>
+                  {{child.name | translate}}
+                </a>
+              </li>
+            </ul>
           </div>
           <div *ngIf="item.value.link">
             <a [href]="item.value.link" target="_blank">{{item.value.name | translate}}</a>
@@ -58,23 +59,19 @@
 </nav>
 
 <ul class="sidenav" id="mobile-menu">
-  <li 
-    class="text-white"
-    *ngFor="let item of mainMenu.defaultOptions | keyvalue">
-    <span
-      class="sidenav-btn"
+  <li class="text-white" *ngFor="let item of mainMenu.defaultOptions | keyvalue">
+    <a class="sidenav-btn" 
       [routerLink]="item.value.router"
       routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLinkActiveOptions]="{ exact: true }" 
       *ngIf="!item.value.childrens && !item.value.link"
       (click)="cerrarSidenav()"
-      >
-      {{item.value.name | translate}}
-    </span>
+      [innerHTML]="item.value.name | translate">
+    </a>
     <div *ngIf="item.value.link">
-      <a [href]="item.value.link" target="_blank">{{item.value.name | translate}}</a>
+      <a [href]="item.value.link" target="_blank" [innerHTML]="item.value.name | translate"></a>
     </div>
-    
+
     <ul *ngIf="item.value.childrens" class="collapsible">
       <li>
         <div class="collapsible-header flex items-center justify-between">
@@ -82,19 +79,17 @@
           <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon>
         </div>
         <div class="collapsible-body">
-          <a 
-            *ngFor="let child of item.value.childrens"
-            [routerLink]="child.router"
-            routerLinkActive="router-link-active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            (click)="cerrarSidenav()"
-            class="flex p-4 leading-normal "
-            >
+          <a *ngFor="let child of item.value.childrens" [routerLink]="child.router"
+            routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="cerrarSidenav()"
+            class="flex p-4 leading-normal ">
             <span class="menu-initials mr-1 font-bold">{{child.initials}}</span>
-            {{child.name | translate}}
+            <span [innerHTML]="child.name | translate"></span>
           </a>
         </div>
       </li>
     </ul>
+  </li>
+  <li class="flex justify-start">
+    <app-social-media></app-social-media>
   </li>
 </ul>

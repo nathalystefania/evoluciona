@@ -1,25 +1,29 @@
 .nav
-    background: white
+    background: transparent
     box-shadow: none
     a
-      @apply text-primary
+      @apply text-white
 nav
+  background: white
+  @media (min-width: 1023px) 
+    background: linear-gradient(to bottom, #000000, rgba(0,0,0, 0))
   ul
-    @media screen and ( min-width: 1245px )
+    @media screen and ( min-width: 1023px )
       display: flex
+      gap: 1rem
   li
-    @apply mx-2 px-2 py-0 text-primary
+    @apply py-0 text-white
     cursor: pointer
-    font-weight: 500
+    font-weight: 400
+    font-size: 1.1rem
     padding-bottom: 10px
     position: relative
-    max-width: 150px
     display: flex
     align-items: center
+    flex: 1
     div
       display: flex
       align-items: center
-    // white-space: nowrap
     span
       line-height: 120%
       display: inline-flex
@@ -32,13 +36,19 @@ nav
         height: 3px
         display: block
         position: absolute
-        bottom: 1.5em
-        left: 0.5rem
-        max-width: 90px
+        bottom: 0
+        left: 0
+        max-width: 70%
         width: 65%
         z-index: 1
     &:focus-visible
       outline: none
+    &:last-child
+      justify-content: flex-end
+      &.router-link-active
+        &::after
+          left: initial
+          right: 0
   ul.dropdown-content
     .menu-initials
       font-weight: 700
@@ -86,11 +96,28 @@ nav
     margin: 0
     .collapsible-header
       padding: 0
+  li > a
+    color: white
+    font-size: 1.15rem
+    padding: 0 1rem
+    position: relative
+    &.router-link-active
+      &::after
+        content: ''
+        background: var(--orange-color)
+        height: 3px
+        display: block
+        position: absolute
+        bottom: 0.5rem
+        left: 1rem
+        max-width: 70%
+        width: 65%
+        z-index: 1
 
 ::ng-deep .select-idioma
   color: white
-  max-width: 100px
-  .select-wrapper 
+  .select-wrapper
+    max-width: 100px
     input.select-dropdown
       border-bottom: 0
       margin: 0
@@ -100,14 +127,8 @@ nav
   .dropdown-content li > span
     @apply text-primary
 
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i
-  height: 70px
-  line-height: 70px
-  @media only screen and (min-width: 1244px)
-    height: 120px
-    line-height: 120px
 nav 
-  @media only screen and (max-width: 1244px)
+  @media only screen and (max-width: 989px)
     a.sidenav-trigger
         display: block
     .brand-logo
@@ -120,5 +141,14 @@ nav
   @apply bg-primary
 
 .header-menu
-  @media screen and ( max-width: 1245px )
+  @media screen and ( max-width: 1023px )
     display: none
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i
+  height: auto
+  line-height: normal
+  position: relative
+  z-index: 1
+  @media screen and ( max-width: 1023px )
+    height: auto
+    line-height: normal

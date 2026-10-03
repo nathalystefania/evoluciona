@@ -4,14 +4,17 @@
     "ABOUT_US" : "About us",
     "SERVICES" : "Services",
     "PRODUCTS" : "Products",
-    "ITS" : "ITS",
+    "ITS" : "Electronic Tolling <br class=\"hidden lg:inline\"> and ITS",
     "CLIENTS" : "Clients",
     "COMMUNITY": "Community",
     "CONTACT" : "Contact",
-    "CLIENTS_&_SUCCESS_STORIES": "Clients & Success Stories",
+    "CLIENTS_&_SUCCESS_STORIES": "Clients and <br class=\"hidden lg:inline\"> Success Stories",
     "GLOBAL_SOURCING": "Sourcing Global",
     "DEVELOPMENT_&_INNOVATION": "Development & Innovation",
-    "NEWS" : "News"
+    "NEWS" : "News",
+    "AGILE_METHODOLOGIES": "Agile Methodologies",
+    "CUSTOMER_EXPERIENCE": "Customer Experience",
+    "POLICE_CONTROLLER_ADAPTER": "Police Controller Adapter"
   },
   "FOLLOW_US_ON_NETWORKS": "FOLLOW US ON NETWORKS",
   "ALL_RIGHTS_RESERVED": "All Rights Reserved."

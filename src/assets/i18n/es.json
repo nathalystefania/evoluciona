@@ -4,14 +4,17 @@
     "ABOUT_US" : "Nosotros",
     "PRODUCTS" : "Productos",
     "SERVICES" : "Servicios",
-    "ITS" : "ITS",
+    "ITS" : "Peaje Electrónico <br class=\"hidden lg:inline\"> e ITS",
     "CLIENTS" : "Clientes",
     "COMMUNITY": "Comunidad",
     "CONTACT" : "Contacto",
-    "CLIENTS_&_SUCCESS_STORIES": "Clientes & casos de éxito",
+    "CLIENTS_&_SUCCESS_STORIES": "Clientes y <br class=\"hidden lg:inline\">Casos de éxito",
     "GLOBAL_SOURCING": "Global Sourcing",
-    "DEVELOPMENT_&_INNOVATION": "Desarrollo e innovación",
-    "NEWS" : "Noticias"
+    "DEVELOPMENT_&_INNOVATION": "Desarrollo e Innovación",
+    "NEWS" : "Noticias",
+    "AGILE_METHODOLOGIES": "Metodologías Ágiles",
+    "CUSTOMER_EXPERIENCE": "Customer Experience",
+    "POLICE_CONTROLLER_ADAPTER": "Police Controller Adapter"
   },
   "FOLLOW_US_ON_NETWORKS": "SÍGUENOS EN LAS REDES",
   "ALL_RIGHTS_RESERVED": "Todos los derechos reservados."
