@@ -168,7 +168,7 @@ export class HeaderComponent implements OnInit {
       },
       {
         name: 'MENU.POLICE_CONTROLLER_ADAPTER',
-        router: ['/', 'police-controller-adapter']
+        router: ['products', 'pca']
       },
       {
         name: 'MENU.DEVELOPMENT_&_INNOVATION',
