@@ -17,15 +17,27 @@ export class FooterComponent implements OnInit {
     this.mainMenu.defaultOptions = [
       {
         name: 'MENU.ABOUT_US',
-        router: ['/', 'home']
+        router: ['/', '/']
       },
       {
         name: 'MENU.ITS',
         router: ['', 'its-transportation-systems']
       },
       {
+        name: 'MENU.AGILE_METHODOLOGIES',
+        router: ['/', '']
+      },
+      {
+        name: 'MENU.CUSTOMER_EXPERIENCE',
+        router: ['/', '']
+      },
+      {
         name: 'MENU.GLOBAL_SOURCING',
         router: ['/', 'sourcing-global']
+      },
+      {
+        name: 'MENU.POLICE_CONTROLLER_ADAPTER',
+        router: ['products', 'pca']
       },
       {
         name: 'MENU.DEVELOPMENT_&_INNOVATION',
@@ -34,11 +46,6 @@ export class FooterComponent implements OnInit {
       {
         name: 'MENU.CLIENTS_&_SUCCESS_STORIES',
         router: ['/', 'clients']
-      },
-      {
-        name: 'MENU.NEWS',
-        // router: ['/', 'community']
-        link: 'https://www.linkedin.com/company/evoluciona-limitada/posts/?feedView=all'
       },
       {
         name: 'MENU.CONTACT',
