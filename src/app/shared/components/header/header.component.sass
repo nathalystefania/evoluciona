@@ -96,23 +96,28 @@ nav
     margin: 0
     .collapsible-header
       padding: 0
-  li > a
-    color: white
-    font-size: 1.15rem
-    padding: 0 1rem
-    position: relative
-    &.router-link-active
-      &::after
-        content: ''
-        background: var(--orange-color)
-        height: 3px
-        display: block
-        position: absolute
-        bottom: 0.5rem
-        left: 1rem
-        max-width: 70%
-        width: 65%
-        z-index: 1
+  li
+    line-height: 1.5
+    padding: 0.6rem 0
+    & > a
+      color: white
+      font-size: 1.15rem
+      height: auto
+      line-height: 1.5
+      padding: 0 1rem
+      position: relative
+      &.router-link-active
+        &::after
+          content: ''
+          background: var(--orange-color)
+          height: 3px
+          display: block
+          position: absolute
+          bottom: -0.5rem
+          left: 1rem
+          max-width: 70%
+          width: 65%
+          z-index: 1
 
 ::ng-deep .sidenav li > a br
   display: none

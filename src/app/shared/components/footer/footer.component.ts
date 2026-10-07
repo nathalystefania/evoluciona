@@ -24,11 +24,11 @@ export class FooterComponent implements OnInit {
         router: ['', 'its-transportation-systems']
       },
       {
-        name: 'MENU.AGILE_METHODOLOGIES',
+        name: 'MENU.TRANSFORMATION_AND_OPERATIONAL_EXCELLENCE',
         router: ['/', '']
       },
       {
-        name: 'MENU.CUSTOMER_EXPERIENCE',
+        name: 'MENU.INTELLIGENCE_OF_EXPERIENCE_AND_PERFORMANCE',
         router: ['/', '']
       },
       {
