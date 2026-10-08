@@ -12,10 +12,10 @@ nav
     font-weight: 400
     font-size: 1.1rem
     padding-bottom: 10px
-    position: relative
     display: flex
     align-items: center
     flex: 1
+    justify-content: center
     div
       display: flex
       align-items: center
@@ -25,21 +25,31 @@ nav
     &:empty
       display: none
     &.router-link-active
-      &::after
-        content: ''
-        background: var(--orange-color)
-        height: 3px
-        display: block
-        position: absolute
-        bottom: 0
-        left: 0
-        max-width: 70%
-        width: 65%
-        z-index: 1
+      & > div
+        display: flex
+        align-items: center
+        flex: 1
+        justify-content: center
+        height: 100% 
+        & > span
+          position: relative
+          height: 100%
+          align-items: center
+          &::after
+            content: ''
+            background: var(--orange-color)
+            height: 3px
+            display: block
+            position: absolute
+            bottom: 0
+            left: 0
+            max-width: 70%
+            width: 65%
+            z-index: 1
     &:focus-visible
       outline: none
-    &:last-child
-      justify-content: flex-end
+    // &:last-child
+    //   justify-content: flex-end
       &.router-link-active
         &::after
           left: initial
