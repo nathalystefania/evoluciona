@@ -162,7 +162,7 @@ export class InitPageComponent implements OnInit, OnDestroy {
   ajustarAlturaElemento() {
     const slider: HTMLElement = this.elRef.nativeElement.querySelector('#slider-header');
     const alturaVentana = window.innerHeight;
-    const nuevaAltura = alturaVentana * 0.6;
+    const nuevaAltura = alturaVentana * 0.7;
     slider.style.height = `${nuevaAltura}px`;
     
     // Obtener todas las imágenes dentro del elemento

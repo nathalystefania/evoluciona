@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IconModule } from './icon.module';
 
 import { HeaderComponent } from './components/header/header.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { WrapHeroComponent } from './components/wrap-hero/wrap-hero.component';
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     HeaderComponent,
+    NavBarComponent,
     FooterComponent,
     HeroComponent,
     WrapHeroComponent,
@@ -60,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   exports: [
     HeaderComponent,
+    NavBarComponent,
     FooterComponent,
     WrapHeroComponent,
     HeroComponent,

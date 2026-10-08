@@ -1,77 +1,3 @@
-.nav
-    background: transparent
-    box-shadow: none
-    a
-      @apply text-white
-nav
-  background: white
-  @media (min-width: 1023px) 
-    background: linear-gradient(to bottom, #000000, rgba(0,0,0, 0))
-  ul
-    @media screen and ( min-width: 1023px )
-      display: flex
-      gap: 1rem
-  li
-    @apply py-0 text-white
-    cursor: pointer
-    font-weight: 400
-    font-size: 1.1rem
-    padding-bottom: 10px
-    position: relative
-    display: flex
-    align-items: center
-    flex: 1
-    div
-      display: flex
-      align-items: center
-    span
-      line-height: 120%
-      display: inline-flex
-    &:empty
-      display: none
-    &.router-link-active
-      &::after
-        content: ''
-        background: var(--orange-color)
-        height: 3px
-        display: block
-        position: absolute
-        bottom: 0
-        left: 0
-        max-width: 70%
-        width: 65%
-        z-index: 1
-    &:focus-visible
-      outline: none
-    &:last-child
-      justify-content: flex-end
-      &.router-link-active
-        &::after
-          left: initial
-          right: 0
-  ul.dropdown-content
-    .menu-initials
-      font-weight: 700
-    li 
-      margin-left: 0
-      padding: 0
-      & > a,
-      & > span
-        @apply text-primary
-        &:hover
-          background: transparent
-      &:hover
-        background: var(--orange-color)
-      // & > a.router-link-active
-      //   background: var(--orange-color)
-  .sidenav-trigger
-    padding: 4px 0
-  ul a
-    @apply text-primary
-    font-size: inherit
-    padding: 0
-    &:hover
-      background: transparent
 ::ng-deep
   app-header
     mat-icon.mat-icon
@@ -86,41 +12,6 @@ nav
   .text-white
     @media screen and (max-width: 769px)
       color: white!important
-.dropdown-content
-  overflow: hidden
-  top: 20px
-
-.sidenav
-  @apply p-6
-  .collapsible
-    margin: 0
-    .collapsible-header
-      padding: 0
-  li
-    line-height: 1.5
-    padding: 0.6rem 0
-    & > a
-      color: white
-      font-size: 1.15rem
-      height: auto
-      line-height: 1.5
-      padding: 0 1rem
-      position: relative
-      &.router-link-active
-        &::after
-          content: ''
-          background: var(--orange-color)
-          height: 3px
-          display: block
-          position: absolute
-          bottom: -0.5rem
-          left: 1rem
-          max-width: 70%
-          width: 65%
-          z-index: 1
-
-::ng-deep .sidenav li > a br
-  display: none
 
 ::ng-deep .select-idioma
   color: white
@@ -134,29 +25,3 @@ nav
   .dropdown-content li > a,
   .dropdown-content li > span
     @apply text-primary
-
-nav 
-  @media only screen and (max-width: 989px)
-    a.sidenav-trigger
-        display: block
-    .brand-logo
-      left: 50%
-      transform: translateX(-50%)
-      img
-        height: 5rem
-
-#mobile-menu
-  @apply bg-primary
-
-.header-menu
-  @media screen and ( max-width: 1023px )
-    display: none
-
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i
-  height: auto
-  line-height: normal
-  position: relative
-  z-index: 1
-  @media screen and ( max-width: 1023px )
-    height: auto
-    line-height: normal
