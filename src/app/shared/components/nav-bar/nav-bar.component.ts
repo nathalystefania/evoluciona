@@ -95,7 +95,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'MENU.GLOBAL_SOURCING',
-        router: ['/', 'sourcing-global']
+        router: ['/', 'staﬃng-global']
       },
       {
         name: 'MENU.POLICE_CONTROLLER_ADAPTER',

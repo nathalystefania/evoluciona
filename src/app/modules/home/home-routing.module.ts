@@ -33,7 +33,7 @@ const routes: Routes = [
     data: { title: 'DEVELOPMENT_&_INNOVATION.TITLE' }
   },
   {
-    path: 'sourcing-global',
+    path: 'staﬃng-global',
     loadChildren: () => import(`@modules/sourcing-global/sourcing-global.module`).then(m => m.SourcingGlobalModule),
     data: { title: 'GLOBAL_SOURCING.TITLE' }
   },
@@ -60,6 +60,11 @@ const routes: Routes = [
     path: 'experience-and-performance-intelligence',
     loadChildren: () => import(`@modules/experience-and-performance-intelligence/experience-and-performance-intelligence.module`).then(m => m.ExperienceAndPerformanceIntelligenceModule),
     data: { title: 'EXPERIENCE_AND_PERFORMANCE_INTELLIGENCE.TITLE' }
+  },
+  {
+    path: 'sourcing-global',
+    redirectTo: 'staﬃng-global',
+    pathMatch: 'full'
   },
   {
     path: '**',

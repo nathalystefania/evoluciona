@@ -33,7 +33,7 @@ export class FooterComponent implements OnInit {
       },
       {
         name: 'MENU.GLOBAL_SOURCING',
-        router: ['/', 'sourcing-global']
+        router: ['/', 'staﬃng-global']
       },
       {
         name: 'MENU.POLICE_CONTROLLER_ADAPTER',
