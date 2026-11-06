@@ -3,23 +3,40 @@
   "HEADER_TEXT": "Diseñamos y desarrollamos soluciones simples y prácticas, enfocadas en las necesidades reales de nuestros clientes, con una mirada integral y global.",
   "DESCRIPTION": {
     "TITLE": "Nosotros",
-    "TEXT": "Evoluciona es una empresa con 20 años de trayectoria, buscamos generar valor a nuestros clientes a través de la ingeniería de negocios, la tecnología, la innovación y la búsqueda de las personas con el conocimiento y la experiencia necesaria para nuestros proyectos. Nos caracterizamos por una actitud de servicio y responsabilidad, en un camino de mejora continua de rigor y calidad, tanto en el mundo privado como público."
+    "TEXT": "Evoluciona es una empresa con más de 20 años de trayectoria, buscamos generar valor a nuestros clientes a través de la ingeniería de negocios, la tecnología, la innovación y la búsqueda de las personas con el conocimiento y la experiencia necesaria para nuestros proyectos. Nos caracterizamos por una actitud de servicio y responsabilidad, en un camino de mejora continua de rigor y calidad, tanto en el mundo privado como público."
   },
-  "INTRODUCTION_ABOUT_US": "Evoluciona, está conformada por una red de más de 40 profesionales en varios países y de distintas especialidades, como ingenieros industriales, informáticos y comerciales, psicólogos, audiovisuales, periodistas, abogados, técnicos, entre otros; lo que nos permite conformar equipos y células multidisciplinarias para abordar sus necesidades e iniciativas.",
-  "WE_PROVIDE": "<span class='font-medium'>BRINDAMOS</span> asesoría en el diagnóstico y solución de problemáticas de negocios, en el desarrollo de emprendimientos y en el diseño de planes estratégicos.",
-  "WE_PROMOTE": "<span class='font-medium'>IMPULSAMOS</span> la incursión de nuestros clientes en la implementación de plataformas tecnológicas funcionales innovadoras.",
-  "WE_SUPPORT": "<span class='font-medium'>APOYAMOS</span> la expansión de las compañías en términos de estrategias efectivas de negocios que permitan la consecución de metas concretas.",
+  "INTRODUCTION_ABOUT_US": "Evoluciona, está conformada por una red de más de 40 profesionales en varios países y de distintas especialidades, como ingenieros industriales, informáticos y comerciales, psicólogos, sociólogos, audiovisuales, periodistas, abogados, técnicos, entre otros; lo que nos permite conformar equipos y células multidisciplinarias para abordar sus necesidades e iniciativas. </br>Ayudamos a organizaciones que necesitan transformar su operación sin perder velocidad ni foco en el negocio. Combinamos estrategia, excelencia operacional, prácticas ágiles y tecnología para convertir desafíos complejos en mejoras medibles. Nuestro modelo boutique asegura participación senior, en las soluciones diseñadas para cada contexto y acompañamiento cercano desde el diagnóstico hasta la instalación de capacidades.",
+  "WE_UNDERSTAND": {
+    "TITLE": "ENTENDEMOS",
+    "TEXT": "Antes de proponer soluciones, buscamos comprender qué está ocurriendo y por qué. Analizamos procesos, datos y experiencias de clientes y colaboradores para identificar fricciones, brechas y causas raíz, y así definir con claridad dónde intervenir."
+  },
+  "WE_TRANSFORM": {
+    "TITLE": "TRANSFORMAMOS",
+    "TEXT": "Convertimos el diagnóstico en iniciativas concretas. Rediseñamos procesos, incorporamos tecnología y automatización, fortalecemos capacidades y acompañamos a los equipos en la implementación de mejoras orientadas a resultados medibles."
+  },
+  "WE_CONSOLIDATE": {
+    "TITLE": "CONSOLIDAMOS",
+    "TEXT": "Acompañamos la adopción de los cambios para que las mejoras se sostengan en el tiempo. Medimos resultados, recogemos nueva evidencia y retroalimentamos el proceso para ajustar, aprender y continuar mejorando."
+  },
   "WE_INVITE_YOU_TO_LEARN_MORE_ABOUT_OUR_SERVICES": "Te invitamos a conocer más sobre nuestros servicios",
   "OUR_SERVICES": {
     "CARD1":{
-      "TITLE": "ITS",
+      "TITLE": "ITS / Desarrollo de sistemas",
       "TEXT": "Evoluciona es una empresa con más de 15 años de experiencia en Sistemas Inteligentes de Transporte en distintas autopistas de Europa y América.<br> Nuestra especialización se extiende desde la conceptualización y formulación comercial de productos y servicios tecnológicos, hasta el establecimiento de requerimientos, dirección, licitación y adquisición o diseño y construcción, junto al mantenimiento de las soluciones que ayuden a mejorar la operación de las autopistas"
     },
     "CARD2":{
+      "TITLE": "TRANSFORMACIÓN Y EXCELENCIA OPERACIONAL",
+      "TEXT": "Ayudamos a organizaciones que necesitan transformar su operación sin perder velocidad ni foco en el negocio. Combinamos estrategia, excelencia operacional, prácticas ágiles y tecnología para convertir desafíos complejos en mejoras medibles. Nuestro modelo boutique asegura participación senior, soluciones diseñadas para cada contexto y acompañamiento cercano desde el diagnóstico hasta la instalación de capacidades."
+    },
+    "CARD3":{
+      "TITLE": "INTELIGENCIA DE EXPERIENCIA Y DESEMPEÑO",
+      "TEXT": "Como área especializada de Evoluciona en experiencia del cliente y del colaborador, trabajamos directamente con cada organización para diseñar mediciones y análisis ajustados a su realidad. Integramos distintas fuentes de información, identificamos oportunidades concretas de mejora y entregamos recomendaciones que facilitan la toma de decisiones, con estricta confidencialidad de los datos y resultados."
+    },
+    "CARD4":{
       "TITLE": "SOURCING GLOBAL",
       "TEXT": "El éxito de una organización depende en gran medida de las capacidades y compromiso de su fuerza laboral. La ejecución de proyectos requiere cada vez más personal con probadas competencias que garanticen la calidad y el compromiso con los resultados.<br> En ocasiones, es necesario potenciar el equipo de trabajo, para ello Evoluciona propone el outsourcing empresarial global, presencial o remoto, como estrategia eficaz para impulsar la consolidación de los proyectos de la organización."
     },
-    "CARD3":{
+    "CARD5":{
       "TITLE": "DESARROLLO & INNOVACIÓN",
       "TEXT": "Evaluamos las opciones tecnológicas que permitan impulsar la innovación de nuestros clientes y su presencia en las plataformas digitales.<br> Desarrollamos proyectos de aplicaciones adaptables, prácticas e integrales para empresas y organizaciones innovadoras, que comprenden el ritmo de las nuevas tecnologías y la importancia de la tecnología en su actividad cotidiana y en su crecimiento."
     }
@@ -35,7 +52,7 @@
       "PARTNER2": {
         "NAME": "Manuel Vergara Trincado",
         "POSITION": "CEO / Director Ejecutivo",
-        "TEXT": "Mi motivación es agregar valor a las organizaciones a través de un estudio sistemático de sus recursos, del entorno y de sus propias metas, para a través de la ingeniería, innovación y valores, llevarlos a desafiar sus límites, apoyando los procesos de transformación necesarios para alcanzar el éxito."
+        "TEXT": "Durante más de dos décadas he creado, dirigido y hecho crecer empresas y proyectos de servicios profesionales y tecnología. Esa experiencia me permite acompañar a otros dueños y gerentes desde una mirada práctica, porque muchas de las decisiones que hoy asesoro también me ha tocado enfrentarlas. Como socio y director de Evoluciona, trabajo junto a nuestros equipos y clientes para transformar desafíos complejos en decisiones claras, planes ejecutables y mejoras que generen valor real."
       },
       "PARTNER3": {
         "NAME": "Jorge Vasquez Araya",
@@ -45,7 +62,7 @@
     }
   },
   "VIEW_PROFILE": "Ver perfil en Linkedin",
-  "PREVIEW_VIDEO": "Conoce un poco más de nuestra propuesta para el crecimiento empresarial.",
+  "PREVIEW_VIDEO": "Somos una ventana abierta al futuro.<br> Conoce un poco más de nuestra propuesta para el crecimiento empresarial.",
   "CONTACT_US": "Contacta con nosotros",
   "OUR_EXPERIENCE_AND_SUCCESS_STORIES": "Nuestra experiencia y Casos de éxito"
 }

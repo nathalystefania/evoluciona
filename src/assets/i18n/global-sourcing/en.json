@@ -1,65 +1,37 @@
 {
-  "HEADER_TITLE": "PEOPLE<br> AT YOUR SERVICE",
+  "TITLE": "Staﬃng Global",
+  "HEADER_TITLE": "TALENT <br> TO STRENGTHEN <br> YOUR TEAMS",
   "HEADER_TEXT": "",
   "DESCRIPTION": {
-    "TITLE": "Global Sourcing",
-    "TEXT": "The success of an organization depends largely on the capabilities and commitment of its workforce. The execution of projects requires more and more personnel with proven skills that guarantee quality and commitment to results. Sometimes, it is necessary to strengthen the work team, for this Evoluciona proposes global business outsourcing, in-person or remote, as an effective strategy to promote the consolidation of the organization's projects."
+    "TITLE": "Staﬃng Global",
+    "TEXT": "With our staffing and staff augmentation service, we strengthen our clients' teams through the search, selection, and incorporation of specialized talent, both locally and internationally. We adapt the service to the needs of each organization, with professionals who can integrate either on-site or remotely. We evaluate their competencies and support their integration, maintaining close follow-up with the client and the professionals to support their performance and the continuity of the service."
   },
   "WHAT_IS_GLOBAL_PEOPLE_SOURCING": {
-    "TITLE": "What is Global People Sourcing?",
-    "TEXT": "One of the main obstacles that some economies face is the lack of professionals in the field of technology, which translates into a problem when companies want to carry out technological strategies to enhance their operations. In Chile alone, in the field of technology, it is estimated that we have a deficit of professionals in the area of 25% to 40%. In this context, Global Sourcing is a strategy that carries out an intensive search and selection of the human talent that companies require, both locally and globally, at competitive prices and with a high quality standard."
+    "TITLE": "How does our Staﬃng Global service work?",
+    "TEXT": "We start by understanding the client's challenge and defining the profiles, skills, and work modalities required. Then we search for and evaluate local and international talent, and present a selection of candidates for validation. This reduces the internal team's workload and facilitates an onboarding aligned with the project's and organization's needs. <br>We manage the hiring and coordinate the onboarding of professionals, either on-site or remotely, according to the agreed scope. During the service, we maintain close contact with the client and the professionals to monitor performance, address difficulties, and adjust support to the team's needs."
   },
   "WHY_DO_GLOBAL_SOURCING_WITH_US": {
     "TITLE": "Why do Global Sourcing with us?",
     "CARDS": {
       "CARD1": {
-        "TITLE": "PSYCHOLABOR REPORT",
-        "TEXT" : "We carry out an independent psycho-labor report prior to all our engineers."
+        "TITLE": "EVALUATION AND PROFILE ADJUSTMENT",
+        "TEXT" : "We evaluate the technical skills and cultural fit according to the requirements of each profile, project, and client."
       },
       "CARD2": {
-        "TITLE": "TECHNICAL SKILLS",
-        "TEXT" : "We guarantee the technical skills of each of those selected."
+        "TITLE": "PERMANENT TECHNICAL AND HUMAN SUPPORT",
+        "TEXT" : "We provide permanent technical support according to the scope of the project, promoting the continuity of the assigned work."
       },
       "CARD3": {
-        "TITLE": "PERMANENT TECHNICAL SUPPORT",
-        "TEXT" : "We provide permanent technical support to both the resource and the client."
+        "TITLE": "ADHERENCE TO INTERNATIONAL LEGISLATION",
+        "TEXT" : "In Chile, Peru, and Spain, we have direct hiring of personnel, without prejudice to hiring in other locations with protection under international law."
       },
       "CARD4": {
-        "TITLE": "STICKED TO THE LEGISLATION",
-        "TEXT" : "We strictly adhere to national labor legislation."
-      },
-      "CARD5": {
         "TITLE": "PERMANENT MONITORING",
-        "TEXT" : "We permanently monitor selected personnel and their performance."
-      },
-      "CARD6": {
-        "TITLE": "LABOR ABSORPTION",
-        "TEXT" : "Without complications, nor any cost in case of eventual absorption of the resource by the client."
-      },
-      "CARD7": {
-        "TITLE": "GLOBAL SOURCING",
-        "TEXT" : "We make it possible to hire trained personnel from different locations around the world."
-      }
-    }
-  },
-  "ADDITIONALLY": {
-    "TITLE": "Additionally",
-    "CARDS": {
-      "CARD1": {
-        "TITLE": "SELECTION",
-        "TEXT" : "We carry out an exhaustive search and timely selection of professionals."
-      },
-      "CARD2": {
-        "TITLE": "SAVING",
-        "TEXT" : "Excellent cost/benefit ratio."
-      },
-      "CARD3": {
-        "TITLE": "PROFESSIONALISM",
-        "TEXT" : "We apply a prior interview to the resource, endorsed by an expert psychologist."
+        "TEXT" : "We are committed to our clients' goals through the empowerment and continuous feedback to our team."
       }
     }
   },
   "PREVIEW_VIDEO": {
-    "TITLE": "Know more about us"
+    "TITLE": "Tell us what capabilities your team needs. We will design a staffing alternative according to the profile, work modality, and scope of the service your organization requires."
   }
 }

@@ -3,23 +3,40 @@
   "HEADER_TEXT": "We design and develop simple and practical solutions, focused on the real needs of our clients, with a comprehensive and global perspective.",
   "DESCRIPTION": {
     "TITLE": "About Us",
-    "TEXT": "Evoluciona is a company with 20 years of experience. We strive to generate value for our clients through business engineering, technology, innovation, and by seeking out individuals with the knowledge and experience necessary for our projects. We are characterized by a service-oriented and responsible approach, committed to continuous improvement with rigor and quality, in both the private and public sectors."
+    "TEXT": "Evoluciona is a company with more than 20 years of experience. We strive to generate value for our clients through business engineering, technology, innovation, and by seeking out individuals with the knowledge and experience necessary for our projects. We are characterized by a service-oriented and responsible approach, committed to continuous improvement with rigor and quality, in both the private and public sectors."
   },
-  "INTRODUCTION_ABOUT_US": "Evoluciona is made up of a network of more than 40 professionals in several countries and from different specialties, such as industrial, computer and commercial engineers, psychologists, audiovisuals, journalists, lawyers, technicians, among others; which allows us to form multidisciplinary teams and cells to address their needs and initiatives.",
-  "WE_PROVIDE": "<span class='font-medium'>WE PROVIDE</span> advice in the diagnosis and solution of business problems, in the development of ventures and in the design of strategic plans.",
-  "WE_PROMOTE": "<span class='font-medium'>WE PROMOTE</span> our clients' foray into the implementation of innovative functional technological platforms.",
-  "WE_SUPPORT": "<span class='font-medium'>WE SUPPORT</span> the expansion of companies in terms of effective business strategies that allow the achievement of specific goals.",
+  "INTRODUCTION_ABOUT_US": "Evoluciona is made up of a network of more than 40 professionals in several countries and from different specialties, such as industrial, computer and commercial engineers, psychologists, sociologists, audiovisuals, journalists, lawyers, technicians, among others; which allows us to form multidisciplinary teams and cells to address their needs and initiatives. <br/> We help organizations that need to transform their operation without losing speed or focus on the business. We combine strategy, operational excellence, agile practices and technology to turn complex challenges into measurable improvements. Our boutique model ensures senior participation in the solutions designed for each context and close support from diagnosis to capacity building.",
+  "WE_UNDERSTAND": {
+    "TITLE": "WE UNDERSTAND",
+    "TEXT": "Before proposing solutions, we seek to understand what is happening and why. We analyze processes, data, and experiences of clients and collaborators to identify frictions, gaps, and root causes, and thus clearly define where to intervene."
+  },
+  "WE_TRANSFORM": {
+    "TITLE": "WE TRANSFORM",
+    "TEXT": "We turn the diagnosis into concrete initiatives. We redesign processes, incorporate technology and automation, strengthen capabilities, and support teams in implementing improvements aimed at measurable results."
+  },
+  "WE_CONSOLIDATE": {
+    "TITLE": "WE CONSOLIDATE",
+    "TEXT": "We support the adoption of changes so that improvements are sustained over time. We measure results, gather new evidence, and provide feedback to the process to adjust, learn, and continue improving."
+  },
   "WE_INVITE_YOU_TO_LEARN_MORE_ABOUT_OUR_SERVICES": "We invite you to learn more about our services",
   "OUR_SERVICES": {
     "CARD1":{
-      "TITLE": "ITS",
+      "TITLE": "ITS / Systems Development",
       "TEXT": "Evoluciona is a company with more than 15 years of experience in Intelligent Transportation Systems on different highways in Europe and America.<br> Our specialization extends from the conceptualization and commercial formulation of technological products and services, to the establishment of requirements, management , bidding and acquisition or design and construction, along with the maintenance of solutions that help improve the operation of highways."
     },
     "CARD2":{
+      "TITLE" : "TRANSFORMATION AND OPERATIONAL EXCELLENCE",
+      "TEXT": "We help organizations that need to transform their operations without losing speed or focus on the business. We combine strategy, operational excellence, agile practices, and technology to turn complex challenges into measurable improvements. Our boutique model ensures senior participation, solutions designed for each context, and close support from diagnosis to capability installation."
+    },
+    "CARD3":{
+      "TITLE" : "EXPERIENCE AND PERFORMANCE INTELLIGENCE",
+      "TEXT": "As a specialized area of Evoluciona in customer and employee experience, we work directly with each organization to design measurements and analyses tailored to their reality. We integrate different sources of information, identify concrete improvement opportunities, and provide recommendations that facilitate decision-making, with strict confidentiality of data and results."
+    },
+    "CARD4":{
       "TITLE": "SOURCING GLOBAL",
       "TEXT": "The success of an organization depends largely on the capabilities and commitment of its workforce. The execution of projects requires more and more personnel with proven skills that guarantee quality and commitment to results.<br> Sometimes, it is necessary to strengthen the work team, for this Evoluciona proposes global business outsourcing, in-person or remote, as an effective strategy to promote the consolidation of the organization's projects."
     },
-    "CARD3":{
+    "CARD5":{
       "TITLE": "DEVELOPMENT & INNOVATION",
       "TEXT": "We evaluate the technological options that allow us to promote our clients' innovation and their presence on digital platforms.<br> We develop adaptable, practical and comprehensive application projects for innovative companies and organizations, which understand the pace of new technologies and the importance of technology in their daily activity and in their growth."
     }
@@ -35,7 +52,7 @@
       "PARTNER2": {
         "NAME": "Manuel Vergara Trincado",
         "POSITION": "CEO / Executive Director",
-        "TEXT": "My motivation is to add value to organizations through a systematic study of their resources, the environment and their own goals, to through engineering, innovation and values, lead them to challenge their limits, supporting the transformation processes necessary to reach success."
+        "TEXT": "For more than two decades I have created, led and grown companies and professional services and technology projects. This experience allows me to support other owners and managers from a practical perspective, because many of the decisions I advise on today I have also had to face. As a partner and director of Evoluciona, I work alongside our teams and clients to transform complex challenges into clear decisions, executable plans and improvements that generate real value."
       },
       "PARTNER3": {
         "NAME": "Jorge Vasquez Araya",
@@ -45,7 +62,7 @@
     }
   },
   "VIEW_PROFILE": "View profile on Linkedin",
-  "PREVIEW_VIDEO": "Learn a little more about our proposal for business growth.",
+  "PREVIEW_VIDEO": "We are an open window to the future.<br> Learn a little more about our proposal for business growth.",
   "CONTACT_US": "Contact us",
   "OUR_EXPERIENCE_AND_SUCCESS_STORIES": "Our experience and Success stories"
 }

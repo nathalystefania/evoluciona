@@ -15,5 +15,13 @@
 <body class="relative">
   <app-root></app-root>
 </body>
-
+<script>
+  // Legacy PCA URL compatibility redirect (before Angular initializes).
+  if (window.location.hash === '#/products/pca') {
+    window.location.replace(
+      window.location.pathname + window.location.search + '#/pca'
+    );
+  }
+  document.documentElement.lang = localStorage.getItem('currentLang') || 'en';
+</script>
 </html>

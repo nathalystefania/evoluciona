@@ -12,6 +12,7 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { InitRoutingModule } from './init-routing.module';
 import { InitPageComponent } from './pages/init-page/init-page.component';
 import { SharedModule } from '@shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
 
 export function homeHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -36,7 +37,8 @@ export function homeHttpLoaderFactory(http: HttpClient) {
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    MatIconModule
   ]
 })
 export class InitModule { }

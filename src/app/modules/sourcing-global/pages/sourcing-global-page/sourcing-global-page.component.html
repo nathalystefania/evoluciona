@@ -21,15 +21,15 @@
         {{ 'WHAT_IS_GLOBAL_PEOPLE_SOURCING.TITLE' | translate}}
       </h2>
     </div>
-    <p class="text-lg leading-6">{{ 'WHAT_IS_GLOBAL_PEOPLE_SOURCING.TEXT' | translate}}</p>
+    <p class="text-lg leading-7" [innerHTML]="'WHAT_IS_GLOBAL_PEOPLE_SOURCING.TEXT' | translate"></p>
   </section>
 
-  <section class="container px-4 lg:px-10 max-w-[96rem] py-12">
-    <div class="flex justify-center mb-10">
+  <section class="container px-4 lg:px-10 max-w-[96rem]">
+    <!-- <div class="flex justify-center mb-10">
       <h2 class="flex text-gray text-3xl text-center title_border relative pb-3">
         {{ 'WHY_DO_GLOBAL_SOURCING_WITH_US.TITLE' | translate}}
       </h2>
-    </div>
+    </div> -->
     <app-wrap-cards 
       [dataCards]="globalSourcingCards"
       [nCards]="nCards"
@@ -37,7 +37,7 @@
     ></app-wrap-cards>
   </section>
 
-  <section class="container px-4 lg:px-6 max-w-[96rem] pb-28">
+  <!-- <section class="container px-4 lg:px-6 max-w-[96rem] pb-28">
     <div class="flex justify-center mb-12">
       <h2 class="flex text-gray text-3xl text-center title_border relative pb-3">
         {{ 'ADDITIONALLY.TITLE' | translate}}
@@ -49,14 +49,14 @@
       [titlePosition]="'top'"
       [imageSize]="'w-full'"
     ></app-wrap-cards>
-  </section>
+  </section> -->
 </div>
 
 
 <div class="container-fluid">
   <section class="container px-4 lg:px-6 max-w-[96rem] py-12">
     <div class="flex justify-center mb-10">
-      <h2 class="flex text-gray text-3xl text-center title_border relative pb-3">
+      <h2 class="flex text-gray text-3xl title_border relative leading-normal pb-3 max-w-[80%]">
         {{ 'PREVIEW_VIDEO.TITLE' | translate}}
       </h2>
     </div>

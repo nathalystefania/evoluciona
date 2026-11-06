@@ -1,66 +1,37 @@
 {
-  "TITLE": "Global Sourcing",
-  "HEADER_TITLE": "PERSONAS<br> A TU SERVICIO",
+  "TITLE": "Staﬃng Global",
+  "HEADER_TITLE": "TALENTO PARA <br> FORTALECER <br> TUS EQUIPOS",
   "HEADER_TEXT": "",
   "DESCRIPTION": {
-    "TITLE": "Global Sourcing",
-    "TEXT": "El éxito de una organización depende en gran medida de las capacidades y compromiso de su fuerza laboral. La ejecución de proyectos requiere cada vez más personal con probadas competencias que garanticen la calidad y el compromiso con los resultados. En ocasiones, es necesario potenciar el equipo de trabajo, para ello Evoluciona propone el outsourcing empresarial global, presencial o remoto, como estrategia eficaz para impulsar la consolidación de los proyectos de la organización."
+    "TITLE": "Staﬃng Global",
+    "TEXT": "Con nuestro servicio de staﬃng y staﬀ augmentation, fortalecemos los equipos de nuestros clientes mediante la búsqueda, selección e incorporación de talento especializado, tanto local como internacional. Adaptamos el servicio a las necesidades de cada organización, con profesionales que pueden integrarse de forma presencial o remota. Evaluamos sus competencias y acompañamos su integración, manteniendo un seguimiento cercano con el cliente y los profesionales para apoyar su desempeño y la continuidad del servicio."
   },
   "WHAT_IS_GLOBAL_PEOPLE_SOURCING": {
-    "TITLE": "¿Qué es el Global Sourcing de personas?",
-    "TEXT": "Uno de los principales obstáculos que enfrentan algunas economías es la falta de profesionales en el rubro de la tecnología, lo que se traduce en un problema al momento que las empresas quieren llevar a cabo estrategias tecnológicas para potenciar su operación. Solo en Chile en el ámbito de la tecnología, se estima que tenemos un déficit de profesionales del área del 25% al 40%. En ese contexto el Global Sourcing es una estrategia que realiza una búsqueda y selección intensiva del talento humano que las empresas requieren, tanto a nivel local como global, a precios competitivos y con un alto estándar de calidad."
+    "TITLE": "¿Cómo funciona nuestro servicio de Staﬃng Global?",
+    "TEXT": "Comenzamos por comprender el desafío del cliente y definir los perfiles, competencias y modalidades de trabajo que requiere. Luego buscamos y evaluamos talento local e internacional, y presentamos una selección de candidatos para su validación. Así reducimos la carga del equipo interno y facilitamos una incorporación alineada con las necesidades del proyecto y de la organización. <br>Gestionamos la contratación y coordinamos la incorporación de los profesionales, de forma presencial o remota, según el alcance acordado. Durante el servicio, mantenemos un contacto cercano con el cliente y los profesionales para dar seguimiento al desempeño, abordar dificultades y ajustar el apoyo a las necesidades del equipo."
   },
   "WHY_DO_GLOBAL_SOURCING_WITH_US": {
     "TITLE": "¿Por qué hacer global sourcing con nosotros?",
     "CARDS": {
       "CARD1": {
-        "TITLE": "INFORME PSICOLABORAL",
-        "TEXT" : "Realizamos un informe psicolaboral independiente previo a todos nuestros ingenieros."
+        "TITLE": "EVALUACIÓN Y AJUSTE AL PERFIL",
+        "TEXT" : "Evaluamos las competencias técnicas y calce cultural según los requerimientos de cada perfil, proyecto y cliente."
       },
       "CARD2": {
-        "TITLE": "COMPETENCIAS TÉCNICAS",
-        "TEXT" : "Garantizamos las competencias técnicas de cada uno de los seleccionados."
+        "TITLE": "APOYO TÉCNICO Y HUMANO PERMANENTE",
+        "TEXT" : "Brindamos soporte técnico permanente según el alcance del proyecto, promoviendo la continuidad del trabajo encomendado."
       },
       "CARD3": {
-        "TITLE": "APOYO TÉCNICO PERMANENTE",
-        "TEXT" : "Brindamos apoyo técnico permanente tanto al recurso como al cliente."
+        "TITLE": "APEGADOS A LA LEGISLACIÓN INTERNACIONAL",
+        "TEXT" : "En Chile, Perú y España, disponemos de contratación directa del personal, sin perjuicio de la contratación en otras latitudes con resguardo al derecho internacional."
       },
       "CARD4": {
-        "TITLE": "APEGADOS A LA LEGISLACIÓN",
-        "TEXT" : "Nos apegamos estrictamente a la legislación laboral nacional."
-      },
-      "CARD5": {
         "TITLE": "MONITOREO PERMANENTE",
-        "TEXT" : "Monitoreamos permanentemente al personal seleccionado y su desempeño."
-      },
-      "CARD6": {
-        "TITLE": "ABSORCIÓN LABORAL",
-        "TEXT" : "Sin complicaciones, ni costo alguno en caso de una eventual absorción del recurso por parte del cliente."
-      },
-      "CARD7": {
-        "TITLE": "GLOBAL SOURCING",
-        "TEXT" : "Hacemos posible la contratación de personal capacitado desde distintos lugares alrededor del mundo."
-      }
-    }
-  },
-  "ADDITIONALLY": {
-    "TITLE": "Además",
-    "CARDS": {
-      "CARD1": {
-        "TITLE": "SELECCIÓN",
-        "TEXT" : "Realizamos la búsqueda exhaustiva y selección oportuna de profesionales."
-      },
-      "CARD2": {
-        "TITLE": "AHORRO",
-        "TEXT" : "Excelente relación costo / beneficio."
-      },
-      "CARD3": {
-        "TITLE": "PROFESIONALISMO",
-        "TEXT" : "Aplicamos al recurso una entrevista previa, avalada por un psicólogo experto."
+        "TEXT" : "Nos comprometemos con las metas de nuestros clientes a través del potenciamiento y feedback continuo a nuestro equipo."
       }
     }
   },
   "PREVIEW_VIDEO": {
-    "TITLE": "Conoce un poco más"
+    "TITLE": "Cuéntanos qué capacidades necesita tu equipo. Diseñaremos una alternativa de staﬃng acorde con el perfil, la modalidad de trabajo y el alcance del servicio que requiera tu organización."
   }
 }

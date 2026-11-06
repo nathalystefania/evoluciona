@@ -36,6 +36,11 @@
                   "input": "src/assets",
                   "ignore": ["videos/**"],
                   "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/redirects",
+                "output": "/"
               }
             ],
             "styles": [

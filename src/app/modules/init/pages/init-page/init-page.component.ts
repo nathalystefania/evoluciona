@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy, ElementRef, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { I18nServiceService } from 'src/app/i18n-service/i18n-service.service';
+import { I18nServiceService } from '../../../../i18n-service/i18n-service.service';
 
 
 import { VgApiService } from '@videogular/ngx-videogular/core';
@@ -78,16 +78,19 @@ export class InitPageComponent implements OnInit, OnDestroy {
 
     this.dataCards = [
       {
-        image: './assets/images/icons/home/brindamos.svg',
-        paragraph: 'WE_PROVIDE'
+        title: 'WE_UNDERSTAND.TITLE',
+        image: './assets/images/icons/home/entendemos.svg',
+        paragraph: 'WE_UNDERSTAND.TEXT'
       },
       {
-        image: './assets/images/icons/home/impulsamos.svg',
-        paragraph: 'WE_PROMOTE'
+        title: 'WE_TRANSFORM.TITLE',
+        image: './assets/images/icons/home/transformamos.svg',
+        paragraph: 'WE_TRANSFORM.TEXT'
       },
       {
+        title: 'WE_CONSOLIDATE.TITLE',
         image: './assets/images/icons/home/apoyamos.svg',
-        paragraph: 'WE_SUPPORT'
+        paragraph: 'WE_CONSOLIDATE.TEXT'
       },
     ]
     this.dataLargeCards = [
@@ -105,6 +108,16 @@ export class InitPageComponent implements OnInit, OnDestroy {
         title: 'OUR_SERVICES.CARD3.TITLE',
         text: 'OUR_SERVICES.CARD3.TEXT',
         image: './assets/images/home-servicios/servicios_3.jpg',
+      },
+      {
+        title: 'OUR_SERVICES.CARD4.TITLE',
+        text: 'OUR_SERVICES.CARD4.TEXT',
+        image: './assets/images/home-servicios/servicios_4.jpg',
+      },
+      {
+        title: 'OUR_SERVICES.CARD5.TITLE',
+        text: 'OUR_SERVICES.CARD5.TEXT',
+        image: './assets/images/home-servicios/servicios_5.jpg',
       },
     ],
 

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
@@ -11,12 +12,24 @@ export class I18nServiceService {
 
   localeEvent = new Subject<string>();
 
-  constructor(private translate: TranslateService, private http: HttpClient) { }
+  constructor(
+    private translate: TranslateService,
+    private http: HttpClient,
+    @Inject(DOCUMENT) private document: Document
+  ) {
+    // Sincroniza el atributo lang al iniciar con el idioma guardado
+    this.setHtmlLang(localStorage.getItem('currentLang') || 'en');
+  }
+
+  private setHtmlLang(locale: string): void {
+    this.document.documentElement.lang = locale;
+  }
 
   async changeLocale(locale: string) {
     
     this.translate.use(locale);
     this.localeEvent.next(locale);
+    this.setHtmlLang(locale);
 
     localStorage.setItem('currentLang', locale);
     

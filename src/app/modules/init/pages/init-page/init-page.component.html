@@ -36,7 +36,7 @@
 
 <div class="container-fluid">
   <section class="container px-4 lg:px-6 max-w-[96rem] pt-32">
-    <p class="text-lg leading-6">{{ 'INTRODUCTION_ABOUT_US' | translate}}</p>
+    <p class="text-xl leading-8" [innerHTML]="'INTRODUCTION_ABOUT_US' | translate"></p>
   </section>
 </div>
 
@@ -68,12 +68,15 @@
           <div class="w-auto pr-4">
             <img [src]="partner.image" class="aspect-w-1 aspect-h-1 max-w-[100px]" [alt]="partner.name" />
           </div>
-          <div class="grow self-center">
+          <div class="grow self-start">
+            <h4 class="text-2xl font-medium">{{ partner.name | translate }}</h4>
             <a *ngIf="partner.in_profile" href="{{ partner.in_profile }}" target="_blank" rel="noopener noreferrer" title="{{ 'VIEW_PROFILE' | translate }}" class="link-name">
-              <h4 class="text-2xl font-medium">{{ partner.name | translate }}</h4>
+              <p class="flex align-middle font-light text-medium-gray hover:text-primary">
+                <span>{{ partner.position | translate}}</span>
+              </p>
+              <mat-icon [svgIcon]="'icon-linkedin'"></mat-icon>
             </a>
-            <h4 *ngIf="!partner.in_profile" class="text-2xl font-medium">{{ partner.name | translate }}</h4>
-            <p class="font-light text-medium-gray">{{ partner.position | translate}}</p>
+            <p *ngIf="!partner.in_profile" class="font-light text-medium-gray">{{ partner.position | translate}}</p>            
           </div>
         </div>
         <div class="mt-6">
@@ -90,7 +93,7 @@
   <section class="container px-4 lg:px-6 max-w-[96rem] py-12">
 
     <div class="mx-auto mb-16 max-w-[80rem]">
-      <h4 class="text-center font-medium text-3xl">{{ 'PREVIEW_VIDEO' | translate }}</h4>
+      <h4 class="text-center font-medium text-3xl" [innerHTML]="'PREVIEW_VIDEO' | translate"></h4>
     </div>
     
     <!-- <div *ngIf="translate.currentLang == 'en'">

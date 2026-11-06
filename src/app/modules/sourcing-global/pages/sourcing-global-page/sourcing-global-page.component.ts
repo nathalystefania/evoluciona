@@ -66,57 +66,24 @@ export class SourcingGlobalPageComponent implements OnInit, OnDestroy {
     this.globalSourcingCards = [
       {
         title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD1.TITLE',
-        image: './assets/images/icons/global-sourcing/informe-psicolaboral.svg',
+        image: './assets/images/icons/global-sourcing/competencias-tecnicas.svg',
         paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD1.TEXT'
       },
       {
         title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD2.TITLE',
-        image: './assets/images/icons/global-sourcing/competencias-tecnicas.svg',
+        image: './assets/images/icons/global-sourcing/apoyo-tecnico.svg',
         paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD2.TEXT'
       },
       {
         title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD3.TITLE',
-        image: './assets/images/icons/global-sourcing/apoyo-tecnico.svg',
+        image: './assets/images/icons/global-sourcing/apegados-legislacion.svg',
         paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD3.TEXT'
       },
       {
         title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD4.TITLE',
-        image: './assets/images/icons/global-sourcing/apegados-legislacion.svg',
-        paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD4.TEXT'
-      },
-      {
-        title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD5.TITLE',
         image: './assets/images/icons/global-sourcing/monitoreo_permanente.svg',
-        paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD5.TEXT'
-      },
-      {
-        title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD6.TITLE',
-        image: './assets/images/icons/global-sourcing/absorcion-laboral.svg',
-        paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD6.TEXT'
-      },
-      {
-        title: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD7.TITLE',
-        image: './assets/images/icons/global-sourcing/global-sourcing.svg',
-        paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD7.TEXT'
-      },
-    ]
-
-    this.additionallyCards = [
-      {
-        title: 'ADDITIONALLY.CARDS.CARD1.TITLE',
-        image: './assets/images/global-sourcing/seleccion.jpg',
-        paragraph: 'ADDITIONALLY.CARDS.CARD1.TEXT'
-      },
-      {
-        title: 'ADDITIONALLY.CARDS.CARD2.TITLE',
-        image: './assets/images/global-sourcing/ahorro.jpg',
-        paragraph: 'ADDITIONALLY.CARDS.CARD2.TEXT'
-      },
-      {
-        title: 'ADDITIONALLY.CARDS.CARD3.TITLE',
-        image: './assets/images/global-sourcing/profesionalismo.jpg',
-        paragraph: 'ADDITIONALLY.CARDS.CARD3.TEXT'
-      },
+        paragraph: 'WHY_DO_GLOBAL_SOURCING_WITH_US.CARDS.CARD4.TEXT'
+      }
     ]
 
     this.landingVideos = [
