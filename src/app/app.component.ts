@@ -1,11 +1,13 @@
+
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
-import { Subject, of } from 'rxjs';
-import { filter, map, mergeMap, switchMap, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
+
 import { I18nServiceService } from './i18n-service/i18n-service.service';
 import { AnalyticsService } from '@shared/services/analytics.service';
+import { SeoService } from '@shared/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -14,59 +16,55 @@ import { AnalyticsService } from '@shared/services/analytics.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
-  private baseTitle = 'Evoluciona';
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    private translate: TranslateService,
     private i18nService: I18nServiceService,
-    private analytics: AnalyticsService
-  ) {
-    let lang = localStorage.getItem('currentLang') || 'en';
-    translate.setDefaultLang(lang);
-    translate.use(lang);
-    this.changeLocale(lang);
-  }
+    private analytics: AnalyticsService,
+    private seo: SeoService
+  ) {}
 
   ngOnInit(): void {
+    // Navegación: metadata + Analytics
     this.router.events
       .pipe(
-        filter(event => event instanceof NavigationEnd),
-        map(() => this.activatedRoute),
-        map(route => {
-          while (route.firstChild) { route = route.firstChild; }
-          return route;
-        }),
-        mergeMap(route => route.data),
-        switchMap(data => {
-          const titleKey = data?.['title'];
-          return titleKey ? this.translate.get(titleKey) : of(null);
-        }),
+        filter((event): event is NavigationEnd =>
+          event instanceof NavigationEnd
+        ),
         takeUntil(this.destroy$)
       )
-      .subscribe(translatedTitle => {
-        //Actualiza título
-        if (translatedTitle) {
-          this.titleService.setTitle(`${this.baseTitle} | ${translatedTitle}`);
-        } else {
-          this.titleService.setTitle(this.baseTitle);
-        }
+      .subscribe(() => {
+        this.updateSeo();
 
-        //Envía page_view a Analytics
-        const currentUrl = this.router.url;
-        this.analytics.sendPageView(currentUrl, { page_title: translatedTitle || this.baseTitle });
+        this.analytics.sendPageView(this.router.url, {
+          page_title: this.titleService.getTitle()
+        });
       });
+
+    // El servicio emite después de cargar y combinar las traducciones de rutas.
+    this.i18nService.localeEvent
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => this.updateSeo());
+
+    // Cubre el caso de navegación inicial ya completada.
+    if (this.router.navigated) {
+      this.updateSeo();
+    }
   }
 
+  private updateSeo(): void {
+    this.seo.update(this.router.routerState.snapshot);
+  }
+
+  changeLocale(locale: string): void {
+    void this.i18nService.changeLocale(locale).catch(error => {
+      console.error(`No se pudo cambiar el idioma a "${locale}".`, error);
+    });
+  }
 
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
-  }
-
-  changeLocale(locale: string) {
-    this.i18nService.changeLocale(locale);
   }
 }

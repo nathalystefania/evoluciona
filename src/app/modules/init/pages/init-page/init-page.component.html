@@ -74,7 +74,7 @@
               <p class="flex align-middle font-light text-medium-gray hover:text-primary">
                 <span>{{ partner.position | translate}}</span>
               </p>
-              <mat-icon [svgIcon]="'icon-linkedin'"></mat-icon>
+              <mat-icon [svgIcon]="'icon-linkedin'" title="{{ 'VIEW_PROFILE' | translate }}" ></mat-icon>
             </a>
             <p *ngIf="!partner.in_profile" class="font-light text-medium-gray">{{ partner.position | translate}}</p>            
           </div>

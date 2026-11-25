@@ -31,7 +31,9 @@ export class HeaderComponent implements OnInit {
   }
 
   changeLocale(locale: string) {
-    this.i18nService.changeLocale(locale);   
+    void this.i18nService.changeLocale(locale).catch(error => {
+      console.error(`No se pudo cambiar el idioma a "${locale}".`, error);
+    });
   }
 
   ngOnInit(): void {

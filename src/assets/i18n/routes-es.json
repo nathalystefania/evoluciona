@@ -1,41 +1,66 @@
 {
   "HOME": {
-    "TITLE": "Nosotros"
+    "TITLE": "Nosotros",
+    "seoTitle": "Consultora de transformación digital | Evoluciona Chile · Perú · España",
+    "seoDescription": "Combinamos estrategia, excelencia operacional, estudios de mercado y tecnología para convertir desafíos complejos en mejoras medibles"
   },
   "CONTACT": {
-    "TITLE": "Contacto"
+    "TITLE": "Contacto",
+    "seoTitle": "Contáctanos",
+    "seoDescription": "Ponte en contacto con Evoluciona."
   },
   "ITS": {
-    "TITLE": "Inteligencia de Transporte"
+    "TITLE": "Inteligencia de Transporte",
+    "seoTitle": "Inteligencia de Transporte",
+    "seoDescription": "Explora nuestras soluciones de inteligencia de transporte."
   },
   "CLIENTS_&_SUCCESS_STORIES": {
-    "TITLE": "Clientes & casos de éxito"
+    "TITLE": "Clientes & casos de éxito",
+    "seoTitle": "Clientes & casos de éxito",
+    "seoDescription": "Descubre cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos."
   },
   "GLOBAL_SOURCING": {
-    "TITLE": "Staﬃng Global"
+    "TITLE": "Staﬃng Global",
+    "seoTitle": "Staffing y staff augmentation | Evoluciona",
+    "seoDescription": "Incorporamos talento especializado, local e internacional, presencial o remoto, con evaluación de competencias y seguimiento cercano del desempeño."
   },
   "DEVELOPMENT_&_INNOVATION": {
-    "TITLE": "Desarrollo e innovación"
+    "TITLE": "Desarrollo e innovación",
+    "seoTitle": "Desarrollo e innovación",
+    "seoDescription": "Aprende sobre nuestras iniciativas de desarrollo e innovación."
   },
   "PRODUCTS": {
     "TITLE": "Productos",
-    "PCA": {
-      "TITLE": "Police Controller Adapter"
-    },
+    "seoTitle": "Nuestros Productos",
+    "seoDescription": "Explora nuestra gama de productos innovadores."
+  },
+  "PCA": {
+    "TITLE": "Police Controller Adapter",
+    "seoTitle": "Police Controller Adapter",
+    "seoDescription": "Aprende sobre nuestra solución de Police Controller Adapter.",
     "TMFE": {
-      "TITLE": "Traffic Monitoring Front-end"
+      "TITLE": "Traffic Monitoring Front-end",
+      "seoTitle": "Traffic Monitoring Front-end",
+      "seoDescription": "Aprende sobre nuestra solución de Traffic Monitoring Front-end."
     },
     "OUR_PRODUCTS": {
-      "TITLE": "Nuestros productos"
+      "TITLE": "Nuestros productos",
+      "seoTitle": "Nuestros Productos",
+      "seoDescription": "Explora nuestra gama de productos innovadores."
     }
   },
   "MESU2025": {
-    "TITLE": "MESU 2025"
+    "TITLE": "MESU 2025",
+    "DESCRIPTION": ""
   },
   "TRANSFORMATION_OPERATIONAL_EXCELLENCE": {
-    "TITLE": "Transformación y Excelencia Operacional"
+    "TITLE": "Transformación y Excelencia Operacional",
+    "seoTitle": "Consultora de transformación digital | Evoluciona Chile · Perú · España",
+    "seoDescription": "Mejoramos procesos y la ejecución de los equipos con planificación estratégica, gestión del cambio, coaching ágil y automatización con IA."
   },
   "EXPERIENCE_AND_PERFORMANCE_INTELLIGENCE": {
-    "TITLE": "Inteligencia de Experiencia y Desempeño"
+    "TITLE": "Inteligencia de Experiencia y Desempeño",
+    "seoTitle": "Experiencia del cliente y del colaborador | Evoluciona",
+    "seoDescription": "Medimos la experiencia de clientes y colaboradores: monitor de fricciones, voz del cliente, clima laboral, mystery shopping y estudios de mercado."
   }
 }

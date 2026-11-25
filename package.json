@@ -9,7 +9,9 @@
     "build:prod": "ng build --configuration production --base-href ./ --deploy-url ./",
     "postbuild": "node postbuild.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "link:videos": "node scripts/link-videos.cjs",
+    "build:deploy": "npm run build -- --configuration production --base-href ./ --deploy-url ./ && npm run link:videos"
   },
   "private": true,
   "dependencies": {

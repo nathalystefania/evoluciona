@@ -26,20 +26,15 @@ export class I18nServiceService {
   }
 
   async changeLocale(locale: string) {
-    
-    this.translate.use(locale);
-    this.localeEvent.next(locale);
+    const routes = await firstValueFrom(
+      this.http.get(`assets/i18n/routes-${locale}.json`)
+    );
+    await firstValueFrom(this.translate.use(locale));
+
+    this.translate.setTranslation(locale, routes, true);
+    this.translate.setDefaultLang(locale);
     this.setHtmlLang(locale);
-
     localStorage.setItem('currentLang', locale);
-    
-    if(this.translate.currentLang){
-      this.translate.setDefaultLang(this.translate.currentLang);
-    } 
-
-    try {
-      const routes = await firstValueFrom(this.http.get(`assets/i18n/routes-${locale}.json`));
-      this.translate.setTranslation(locale, routes as any, true);
-    } catch (e) { /* ignore */ }
+    this.localeEvent.next(locale);
   }
 }

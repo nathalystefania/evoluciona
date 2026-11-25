@@ -17,11 +17,9 @@ import { PathLocationStrategy, LocationStrategy, HashLocationStrategy } from '@a
 import { MaterialModule } from '@shared/material.module';
 
 import { Title } from '@angular/platform-browser';
-import { TranslateTitleStrategy } from './core/translate-title.strategy';
 import { APP_INITIALIZER } from '@angular/core';
 import { firstValueFrom, forkJoin, of } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { TitleStrategy } from '@angular/router';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -84,7 +82,6 @@ export function loadTranslationsFactory(translate: TranslateService, http: HttpC
     //   multi: true
     // },
     Title,
-    { provide: TitleStrategy, useClass: TranslateTitleStrategy },
     {
       provide: APP_INITIALIZER,
       useFactory: loadTranslationsFactory,
